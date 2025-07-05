@@ -19,19 +19,9 @@ export function Header() {
           <nav className="hidden md:flex gap-6">
             <Link 
               href="/" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                pathname === "/" ? "text-primary" : "text-muted-foreground"
-              }`}
+              className="text-sm font-medium transition-colors hover:text-primary text-primary"
             >
-              Home
-            </Link>
-            <Link 
-              href="/links" 
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                pathname === "/links" ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              Links
+              ZAO Nexus
             </Link>
           </nav>
         </div>

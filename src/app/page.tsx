@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { TokenChecker } from "@/components/token-checker";
 import { WalletConnector } from "@/components/wallet-connector";
-import { checkZaoAndLoanzBalances } from "@/lib/token-balance-checker";
+import { VirtualizedLinkList } from "@/components/links/virtualized-link-list";
+import { LinksData } from "@/types/links";
 import { Loader2 } from "lucide-react";
 
 export default function Home() {
@@ -14,12 +14,8 @@ export default function Home() {
   const [hasTokens, setHasTokens] = useState(false);
   const [zaoBalance, setZaoBalance] = useState("0");
   const [loanzBalance, setLoanzBalance] = useState("0");
-  const [testWalletResult, setTestWalletResult] = useState<{
-    zao: { formattedBalance: string; hasMinimum: boolean };
-    loanz: { formattedBalance: string; hasMinimum: boolean };
-  } | null>(null);
-  const [isTestingWallet, setIsTestingWallet] = useState(false);
-  const [showLinksSection, setShowLinksSection] = useState(true);
+  const [linksData, setLinksData] = useState<LinksData | null>(null);
+  const [loading, setLoading] = useState(true);
 
   // Handle wallet connection
   const handleWalletConnected = (address: string) => {
@@ -45,29 +41,37 @@ export default function Home() {
     setZaoBalance(zaoBalance);
     setLoanzBalance(loanzBalance);
   };
-
-  // Test specific wallet address
-  const testSpecificWallet = async () => {
-    const testWalletAddress = "0x7234c36A71ec237c2Ae7698e8916e0735001E9Af";
-    setIsTestingWallet(true);
-    
-    try {
-      console.log("[HOME] Testing specific wallet:", testWalletAddress);
-      const results = await checkZaoAndLoanzBalances(testWalletAddress);
-      setTestWalletResult(results);
-      console.log("[HOME] Test wallet results:", results);
-    } catch (error) {
-      console.error("[HOME] Error testing wallet:", error);
-    } finally {
-      setIsTestingWallet(false);
+  
+  // Load links data
+  useEffect(() => {
+    async function loadLinks() {
+      try {
+        // Only load the default dataset
+        const response = await fetch('/api/links');
+        if (response.ok) {
+          const data = await response.json();
+          setLinksData(data);
+        } else {
+          throw new Error('Failed to load links');
+        }
+      } catch (error) {
+        console.error("Error loading links:", error);
+        // Load from static file as a fallback
+        const data = await import('@/data/links.json');
+        setLinksData(data);
+      } finally {
+        setLoading(false);
+      }
     }
-  };
+
+    loadLinks();
+  }, []);
   
   return (
     <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">ZAO Nexus Token Checker</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">ZAO Nexus</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         <Card>
           <CardHeader>
             <CardTitle>Wallet Connection</CardTitle>
@@ -107,74 +111,28 @@ export default function Home() {
         </Card>
       </div>
       
-      <div className="mt-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>Test Specific Wallet</CardTitle>
-            <CardDescription>Test the balance checker with a known wallet address</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex flex-col gap-4">
-              <p className="text-sm">Test wallet: <code>0x7234c36A71ec237c2Ae7698e8916e0735001E9Af</code></p>
-              
-              <Button 
-                onClick={testSpecificWallet} 
-                disabled={isTestingWallet}
-                className="w-full md:w-auto"
-              >
-                {isTestingWallet ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Testing...
-                  </>
-                ) : "Test Specific Wallet"}
-              </Button>
-              
-              {testWalletResult && (
-                <div className="mt-4 p-4 border rounded-md">
-                  <h3 className="font-medium mb-2">Test Results:</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="text-sm font-medium">$ZAO:</p>
-                      <p>Balance: {testWalletResult.zao.formattedBalance}</p>
-                      <p>Has Minimum: {testWalletResult.zao.hasMinimum ? "✅ Yes" : "❌ No"}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium">$LOANZ:</p>
-                      <p>Balance: {testWalletResult.loanz.formattedBalance}</p>
-                      <p>Has Minimum: {testWalletResult.loanz.hasMinimum ? "✅ Yes" : "❌ No"}</p>
-                    </div>
-                  </div>
-                </div>
-              )}
+      <Card className="mt-8">
+        <CardHeader>
+          <CardTitle>ZAO Ecosystem Links</CardTitle>
+          <CardDescription>
+            Browse through our curated collection of resources and links
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          {loading ? (
+            <div className="flex justify-center items-center py-12">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+              <span className="ml-2">Loading links...</span>
             </div>
-          </CardContent>
-        </Card>
-      </div>
-      
-      {showLinksSection && (
-        <div className="mt-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Explore ZAO Ecosystem Links</CardTitle>
-              <CardDescription>Access our comprehensive collection of 5000+ curated links</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col gap-4">
-                <p>
-                  The ZAO Nexus Links section provides access to over 5000 curated links organized by categories and subcategories.
-                  Explore resources across DeFi, NFTs, Tools, Education, and more with our high-performance link browser.
-                </p>
-                <div className="flex justify-center">
-                  <Link href="/links">
-                    <Button className="mt-2">Browse All Links</Button>
-                  </Link>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+          ) : linksData ? (
+            <VirtualizedLinkList data={linksData} />
+          ) : (
+            <div className="text-center py-8">
+              <p className="text-muted-foreground">Failed to load links. Please try again later.</p>
+            </div>
+          )}
+        </CardContent>
+      </Card>
     </main>
   );
 }

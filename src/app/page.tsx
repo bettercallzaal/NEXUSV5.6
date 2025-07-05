@@ -68,16 +68,16 @@ export default function Home() {
   }, []);
   
   return (
-    <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">ZAO Nexus</h1>
+    <main className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
+      <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">ZAO Nexus</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>Wallet Connection</CardTitle>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-4 sm:mb-8">
+        <Card className="w-full">
+          <CardHeader className="p-4 sm:p-6">
+            <CardTitle className="text-lg sm:text-xl">Wallet Connection</CardTitle>
             <CardDescription>Connect your wallet to check token balances</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
             <WalletConnector 
               onWalletConnected={handleWalletConnected}
               onWalletDisconnected={handleWalletDisconnected}
@@ -85,20 +85,20 @@ export default function Home() {
           </CardContent>
         </Card>
         
-        <Card>
-          <CardHeader>
-            <CardTitle>Token Balances</CardTitle>
+        <Card className="w-full">
+          <CardHeader className="p-4 sm:p-6">
+            <CardTitle className="text-lg sm:text-xl">Token Balances</CardTitle>
             <CardDescription>
               {walletAddress ? "Your current token balances" : "Connect wallet to view balances"}
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
             <TokenChecker 
               walletAddress={walletAddress}
               onBalancesChecked={handleBalancesChecked}
             />
           </CardContent>
-          <CardFooter className="flex flex-col items-start gap-4">
+          <CardFooter className="flex flex-col items-start gap-4 p-4 sm:p-6">
             <div className="w-full">
               <p className="text-sm font-medium mb-2">Access Status:</p>
               <div className={`p-3 rounded-md ${hasTokens ? "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-300" : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-300"}`}>
@@ -111,28 +111,33 @@ export default function Home() {
         </Card>
       </div>
       
-      <Card className="mt-8">
-        <CardHeader>
-          <CardTitle>ZAO Ecosystem Links</CardTitle>
-          <CardDescription>
-            Browse through our curated collection of resources and links
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          {loading ? (
-            <div className="flex justify-center items-center py-12">
-              <Loader2 className="h-8 w-8 animate-spin text-primary" />
-              <span className="ml-2">Loading links...</span>
-            </div>
-          ) : linksData ? (
-            <VirtualizedLinkList data={linksData} />
-          ) : (
-            <div className="text-center py-8">
-              <p className="text-muted-foreground">Failed to load links. Please try again later.</p>
-            </div>
-          )}
-        </CardContent>
-      </Card>
+      {/* Links section - integrated directly into the page flow */}
+      <div className="mt-4 sm:mt-8">
+        <Card className="w-full">
+          <CardHeader className="p-4 sm:p-6">
+            <CardTitle className="text-lg sm:text-xl">ZAO Ecosystem Links</CardTitle>
+            <CardDescription>
+              Browse through our curated collection of resources and links
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="p-0 sm:p-0">
+            {loading ? (
+              <div className="flex justify-center items-center py-12">
+                <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                <span className="ml-2">Loading links...</span>
+              </div>
+            ) : linksData ? (
+              <div className="links-container">
+                <VirtualizedLinkList data={linksData} />
+              </div>
+            ) : (
+              <div className="text-center py-8">
+                <p className="text-muted-foreground">Failed to load links. Please try again later.</p>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      </div>
     </main>
   );
 }

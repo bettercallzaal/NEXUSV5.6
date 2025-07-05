@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ZAO & LOANZ Token Checker</title>
+  <!-- Google Fonts for a modern look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #fafafa 0%, #e8ecf1 100%);
+      color: #333;
+    }
+    .page-title {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .checker-container {
+      max-width: 480px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+    .checker-container h1 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #141e27;
+    }
+    #walletStatus {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: #141e27;
+      padding: 0.75rem;
+      background-color: #f5f5f5;
+      border-radius: 6px;
+    }
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    button {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: #ff6f61;
+      color: #fff;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      font-weight: 600;
+    }
+    button:hover {
+      background-color: #ff5f50;
+      transform: translateY(-2px);
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .balance-results {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .balance-card {
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .zao-card {
+      background-color: rgba(52, 211, 153, 0.1);
+      color: #065f46;
+    }
+    .loanz-card {
+      background-color: rgba(59, 130, 246, 0.1);
+      color: #1e40af;
+    }
+    .token-value {
+      font-weight: 600;
+    }
+    .error-message {
+      color: #ef4444;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .refresh-button {
+      background: none;
+      border: none;
+      color: #3b82f6;
+      font-size: 0.9rem;
+      padding: 0.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      margin: 1rem auto 0;
+    }
+    .refresh-button:hover {
+      color: #1d4ed8;
+      background-color: rgba(59, 130, 246, 0.1);
+      border-radius: 4px;
+    }
+    .refresh-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="page-title">ZAO & LOANZ Token Checker</h2>
+  <div class="checker-container">
+    <h1>Multi-Chain Token Checker</h1>
+    <div id="walletStatus">Not connected</div>
+    <div class="button-group">
+      <button id="connectWalletButton">Connect Wallet</button>
+      <button id="checkBalanceButton" disabled>Check Balances</button>
+    </div>
+    <div id="errorMessage" class="error-message"></div>
+    <div id="balanceResults" class="balance-results"></div>
+  </div>
+  <!-- Include Web3 -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.7.3/dist/web3.min.js"></script>
+  <script>
+    // Configuration
+    const CONFIG = {
+      zao: {
+        network: 'Optimism',
+        rpcUrl: 'https://opt-mainnet.g.alchemy.com/v2/LkItjJ7_5DDMRV2-xZuYIEdqYxBuC-K-',
+        tokenAddress: '0x34cE89baA7E4a4B00E17F7E4C0cb97105C216957',
+        tokenSymbol: 'ZAO',
+        cardClass: 'zao-card'
+      },
+      loanz: {
+        network: 'Base',
+        rpcUrl: 'https://base-mainnet.g.alchemy.com/v2/LkItjJ7_5DDMRV2-xZuYIEdqYxBuC-K-',
+        tokenAddress: '0x03315307b202bf9c55ebebb8e9341d30411a0bc4',
+        tokenSymbol: 'LOANZ',
+        cardClass: 'loanz-card'
+      }
+    };
+
+    // DOM elements
+    const walletStatusEl = document.getElementById('walletStatus');
+    const connectButton = document.getElementById('connectWalletButton');
+    const checkButton = document.getElementById('checkBalanceButton');
+    const balanceResultsEl = document.getElementById('balanceResults');
+    const errorMessageEl = document.getElementById('errorMessage');
+
+    // State
+    let userAddress = null;
+    let isChecking = false;
+
+    // Utility to shorten addresses: e.g., 0x1234...ABCD
+    function formatAddress(addr) {
+      if (addr.length <= 10) return addr;
+      return addr.slice(0, 6) + '...' + addr.slice(-4);
+    }
+
+    // Show loading state
+    function setLoading(button, isLoading, text) {
+      if (isLoading) {
+        button.innerHTML = `<span class="loading"></span>${text}`;
+        button.disabled = true;
+      } else {
+        button.textContent = text;
+        button.disabled = false;
+      }
+    }
+
+    // Connect wallet function
+    async function connectWallet() {
+      errorMessageEl.textContent = '';
+      setLoading(connectButton, true, 'Connecting...');
+      
+      try {
+        if (window.ethereum) {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          userAddress = accounts[0];
+          walletStatusEl.textContent = `Connected: ${formatAddress(userAddress)}`;
+          connectButton.textContent = 'Wallet Connected';
+          connectButton.disabled = true;
+          checkButton.disabled = false;
+          
+          // Set up listeners for account changes
+          window.ethereum.on('accountsChanged', handleAccountsChanged);
+        } else {
+          errorMessageEl.textContent = "No Ethereum wallet found. Please install MetaMask or another wallet extension.";
+        }
+      } catch (error) {
+        console.error("User denied account access:", error);
+        errorMessageEl.textContent = "Connection denied by user.";
+      } finally {
+        setLoading(connectButton, false, 'Connect Wallet');
+      }
+    }
+
+    // Handle account changes
+    function handleAccountsChanged(accounts) {
+      if (accounts.length === 0) {
+        // User disconnected
+        userAddress = null;
+        walletStatusEl.textContent = 'Not connected';
+        connectButton.textContent = 'Connect Wallet';
+        connectButton.disabled = false;
+        checkButton.disabled = true;
+        balanceResultsEl.innerHTML = '';
+      } else {
+        // User switched accounts
+        userAddress = accounts[0];
+        walletStatusEl.textContent = `Connected: ${formatAddress(userAddress)}`;
+      }
+    }
+
+    // Check if wallet is already connected
+    async function checkInitialConnection() {
+      try {
+        if (window.ethereum) {
+          const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+          if (accounts.length > 0) {
+            userAddress = accounts[0];
+            walletStatusEl.textContent = `Connected: ${formatAddress(userAddress)}`;
+            connectButton.textContent = 'Wallet Connected';
+            connectButton.disabled = true;
+            checkButton.disabled = false;
+            
+            // Set up listeners for account changes
+            window.ethereum.on('accountsChanged', handleAccountsChanged);
+          }
+        }
+      } catch (error) {
+        console.error("Error checking initial connection:", error);
+      }
+    }
+
+    // Check token balance
+    async function checkTokenBalance(config) {
+      try {
+        // Initialize Web3 with the appropriate RPC URL
+        const web3 = new Web3(config.rpcUrl);
+        
+        // Token contract ABI (minimal for balanceOf)
+        const minABI = [
+          {
+            constant: true,
+            inputs: [{ name: "_owner", type: "address" }],
+            name: "balanceOf",
+            outputs: [{ name: "balance", type: "uint256" }],
+            type: "function",
+          }
+        ];
+        
+        // Create contract instance
+        const tokenContract = new web3.eth.Contract(minABI, config.tokenAddress);
+        
+        // Call balanceOf
+        const balance = await tokenContract.methods.balanceOf(userAddress).call();
+        const balanceFloat = parseFloat(web3.utils.fromWei(balance, 'ether'));
+        const formattedBalance = balanceFloat.toLocaleString('en-US', { maximumFractionDigits: 4 });
+        
+        return {
+          symbol: config.tokenSymbol,
+          balance: formattedBalance,
+          network: config.network,
+          hasBalance: balanceFloat > 0
+        };
+      } catch (error) {
+        console.error(`Error checking ${config.tokenSymbol} balance:`, error);
+        return {
+          symbol: config.tokenSymbol,
+          balance: 'Error',
+          network: config.network,
+          hasBalance: false,
+          error: true
+        };
+      }
+    }
+
+    // Check all token balances
+    async function checkAllBalances() {
+      if (!userAddress) {
+        errorMessageEl.textContent = "Wallet not connected.";
+        return;
+      }
+      
+      if (isChecking) return;
+      isChecking = true;
+      
+      errorMessageEl.textContent = '';
+      setLoading(checkButton, true, 'Checking...');
+      balanceResultsEl.innerHTML = '';
+      
+      try {
+        // Check balances in parallel
+        const results = await Promise.allSettled([
+          checkTokenBalance(CONFIG.zao),
+          checkTokenBalance(CONFIG.loanz)
+        ]);
+        
+        // Process results
+        results.forEach((result, index) => {
+          if (result.status === 'fulfilled') {
+            const tokenData = result.value;
+            const config = index === 0 ? CONFIG.zao : CONFIG.loanz;
+            
+            // Create balance card
+            const card = document.createElement('div');
+            card.className = `balance-card ${config.cardClass}`;
+            
+            if (tokenData.error) {
+              card.innerHTML = `
+                <span>${tokenData.symbol} (${tokenData.network}):</span>
+                <span class="token-value">Error checking balance</span>
+              `;
+            } else {
+              card.innerHTML = `
+                <span>${tokenData.symbol} (${tokenData.network}):</span>
+                <span class="token-value">${tokenData.balance}</span>
+              `;
+            }
+            
+            balanceResultsEl.appendChild(card);
+          }
+        });
+        
+        // Add refresh button
+        const refreshButton = document.createElement('button');
+        refreshButton.className = 'refresh-button';
+        refreshButton.innerHTML = `
+          <svg class="refresh-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          Refresh Balances
+        `;
+        refreshButton.addEventListener('click', checkAllBalances);
+        balanceResultsEl.appendChild(refreshButton);
+        
+      } catch (error) {
+        console.error("Error checking balances:", error);
+        errorMessageEl.textContent = "Error checking token balances. Please try again.";
+      } finally {
+        setLoading(checkButton, false, 'Check Balances');
+        isChecking = false;
+      }
+    }
+
+    // Event listeners
+    connectButton.addEventListener('click', connectWallet);
+    checkButton.addEventListener('click', checkAllBalances);
+    
+    // Check initial connection on page load
+    checkInitialConnection();
+  </script>
+</body>
+</html>

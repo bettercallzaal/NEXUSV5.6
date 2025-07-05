@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* New theme with blue (#141e27) and yellow (#e0ddaa) */
+    --background: 206 32% 12%; /* Dark blue background #141e27 */
+    --foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --card: 206 32% 15%; /* Slightly lighter than background #1a2632 */
+    --card-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --popover: 206 32% 15%; /* Slightly lighter than background #1a2632 */
+    --popover-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --primary: 206 32% 12%; /* Main blue #141e27 */
+    --primary-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --secondary: 206 32% 20%; /* Lighter blue #1f2e3d */
+    --secondary-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --muted: 206 32% 20%; /* Muted background #1f2e3d */
+    --muted-foreground: 206 10% 70%; /* Muted text #a3b0bb */
+
+    --accent: 55 57% 77%; /* Yellow accent #e0ddaa */
+    --accent-foreground: 206 32% 12%; /* Dark blue text on yellow #141e27 */
+
+    --destructive: 0 84% 60%; /* Red #f03e3e */
+    --destructive-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --border: 206 32% 20%; /* Subtle border #1f2e3d */
+    --input: 206 32% 20%; /* Input background #1f2e3d */
+    --ring: 55 57% 77%; /* Ring matches accent yellow #e0ddaa */
+
+    --radius: 0.5rem;
+  }
+
+  /* Default to dark mode */
+  :root {
+    color-scheme: dark;
+  }
+  
+  .dark {
+    /* New theme with blue (#141e27) and yellow (#e0ddaa) - same as root */
+    --background: 206 32% 12%; /* Dark blue background #141e27 */
+    --foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --card: 206 32% 15%; /* Slightly lighter than background #1a2632 */
+    --card-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --popover: 206 32% 15%; /* Slightly lighter than background #1a2632 */
+    --popover-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --primary: 206 32% 12%; /* Main blue #141e27 */
+    --primary-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --secondary: 206 32% 20%; /* Lighter blue #1f2e3d */
+    --secondary-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --muted: 206 32% 20%; /* Muted background #1f2e3d */
+    --muted-foreground: 206 10% 70%; /* Muted text #a3b0bb */
+
+    --accent: 55 57% 77%; /* Yellow accent #e0ddaa */
+    --accent-foreground: 206 32% 12%; /* Dark blue text on yellow #141e27 */
+
+    --destructive: 0 84% 60%; /* Red #f03e3e */
+    --destructive-foreground: 0 0% 98%; /* Off-white text #fafafa */
+
+    --border: 206 32% 20%; /* Subtle border #1f2e3d */
+    --input: 206 32% 20%; /* Input background #1f2e3d */
+    --ring: 55 57% 77%; /* Ring matches accent yellow #e0ddaa */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s infinite;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes pulseSubtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  /* Micro-animations */
+  .hover-lift {
+    @apply transition-transform duration-200;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-0.5;
+  }
+  
+  /* Shimmer effect for skeletons with new blue and yellow colors */
+  .shimmer {
+    background: linear-gradient(90deg, 
+      hsl(206 32% 12%) 0%, /* Dark blue background #141e27 */
+      hsl(55 57% 77%) 50%, /* Yellow accent #e0ddaa */
+      hsl(206 32% 12%) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}

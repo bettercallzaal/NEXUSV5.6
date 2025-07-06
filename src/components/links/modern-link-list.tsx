@@ -694,7 +694,7 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
     <TooltipProvider>
       <div className="w-full space-y-4">
         {/* Sticky search and filter bar */}
-        <div className="sticky top-16 z-10 bg-background/95 backdrop-blur-sm py-4 border-b">
+        <div className="sticky top-16 z-10 bg-background/95 backdrop-blur-sm py-3 border-b shadow-sm">
           <div className="flex flex-col gap-4">
             {/* Search and view mode controls */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
@@ -776,11 +776,11 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
           role="region"
           aria-label="Links collection"
         >
-          <div className="p-4 pb-20">
+          <div className="p-2 pb-20">
             {filteredLinks.map((link, index) => (
               <div 
                 key={link.id || index}
-                className="mb-4 bg-secondary/50 rounded-md hover:bg-secondary/80 transition-colors"
+                className="mb-2 bg-secondary/30 rounded-md hover:bg-secondary/50 transition-colors border border-border/20"
                 role="listitem"
               >
                 {viewMode === "grid" ? (
@@ -798,38 +798,71 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
                     />
                   </div>
                 ) : (
-                  <div className="px-3 py-2">
-                    <LinkRow 
-                      title={link.title}
-                      description={link.description}
-                      url={link.url}
-                      category={link.category}
-                      subcategory={link.subcategory}
-                      tags={link.tags}
-                      isNew={link.isNew}
-                      className="border border-border/40 rounded-md p-3 hover:bg-accent/30 transition-colors"
-                      isExpanded={link.id ? expandedItems.has(link.id) : false}
-                      onToggleExpand={() => link.id && handleToggleExpand(link.id)}
-                    >
-                      {link.id && expandedItems.has(link.id) && (
-                        <div className="mt-3 animate-fade-in flex gap-2">
+                  <div className="p-0">
+                    <div className="flex items-center justify-between p-3 cursor-pointer" onClick={() => link.id && handleToggleExpand(link.id)}>
+                      <div className="flex-1 overflow-hidden">
+                        <div className="font-medium truncate">{link.title}</div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="h-8 w-8"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.open(link.url, '_blank', 'noopener,noreferrer');
+                          }}
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                        </Button>
+                        {link.id && (
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-8 w-8"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleToggleExpand(link.id!);
+                            }}
+                          >
+                            {expandedItems.has(link.id) ? (
+                              <ChevronDown className="h-5 w-5 text-primary" />
+                            ) : (
+                              <ChevronRight className="h-5 w-5 text-primary" />
+                            )}
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                    
+                    {link.id && expandedItems.has(link.id) && (
+                      <div className="px-3 pb-3 animate-fade-in">
+                        <div className="text-sm text-muted-foreground mb-2">{link.description}</div>
+                        
+                        <div className="flex flex-wrap gap-1 mb-3">
+                          {link.tags && link.tags.map((tag) => (
+                            <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
+                          ))}
+                        </div>
+                        
+                        <div className="flex gap-2">
                           <Button
                             variant="outline"
                             size="sm"
-                            onClick={(e: React.MouseEvent) => handleShareLink(e, link)}
+                            onClick={(e) => handleShareLink(e, link)}
                           >
                             <Share className="mr-1 h-3 w-3" /> Share
                           </Button>
                           <Button
                             variant="outline"
                             size="sm"
-                            onClick={(e: React.MouseEvent) => handleCopyLink(e, link)}
+                            onClick={(e) => handleCopyLink(e, link)}
                           >
                             <Copy className="mr-1 h-3 w-3" /> Copy URL
                           </Button>
                         </div>
-                      )}
-                    </LinkRow>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

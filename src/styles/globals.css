@@ -16,10 +16,13 @@ body {
 
 main {
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
   flex-shrink: 0;
+  margin-top: auto;
 }
 
 /* Links container styling */
@@ -45,13 +48,12 @@ footer {
 
 /* Clean UI styling */
 html, body {
-  overflow-x: hidden;
   padding-bottom: 2rem;
 }
 
-/* Simple container styling */
-.links-container {
-  overflow: visible;
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .links-container-wrapper {

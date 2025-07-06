@@ -184,21 +184,21 @@ export default function Home() {
       
       {/* Links section - integrated directly into the page flow */}
       <div className="mt-4 sm:mt-8 mb-20">
-        <Card className="w-full">
+        <Card className="w-full min-h-[500px] flex flex-col">
           <CardHeader className="p-4 sm:p-6">
             <CardTitle className="text-lg sm:text-xl">ZAO Ecosystem Links</CardTitle>
             <CardDescription>
               Browse through our curated collection of resources and links
             </CardDescription>
           </CardHeader>
-          <CardContent className="p-0">
+          <CardContent className="p-0 flex-1">
             {loading ? (
               <div className="flex justify-center items-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin text-primary" />
                 <span className="ml-2">Loading links...</span>
               </div>
             ) : linksData ? (
-              <div className="links-container-wrapper" ref={linksContainerRef}>
+              <div className="links-container-wrapper h-full" ref={linksContainerRef}>
                 <ModernLinkList data={linksData} />
               </div>
             ) : (

@@ -151,8 +151,8 @@ async function generateTagsWithOpenAI(linkContent: LinkContent, keywords: string
       tagNames = tagContent
         .replace(/[\[\]"']/g, '')
         .split(',')
-        .map(tag => tag.trim())
-        .filter(tag => tag.length > 0);
+        .map((tag: string) => tag.trim())
+        .filter((tag: string) => tag.length > 0);
     }
     
     // Convert tag names to Tag objects with colors

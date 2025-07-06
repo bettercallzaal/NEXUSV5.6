@@ -60,7 +60,7 @@ interface MobileOptimizedLinkListProps {
   filterTags?: string[];
 }
 
-type ViewMode = "grid" | "list";
+type ViewMode = "grid" | "list" | "compact";
 type SortMode = "newest" | "oldest" | "popular" | "az";
 
 interface FlattenedLink extends Link {
@@ -528,6 +528,55 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
     );
   }, [filteredLinks, expandedItems, handleToggleExpand, handleShareLink, handleCopyLink]);
 
+  // Render compact item
+  const renderCompactItem = useCallback((link: FlattenedLink) => {
+    return (
+      <div 
+        key={link.id || link.url} 
+        className="flex items-center justify-between py-1 px-2 hover:bg-accent/50 rounded-sm cursor-pointer"
+        onClick={() => handleLinkClick(link)}
+      >
+        <div className="flex-1 min-w-0 mr-2">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium truncate">{link.title}</span>
+            {link.isNew && (
+              <span className="bg-primary/10 text-primary text-[10px] px-1 py-0.5 rounded-sm">NEW</span>
+            )}
+          </div>
+        </div>
+        <div className="flex items-center gap-1">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-6 w-6 p-0"
+            onClick={(e) => handleCopyLink(e, link)}
+          >
+            <Copy className="h-3 w-3" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-6 w-6 p-0"
+            onClick={(e) => handleShareLink(e, link)}
+          >
+            <Share className="h-3 w-3" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-6 w-6 p-0"
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(link.url, "_blank", "noopener,noreferrer");
+            }}
+          >
+            <ExternalLink className="h-3 w-3" />
+          </Button>
+        </div>
+      </div>
+    );
+  }, [handleLinkClick, handleCopyLink, handleShareLink]);
+
   // Render recently viewed links
   const renderRecentlyViewed = useCallback(() => {
     // In a real implementation, this would come from localStorage or a backend
@@ -610,6 +659,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                     size="sm"
                     onClick={() => setViewMode("grid")}
                     className="h-8 w-8 p-0"
+                    title="Grid View"
                   >
                     <Grid2X2 className="h-4 w-4" />
                   </Button>
@@ -618,8 +668,18 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                     size="sm"
                     onClick={() => setViewMode("list")}
                     className="h-8 w-8 p-0"
+                    title="List View"
                   >
                     <ListIcon className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant={viewMode === "compact" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setViewMode("compact")}
+                    className="h-8 w-8 p-0"
+                    title="Compact View"
+                  >
+                    <ListIcon className="h-4 w-4 scale-75" />
                   </Button>
                 </div>
               </div>
@@ -674,11 +734,29 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   height={height}
                   width={width}
                   itemCount={filteredLinks.length}
-                  itemSize={viewMode === "grid" ? (width < 640 ? 220 : 180) : (width < 640 ? 100 : 80)}
+                  itemSize={
+                    viewMode === "grid" 
+                      ? (width < 640 ? 220 : 180) 
+                      : viewMode === "list" 
+                        ? (width < 640 ? 100 : 80)
+                        : 40 // compact view height
+                  }
                   overscanCount={overscanCount}
                   className="scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent"
                 >
-                  {viewMode === "grid" ? renderGridItem : renderListItem}
+                  {({ index, style }) => {
+                    const link = filteredLinks[index];
+                    return (
+                      <div style={style}>
+                        {viewMode === "grid" 
+                          ? renderGridItem({ index, style })
+                          : viewMode === "list"
+                            ? renderListItem({ index, style })
+                            : renderCompactItem(link)
+                        }
+                      </div>
+                    );
+                  }}
                 </List>
               )}
             </AutoSizer>

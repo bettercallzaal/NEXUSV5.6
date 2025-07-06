@@ -7,9 +7,20 @@
   overflow: visible !important;
 }
 
-/* Ensure content doesn't create horizontal scrollbars */
+/* Ensure content doesn't create horizontal scrollbars and has proper spacing */
 html, body {
   overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+
+/* Improve spacing for filter buttons */
+.filter-buttons {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @layer base {

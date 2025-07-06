@@ -636,7 +636,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   officialOnly={officialOnly}
                 />
                 
-                <div className="flex items-center gap-2">
+                <div className="filter-buttons">
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Button
@@ -734,7 +734,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
         ) : (
           <div 
             ref={containerRef}
-            className="w-full rounded-lg border bg-card links-container h-auto max-h-[calc(100vh-200px)]" 
+            className="w-full rounded-lg border bg-card links-container h-auto max-h-[calc(100vh-200px)] mb-12 pb-4" 
             tabIndex={-1} // Make the container focusable
             id="links-container"
             role="region"

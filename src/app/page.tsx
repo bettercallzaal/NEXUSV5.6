@@ -198,7 +198,7 @@ export default function Home() {
                 <span className="ml-2">Loading links...</span>
               </div>
             ) : linksData ? (
-              <div className="links-container" ref={linksContainerRef}>
+              <div className="links-container-wrapper" ref={linksContainerRef}>
                 <MobileOptimizedLinkList data={linksData} />
               </div>
             ) : (

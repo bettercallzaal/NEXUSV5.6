@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Prevent multiple scrollbars */
+/* Prevent multiple scrollbars and ensure proper styling */
 .links-container {
   overflow: visible !important;
+}
+
+/* Force styling for link container */
+.links-container-wrapper .links-container {
+  border: 2px solid var(--accent) !important;
+  margin-bottom: 2rem !important;
+  padding-bottom: 2rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Ensure content doesn't create horizontal scrollbars and has proper spacing */

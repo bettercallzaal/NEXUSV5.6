@@ -8,9 +8,10 @@ import { checkZaoAndLoanzBalances } from "@/lib/token-balance-checker";
 interface TokenCheckerProps {
   walletAddress: string | null;
   onBalancesChecked?: (hasTokens: boolean, zaoBalance: string, loanzBalance: string) => void;
+  compact?: boolean;
 }
 
-export function TokenChecker({ walletAddress, onBalancesChecked }: TokenCheckerProps) {
+export function TokenChecker({ walletAddress, onBalancesChecked, compact = false }: TokenCheckerProps) {
   const [isChecking, setIsChecking] = useState(false);
   const [zaoBalance, setZaoBalance] = useState<string>("0");
   const [loanzBalance, setLoanzBalance] = useState<string>("0");
@@ -63,6 +64,51 @@ export function TokenChecker({ walletAddress, onBalancesChecked }: TokenCheckerP
     }
   }
 
+  if (compact) {
+    return (
+      <div className="w-full">
+        {error && (
+          <div className="bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-300 p-1 rounded text-xs mb-2">
+            {error}
+          </div>
+        )}
+
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1">
+              <span className="text-xs text-muted-foreground">$ZAO:</span>
+              <span className={`text-xs ${hasZao ? "text-green-600 dark:text-green-400 font-medium" : ""}`}>
+                {zaoBalance}
+                {hasZao && "✓"}
+              </span>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-xs text-muted-foreground">$LOANZ:</span>
+              <span className={`text-xs ${hasLoanz ? "text-green-600 dark:text-green-400 font-medium" : ""}`}>
+                {loanzBalance}
+                {hasLoanz && "✓"}
+              </span>
+            </div>
+          </div>
+          
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={checkBalances}
+            disabled={isChecking || !walletAddress}
+            className="h-7 w-7 p-0"
+          >
+            {isChecking ? (
+              <Loader2 className="h-3 w-3 animate-spin" />
+            ) : (
+              <RefreshCw className="h-3 w-3" />
+            )}
+          </Button>
+        </div>
+      </div>
+    );
+  }
+  
   return (
     <div className="border rounded-md p-4 space-y-4">
       <div className="text-center mb-2">

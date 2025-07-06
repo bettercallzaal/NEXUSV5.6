@@ -73,43 +73,37 @@ export default function Home() {
       <Toaster />
       <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">ZAO Nexus V5</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-4 sm:mb-8">
+      <div className="mb-4 sm:mb-8">
         <Card className="w-full">
-          <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-lg sm:text-xl">Wallet Connection</CardTitle>
-            <CardDescription>Connect your wallet to check token balances</CardDescription>
-          </CardHeader>
-          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
-            <WalletConnector 
-              onWalletConnected={handleWalletConnected}
-              onWalletDisconnected={handleWalletDisconnected}
-            />
-          </CardContent>
-        </Card>
-        
-        <Card className="w-full">
-          <CardHeader className="p-4 sm:p-6">
-            <CardTitle className="text-lg sm:text-xl">Token Balances</CardTitle>
-            <CardDescription>
-              {walletAddress ? "Your current token balances" : "Connect wallet to view balances"}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
-            <TokenChecker 
-              walletAddress={walletAddress}
-              onBalancesChecked={handleBalancesChecked}
-            />
-          </CardContent>
-          <CardFooter className="flex flex-col items-start gap-4 p-4 sm:p-6">
-            <div className="w-full">
-              <p className="text-sm font-medium mb-2">Access Status:</p>
-              <div className={`p-3 rounded-md ${hasTokens ? "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-300" : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-300"}`}>
-                {hasTokens 
-                  ? "✅ You have sufficient tokens for access" 
-                  : "⚠️ Insufficient token balance for access"}
+          <CardHeader className="p-3 sm:p-4">
+            <div className="flex justify-between items-center">
+              <div>
+                <CardTitle className="text-lg">Wallet & Token Access</CardTitle>
+                <CardDescription className="text-xs">
+                  {walletAddress ? `Connected: ${walletAddress.substring(0, 6)}...${walletAddress.substring(walletAddress.length - 4)}` : "Connect your wallet to check access"}
+                </CardDescription>
+              </div>
+              <div className="flex items-center gap-2">
+                <WalletConnector 
+                  onWalletConnected={handleWalletConnected}
+                  onWalletDisconnected={handleWalletDisconnected}
+                  compact={true}
+                />
+                <div className={`text-xs px-2 py-1 rounded-md ${hasTokens ? "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-300" : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-300"}`}>
+                  {hasTokens ? "✅ Access" : "⚠️ No Access"}
+                </div>
               </div>
             </div>
-          </CardFooter>
+          </CardHeader>
+          <CardContent className="p-3 sm:p-4 pt-0 sm:pt-0">
+            <div className="flex flex-wrap justify-between items-center">
+              <TokenChecker 
+                walletAddress={walletAddress}
+                onBalancesChecked={handleBalancesChecked}
+                compact={true}
+              />
+            </div>
+          </CardContent>
         </Card>
       </div>
       

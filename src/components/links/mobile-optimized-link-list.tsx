@@ -101,7 +101,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>(filterTags || []);
-  const [viewMode, setViewMode] = useState<ViewMode>("grid");
+  const [viewMode, setViewMode] = useState<ViewMode>("compact");
   const [sortBy, setSortBy] = useState<SortMode>("newest");
   const [newOnly, setNewOnly] = useState(false);
   const [officialOnly, setOfficialOnly] = useState(false);
@@ -449,61 +449,41 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
       </div>
     );
   }, [selectedTags, handleTagSelect]);
-
-  // Render grid item for virtualized list
-  const renderGridItem = useCallback(({ index, style }: { index: number; style: React.CSSProperties }) => {
+  
+  // Render grid item
+  const renderGridItem = useCallback(({ index, style }: { index: number, style: React.CSSProperties }) => {
     const link = filteredLinks[index];
     return (
-      <div style={style} className="p-2">
-        <LinkCard
+      <div className="p-3" key={link.id || index}>
+        <LinkCard 
           title={link.title}
           description={link.description}
           url={link.url}
           category={link.category}
           subcategory={link.subcategory}
-          tags={link.tags || []}
+          tags={link.tags}
           isNew={link.isNew}
           onClick={() => handleLinkClick(link)}
-          onToggleExpand={() => link.id && handleToggleExpand(link.id)}
-          isExpanded={link.id ? expandedItems.has(link.id) : false}
-        >
-          {link.id && expandedItems.has(link.id) && (
-            <div className="mt-3 animate-fade-in">
-              <Button
-                variant="outline"
-                size="sm"
-                className="mr-2"
-                onClick={(e) => handleShareLink(e, link)}
-              >
-                <Share className="mr-1 h-3 w-3" /> Share
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={(e) => handleCopyLink(e, link)}
-              >
-                <Copy className="mr-1 h-3 w-3" /> Copy URL
-              </Button>
-            </div>
-          )}
-        </LinkCard>
+          className="h-full transition-all hover:shadow-md border border-border/40 rounded-md overflow-hidden"
+        />
       </div>
     );
-  }, [filteredLinks, expandedItems, handleLinkClick, handleToggleExpand, handleShareLink, handleCopyLink]);
+  }, [filteredLinks, handleLinkClick]);
 
-  // Render list item for virtualized list
-  const renderListItem = useCallback(({ index, style }: { index: number; style: React.CSSProperties }) => {
+  // Render list item
+  const renderListItem = useCallback(({ index, style }: { index: number, style: React.CSSProperties }) => {
     const link = filteredLinks[index];
     return (
-      <div style={style} className="px-2">
-        <LinkRow
+      <div className="px-3 py-2" key={link.id || index}>
+        <LinkRow 
           title={link.title}
           description={link.description}
           url={link.url}
           category={link.category}
           subcategory={link.subcategory}
-          tags={link.tags || []}
+          tags={link.tags}
           isNew={link.isNew}
+          className="border border-border/40 rounded-md p-3 hover:bg-accent/30 transition-colors"
           isExpanded={link.id ? expandedItems.has(link.id) : false}
           onToggleExpand={() => link.id && handleToggleExpand(link.id)}
         >
@@ -512,14 +492,14 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
               <Button
                 variant="outline"
                 size="sm"
-                onClick={(e) => handleShareLink(e, link)}
+                onClick={(e: React.MouseEvent) => handleShareLink(e, link)}
               >
                 <Share className="mr-1 h-3 w-3" /> Share
               </Button>
               <Button
                 variant="outline"
                 size="sm"
-                onClick={(e) => handleCopyLink(e, link)}
+                onClick={(e: React.MouseEvent) => handleCopyLink(e, link)}
               >
                 <Copy className="mr-1 h-3 w-3" /> Copy URL
               </Button>
@@ -775,9 +755,9 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   itemCount={filteredLinks.length}
                   itemSize={
                     viewMode === "grid" 
-                      ? (width < 640 ? 240 : 200) 
+                      ? (width < 640 ? 280 : 240) 
                       : viewMode === "list" 
-                        ? (width < 640 ? 120 : 100)
+                        ? (width < 640 ? 140 : 120)
                         : 64 // compact view height with description
                   }
                   overscanCount={overscanCount}
@@ -786,10 +766,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   {({ index, style }) => {
                     const link = filteredLinks[index];
                     return (
-                      <div 
-                        style={style} 
-                        className={`${viewMode === "grid" ? "p-2" : viewMode === "list" ? "p-1.5" : "px-1 py-0.5"}`}
-                      >
+                      <div style={style}>
                         {viewMode === "grid" 
                           ? renderGridItem({ index, style })
                           : viewMode === "list"

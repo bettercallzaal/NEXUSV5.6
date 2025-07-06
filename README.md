@@ -4,6 +4,15 @@ A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000
 
 ## Latest Updates
 
+**[July 5, 2025]** Enhanced the mobile-optimized link list component with improved view modes and spacing:
+
+- Set compact view as the default display mode for better mobile experience
+- Improved spacing and layout consistency across grid, list, and compact views
+- Enhanced grid view with increased item height (280px on mobile, 240px on desktop) and better padding
+- Improved list view with proper borders, rounded corners, and hover effects
+- Optimized compact view with efficient spacing and clear visual hierarchy
+- Fixed TypeScript issues and improved component structure
+
 **[June 29, 2025]** Implemented multi-chain token balance checking for $ZAO (Optimism) and $LOANZ (Base) tokens with a clean, modular UI. The implementation includes:
 
 - Modular `WalletConnector` and `TokenChecker` components

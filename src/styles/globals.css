@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent multiple scrollbars */
+.links-container {
+  overflow: visible !important;
+}
+
+/* Ensure content doesn't create horizontal scrollbars */
+html, body {
+  overflow-x: hidden;
+}
+
 @layer base {
   :root {
     /* New theme with blue (#141e27) and yellow (#e0ddaa) */

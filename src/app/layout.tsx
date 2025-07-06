@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ClientProviders } from "@/providers/client-providers";
+import { ChatBot } from "@/components/chat/chat-bot";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default function RootLayout({
               <Header />
               <main className="flex-1 container py-6">{children}</main>
               <Footer />
+              <ChatBot />
             </div>
           </ClientProviders>
         </ThemeProvider>

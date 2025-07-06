@@ -794,7 +794,7 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
                       tags={link.tags}
                       isNew={link.isNew}
                       onClick={() => handleLinkClick(link)}
-                      className="h-full transition-all hover:shadow-md border border-border/40 rounded-md overflow-hidden"
+                      className="h-full transition-all border border-border/40 rounded-md overflow-hidden"
                     />
                   </div>
                 ) : (

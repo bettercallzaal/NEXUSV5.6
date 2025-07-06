@@ -48,7 +48,7 @@ export function LinkCard({
     <TooltipProvider>
       <div
         className={cn(
-          "group relative rounded-2xl bg-zinc-900/60 p-4 shadow-md transition-all hover-lift hover:shadow-lg focus-within:ring-2 focus-within:ring-accent/50",
+          "group relative rounded-2xl bg-zinc-900/60 p-4 transition-all hover-lift focus-within:ring-2 focus-within:ring-accent/50",
           className
         )}
         onClick={onClick}

@@ -4,13 +4,13 @@ import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { FixedSizeList as List } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import Fuse from "fuse.js";
-import { ExternalLink, Grid2X2, List as ListIcon, Loader2, Share, Copy, Clock } from "lucide-react";
+import { ExternalLink, Grid2X2, List as ListIcon, Loader2, Share, Copy, Clock, CheckCircle, AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LinkCard } from "@/components/links/link-card";
 import { LinkRow } from "@/components/links/link-row";
 
 import { cn } from "@/lib/utils";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { FilterSheet } from "@/components/links/filter-sheet";
 import { CategoryScroll } from "@/components/links/category-scroll";
 import { EnhancedSearch } from "@/components/links/enhanced-search";
@@ -26,6 +26,7 @@ interface Link {
   subcategory?: string;
   tags?: string[];
   isNew?: boolean;
+  isOfficial?: boolean;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -69,6 +70,7 @@ interface FlattenedLink extends Link {
   id?: string;
   tags?: string[];
   isNew?: boolean;
+  isOfficial?: boolean;
   popularity?: number; // For sorting by popularity
 }
 
@@ -533,18 +535,26 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
     return (
       <div 
         key={link.id || link.url} 
-        className="flex items-center justify-between py-1 px-2 hover:bg-accent/50 rounded-sm cursor-pointer border-b border-border/30 last:border-b-0"
+        className="flex items-center justify-between py-1.5 px-3 hover:bg-accent/50 rounded-sm cursor-pointer border-b border-border/30 last:border-b-0"
         onClick={() => handleLinkClick(link)}
       >
         <div className="flex-1 min-w-0 mr-2">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5">
+            {link.isOfficial && (
+              <span className="flex-shrink-0 text-blue-500 dark:text-blue-400">
+                <CheckCircle className="h-3 w-3" />
+              </span>
+            )}
             <span className="text-sm font-medium truncate">{link.title}</span>
             {link.isNew && (
               <span className="bg-primary/10 text-primary text-[10px] px-1 py-0.5 rounded-sm flex-shrink-0">NEW</span>
             )}
           </div>
+          {link.description && (
+            <p className="text-xs text-muted-foreground truncate mt-0.5 ml-0.5">{link.description}</p>
+          )}
         </div>
-        <div className="flex items-center gap-1 flex-shrink-0">
+        <div className="flex items-center gap-1.5 flex-shrink-0">
           <Button
             variant="ghost"
             size="sm"
@@ -659,34 +669,57 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   officialOnly={officialOnly}
                 />
                 
-                <div className="flex items-center space-x-2">
-                  <Button
-                    variant={viewMode === "grid" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setViewMode("grid")}
-                    className="h-8 w-8 p-0"
-                    title="Grid View"
-                  >
-                    <Grid2X2 className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant={viewMode === "list" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setViewMode("list")}
-                    className="h-8 w-8 p-0"
-                    title="List View"
-                  >
-                    <ListIcon className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant={viewMode === "compact" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setViewMode("compact")}
-                    className="h-8 w-8 p-0"
-                    title="Compact View"
-                  >
-                    <ListIcon className="h-4 w-4 scale-75" />
-                  </Button>
+                <div className="flex items-center gap-2">
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant={viewMode === "grid" ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setViewMode("grid")}
+                        className="flex items-center gap-1"
+                      >
+                        <Grid2X2 className="h-4 w-4" />
+                        <span className="hidden sm:inline text-xs">Grid</span>
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom">
+                      <p>Grid View - Card layout with images</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant={viewMode === "list" ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setViewMode("list")}
+                        className="flex items-center gap-1"
+                      >
+                        <ListIcon className="h-4 w-4" />
+                        <span className="hidden sm:inline text-xs">List</span>
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom">
+                      <p>List View - Detailed rows with descriptions</p>
+                    </TooltipContent>
+                  </Tooltip>
+                  
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant={viewMode === "compact" ? "default" : "outline"}
+                        size="sm"
+                        onClick={() => setViewMode("compact")}
+                        className="flex items-center gap-1"
+                      >
+                        <AlignJustify className="h-4 w-4" />
+                        <span className="hidden sm:inline text-xs">Compact</span>
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom">
+                      <p>Compact View - Dense list for maximum items</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </div>
               </div>
             </div>
@@ -742,10 +775,10 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   itemCount={filteredLinks.length}
                   itemSize={
                     viewMode === "grid" 
-                      ? (width < 640 ? 220 : 180) 
+                      ? (width < 640 ? 240 : 200) 
                       : viewMode === "list" 
-                        ? (width < 640 ? 100 : 80)
-                        : 38 // compact view height - slightly smaller for better density
+                        ? (width < 640 ? 120 : 100)
+                        : 64 // compact view height with description
                   }
                   overscanCount={overscanCount}
                   className="scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent"
@@ -753,7 +786,10 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   {({ index, style }) => {
                     const link = filteredLinks[index];
                     return (
-                      <div style={style} className={viewMode === "compact" ? "px-1" : ""}>
+                      <div 
+                        style={style} 
+                        className={`${viewMode === "grid" ? "p-2" : viewMode === "list" ? "p-1.5" : "px-1 py-0.5"}`}
+                      >
                         {viewMode === "grid" 
                           ? renderGridItem({ index, style })
                           : viewMode === "list"

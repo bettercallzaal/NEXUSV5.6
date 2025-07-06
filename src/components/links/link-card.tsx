@@ -1,29 +1,45 @@
 "use client";
 
 import React from "react";
-import { Link } from "@/types/links";
 import { ExternalLink, Copy } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 interface LinkCardProps {
-  link: Link & { category?: string; subcategory?: string; tags?: string[] };
+  title: string;
+  description: string;
+  url: string;
+  category?: string;
+  subcategory?: string;
   tags?: string[];
   isNew?: boolean;
   className?: string;
   onClick?: () => void;
+  onToggleExpand?: () => void;
+  isExpanded?: boolean;
+  children?: React.ReactNode;
 }
 
-export function LinkCard({ link, tags: propTags, isNew: propIsNew, className, onClick }: LinkCardProps) {
-  // Use props or link properties
-  const finalTags = propTags || link.tags;
-  const finalIsNew = propIsNew !== undefined ? propIsNew : link.isNew;
+export function LinkCard({ 
+  title, 
+  description, 
+  url, 
+  category, 
+  subcategory, 
+  tags, 
+  isNew, 
+  className, 
+  onClick, 
+  onToggleExpand,
+  isExpanded,
+  children 
+}: LinkCardProps) {
   const [copied, setCopied] = React.useState(false);
 
   const copyToClipboard = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    navigator.clipboard.writeText(link.url);
+    navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -40,9 +56,9 @@ export function LinkCard({ link, tags: propTags, isNew: propIsNew, className, on
         <div className="mb-1 flex items-start justify-between">
           <div className="flex items-center gap-2">
             <h3 className="line-clamp-1 font-heading text-lg font-semibold text-foreground">
-              {link.title}
+              {title}
             </h3>
-            {finalIsNew && (
+            {isNew && (
               <span className="rounded-full bg-accent/20 px-2 py-0.5 text-xs text-accent">
                 New
               </span>
@@ -67,7 +83,7 @@ export function LinkCard({ link, tags: propTags, isNew: propIsNew, className, on
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
-                  href={link.url}
+                  href={url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded p-1 text-muted-foreground transition-colors hover:bg-accent/10 hover:text-accent"
@@ -83,12 +99,12 @@ export function LinkCard({ link, tags: propTags, isNew: propIsNew, className, on
         </div>
         
         <p className="line-clamp-2 text-sm text-zinc-400">
-          {link.description}
+          {description}
         </p>
         
-        {finalTags && finalTags.length > 0 && (
+        {tags && tags.length > 0 && (
           <div className="mt-3 flex flex-wrap gap-1">
-            {finalTags.map((tag) => (
+            {tags.map((tag) => (
               <span
                 key={tag}
                 className="rounded bg-accent/20 px-2 py-0.5 text-xs text-accent"
@@ -99,17 +115,19 @@ export function LinkCard({ link, tags: propTags, isNew: propIsNew, className, on
           </div>
         )}
         
-        {(link.category || link.subcategory) && (
+        {(category || subcategory) && (
           <div className="mt-2 flex items-center text-xs text-muted-foreground">
-            {link.category && (
+            {category && (
               <>
-                <span>{link.category}</span>
-                {link.subcategory && <span className="mx-1">•</span>}
+                <span>{category}</span>
+                {subcategory && <span className="mx-1">•</span>}
               </>
             )}
-            {link.subcategory && <span>{link.subcategory}</span>}
+            {subcategory && <span>{subcategory}</span>}
           </div>
         )}
+        
+        {children}
       </div>
     </TooltipProvider>
   );

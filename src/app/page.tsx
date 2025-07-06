@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { TokenChecker } from "@/components/token-checker";
 import { WalletConnector } from "@/components/wallet-connector";
-import { VirtualizedLinkList } from "@/components/links/virtualized-link-list";
+import { MobileOptimizedLinkList } from "@/components/links/mobile-optimized-link-list";
 import { LinksData } from "@/types/links";
 import { Loader2 } from "lucide-react";
+import { Toaster } from "@/components/ui/use-toast";
 
 export default function Home() {
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
@@ -69,7 +70,8 @@ export default function Home() {
   
   return (
     <main className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
-      <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">ZAO Nexus</h1>
+      <Toaster />
+      <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">ZAO Nexus V5</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-4 sm:mb-8">
         <Card className="w-full">
@@ -128,7 +130,7 @@ export default function Home() {
               </div>
             ) : linksData ? (
               <div className="links-container">
-                <VirtualizedLinkList data={linksData} />
+                <MobileOptimizedLinkList data={linksData} />
               </div>
             ) : (
               <div className="text-center py-8">

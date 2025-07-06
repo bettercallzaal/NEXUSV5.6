@@ -1,6 +1,6 @@
-# ZAO Nexus Simple
+# ZAO Nexus V5
 
-A simplified version of the ZAO Nexus 2.0 portal that efficiently handles 5000+ links with wallet connection, token gating, search functionality, and an AI assistant.
+A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000+ links with wallet connection, token gating, advanced search functionality, and an AI assistant.
 
 ## Latest Updates
 
@@ -31,6 +31,8 @@ A simplified version of the ZAO Nexus 2.0 portal that efficiently handles 5000+ 
 - **State Management**: Zustand with persist middleware
 - **Web3**: ethers.js for blockchain interactions
 - **Search**: Fuse.js for fuzzy searching
+- **Notifications**: Sonner for toast notifications
+- **Virtualization**: react-window and react-virtualized-auto-sizer for efficient list rendering
 
 ## Getting Started
 
@@ -47,6 +49,54 @@ A simplified version of the ZAO Nexus 2.0 portal that efficiently handles 5000+ 
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Project Structure
+
+Below is a brief description of key files and directories in the project:
+
+### Core Application
+
+- `src/app/page.tsx` - Main application page with wallet connection and link browsing
+- `src/app/layout.tsx` - Root layout with theme provider and client providers
+
+### Components
+
+#### Link Components
+- `src/components/links/mobile-optimized-link-list.tsx` - Mobile-friendly virtualized list with advanced filtering
+- `src/components/links/virtualized-link-list.tsx` - Original virtualized list implementation
+- `src/components/links/link-card.tsx` - Card component for displaying links in grid view
+- `src/components/links/link-row.tsx` - Row component for displaying links in list view
+- `src/components/links/enhanced-search.tsx` - Advanced search component with suggestions
+- `src/components/links/filter-sheet.tsx` - Mobile-optimized filter panel
+- `src/components/links/category-scroll.tsx` - Horizontal scrollable category navigation
+
+#### Wallet Components
+- `src/components/wallet-connector.tsx` - Wallet connection component
+- `src/components/wallet/connect-button.tsx` - Button for connecting wallet
+- `src/components/token-checker.tsx` - Token balance verification component
+- `src/components/token-balance-display.tsx` - Display for token balances
+
+#### UI Components
+- `src/components/ui/button.tsx` - Reusable button component
+- `src/components/ui/toast.tsx` - Toast notification component
+- `src/components/ui/sheet.tsx` - Slide-out panel component
+- `src/components/ui/dialog.tsx` - Modal dialog component
+
+### Hooks and Utilities
+
+- `src/hooks/use-wallet.ts` - Hook for wallet connection and token balance checking
+- `src/lib/token-balance-checker.ts` - Utility for checking token balances across chains
+- `src/lib/utils.ts` - General utility functions
+
+### Data and Types
+
+- `src/data/links.json` - Link data source
+- `src/types/links.ts` - TypeScript types for link data
+- `src/types/ethereum.d.ts` - TypeScript types for Ethereum interactions
+
+### Styles
+
+- `src/styles/globals.css` - Global styles with Tailwind directives
 
 ## Multi-Chain Token Balance Checking Implementation Guide
 
@@ -325,7 +375,37 @@ npm run start
 
 3. **Comments or Notes**: Enable users to add personal notes to links for future reference.
 
-4. **Share Options**: Add easy sharing functionality for individual links or categories.
+4. **Enhanced Sharing Capabilities**:
+
+   #### Share Options
+   - Native Web Share API integration for mobile devices
+   - Direct sharing to popular platforms (Twitter, Telegram, Discord)
+   - QR code generation for physical sharing in presentations
+   - Custom short URL generation with zao.link domain
+   
+   #### Copy-to-Clipboard Fallback
+   - Reliable clipboard API implementation with visual feedback
+   - Formatted link copying with title, description, and URL
+   - Option to copy as markdown, HTML, or plain text
+   - Works even when pop-ups or third-party cookies are blocked
+   
+   #### Share Count Tracking
+   - Backend API endpoint to track share events
+   - Redis-based counter with periodic database persistence
+   - Fraud detection to prevent artificial inflation of counts
+   - Visual badges for links with high share counts (10+, 50+, 100+)
+   
+   #### Social Proof Elements
+   - Share count badges with tiered visual indicators
+   - "Trending" section highlighting most-shared links of the week
+   - User testimonials or comments about shared links
+   - Analytics dashboard for admins showing sharing patterns
+   
+   #### Implementation Approach
+   - Client-side share event tracking with debounced API calls
+   - Server-side count aggregation with rate limiting
+   - Cached count display with optimistic UI updates
+   - A/B testing different share button designs and placements
 
 ### Technical Improvements
 
@@ -388,6 +468,265 @@ npm run start
 14. **Multi-language Support**: Translate link descriptions and categories into multiple languages.
 
 15. **Voice Search**: Implement voice commands for hands-free navigation of the Nexus.
+
+## ZAO Nexus × Hats Protocol Integration
+
+A next-generation "Trusted Link Aggregator" playbook that integrates Hats Protocol at every layer of Nexus. Hats Protocol serves as a programmable reputation OS where every role, permission, or kudos gets minted as an on-chain "Hat," visible at hats.thezao.com and automatically reflected inside Nexus.
+
+### 1. Hats Foundation Layer
+
+- **Hat Registry UI (hats.thezao.com)**
+  - Fork the Hats Protocol dashboard; pre-load "Curator," "Moderator," "Builder," "Partner DAO," "Service Provider," etc.
+  - Anyone can apply for a Hat or be nominated by an existing Hat-holder
+  - Gives every contributor a cryptographically provable badge wired to smart-contract permissions
+
+- **Hat-gated Feature Flags**
+  - Nexus checks the user's Hats on page-load:
+    - Curator Hat ⇒ can submit links
+    - Moderator Hat ⇒ can approve/remove
+    - Builder Hat ⇒ can run CLI/import tools
+    - Partner Hat ⇒ gets a "Trusted Source" label
+  - Permissions live on-chain—not in a hidden database—so any dApp can reuse them
+
+### 2. Verifiable Trust Layer
+
+- **EAS-attested Links + Hat Signature**
+  - When a Curator submits a link, the attestation includes their Hat ID
+  - Nexus badge = ✅ Verified by Curator #123
+  - Creates an auditable trail of who vouched for what
+
+- **Hat Slashing / Suspension Hooks**
+  - If a Moderator removes a Curator's malicious link, the Curator Hat can be auto-suspended until DAO review
+  - Keeps quality high without centralized gatekeepers
+
+### 3. Farcaster Mini-App Surface
+
+- **"Hat-Filtered" Nexus Frame**
+  - Mini-App shows only links attested by wallets holding Curator or higher Hats
+  - Drop-downs let users toggle by Hat type
+  - Makes it obvious which resources are DAO-vetted vs community-submitted
+
+- **Hat-earned Cast Flair**
+  - When the Mini-App posts an auto-receipt cast, it adds the Curator's Hat emoji (🎩) + ID
+  - Social proof travels with the share
+
+### 4. Storage & Portability
+
+- **Hat-indexed Subgraph**
+  - The Graph indexes LinkAttested events and WearHat events
+  - External devs can fetch links by Hat tier
+  - Any hackathon team can instantly build "Top Partner DAO Tools," etc.
+
+### 5. Community-Driven Curation
+
+- **Quadratic Votes Weighted by Hat Seniority**
+  - Votes = √(tokens) × HatLevel (e.g., Moderator = 1.5×)
+  - Balances stake-weighting with earned reputation
+
+- **DAO "Dispute & Remove" with Hat Quorum**
+  - A challenge needs 3+ Moderators or 1 Council Hat to pass
+  - Slashes the challenger's bond if frivolous
+  - Formalizes governance without manual Discord drama
+
+### 6. Builder-First UX
+
+- **Hat-aware CLI (npx zao-nexus)**
+  - CLI auto-detects your Hats; shows commands you're allowed to run
+  - Devs never hit a 403 surprise
+
+- **Hat-sync GitHub Action**
+  - A repo's links.yaml gets pushed nightly
+  - Action signs with the repo owner's Hat-bound key → attestation
+  - Allows teams to keep working in Git while still feeding Nexus
+
+### 7. Intelligence Layer
+
+- **Hat-based Recommendations**
+  - "Builders who wear the Toolsmith Hat also bookmarked…"
+  - Surfaces context-relevant links instead of generic popularity
+
+### 8. Future Experiments
+
+- **Hat Crafting & Leveling**
+  - Curator submits 10 approved links → upgrades to Senior Curator Hat (extra weight, new UI palette)
+  - Gamifies long-term contribution
+
+- **Cross-DAO Hat Federation**
+  - Accept Nouns' "Prop House Judge Hat" or Optimism's "Badge of Merit" as equivalent to Curator Hat via Hats' cross-domain attestation feature
+  - Extends Nexus trust graph beyond ZAO
+
+- **Hat ↔ TBA Profile Fusion**
+  - Issue an ERC-6551 TBA when a Hat is minted
+  - The TBA wallet owns the Hat and the link list NFT
+  - Each project's profile becomes a composable on-chain entity that other apps can permission against
+
+## Implementation Roadmap & Prioritization
+
+This section organizes all proposed features by implementation difficulty and potential impact to help prioritize development efforts.
+
+### Quick Wins (High Impact, Low Difficulty)
+
+1. **Copy-to-Clipboard Fallback**
+   - Estimated effort: 1-2 days
+   - Impact: Ensures shareability across all devices/browsers
+   - Key components: Clipboard API implementation, visual feedback
+
+2. **Share Count Badge**
+   - Estimated effort: 2-3 days
+   - Impact: Adds social proof to increase click-through rates
+   - Key components: Simple counter API, visual badges
+
+3. **Link Preview on Hover**
+   - Estimated effort: 2-3 days
+   - Impact: Improves user experience and reduces unnecessary clicks
+   - Key components: Preview card component, image caching
+
+4. **Sorting Options**
+   - Estimated effort: 1-2 days
+   - Impact: Gives users more control over content discovery
+   - Key components: Sort controls, modified list rendering
+
+5. **Recently Visited Links Section**
+   - Estimated effort: 1 day
+   - Impact: Improves navigation and user retention
+   - Key components: Local storage history, small UI section
+
+### Strategic Priorities (High Impact, Medium Difficulty)
+
+1. **Enhanced Sharing Capabilities**
+   - Estimated effort: 1-2 weeks
+   - Impact: Significantly increases content distribution
+   - Key components: Web Share API, platform-specific integrations, QR code generation
+
+2. **Better Tag System**
+   - Estimated effort: 1-2 weeks
+   - Impact: Improves content discovery and organization
+   - Key components: Multi-tag filtering, tag visualization improvements
+
+3. **Featured Links Section**
+   - Estimated effort: 3-5 days
+   - Impact: Highlights important content and improves navigation
+   - Key components: Admin controls, featured section UI
+
+4. **Link Health Monitoring**
+   - Estimated effort: 1 week
+   - Impact: Maintains quality and reliability of the directory
+   - Key components: Background link checker, reporting system
+
+5. **Hat-gated Feature Flags**
+   - Estimated effort: 1-2 weeks
+   - Impact: Foundation for permission system without major infrastructure changes
+   - Key components: Wallet connection, basic Hat checking
+
+### Major Initiatives (High Impact, High Difficulty)
+
+1. **Hat Registry UI Integration**
+   - Estimated effort: 3-4 weeks
+   - Impact: Establishes decentralized governance foundation
+   - Key components: Forked Hats Protocol dashboard, custom UI, smart contract integration
+
+2. **EAS-attested Links + Hat Signature**
+   - Estimated effort: 3-4 weeks
+   - Impact: Creates verifiable trust layer for all content
+   - Key components: EAS integration, attestation flow, verification UI
+
+3. **Farcaster Mini-App Surface**
+   - Estimated effort: 2-3 weeks
+   - Impact: Extends reach to social platforms
+   - Key components: Frames integration, Hat-filtered views
+
+4. **Hat-indexed Subgraph**
+   - Estimated effort: 2-3 weeks
+   - Impact: Makes data accessible to developer ecosystem
+   - Key components: The Graph integration, event indexing
+
+5. **Community-Driven Curation**
+   - Estimated effort: 4-6 weeks
+   - Impact: Enables scalable, decentralized content moderation
+   - Key components: Voting mechanisms, dispute resolution, reputation weighting
+
+### Future Explorations (Variable Impact, High Difficulty)
+
+1. **Hat Crafting & Leveling**
+   - Estimated effort: 4-6 weeks
+   - Impact: Gamifies contribution and builds community
+   - Key components: Progression system, UI enhancements, smart contract logic
+
+2. **Cross-DAO Hat Federation**
+   - Estimated effort: 6-8 weeks
+   - Impact: Extends trust graph beyond ZAO ecosystem
+   - Key components: Cross-domain attestation, federation protocols
+
+3. **Hat ↔ TBA Profile Fusion**
+   - Estimated effort: 8-10 weeks
+   - Impact: Creates composable on-chain entities
+   - Key components: ERC-6551 integration, complex smart contract interactions
+
+4. **AI-Powered Link Recommendations**
+   - Estimated effort: 6-8 weeks
+   - Impact: Personalizes content discovery
+   - Key components: ML model training, recommendation engine, data pipeline
+
+5. **Decentralized Storage Integration**
+   - Estimated effort: 4-6 weeks
+   - Impact: Ensures censorship resistance
+   - Key components: IPFS/Arweave integration, content addressing
+
+## Implementation Roadmap
+
+### ☑️ Phase 0.5 – Observability Foundation (add **before** anything else)  
+1. **Event Schema**  
+   - Track: `link_add`, `vote_cast`, `share_click`, `preview_hover`, `hat_minted`, `hat_slash`.  
+   - Fields: `txHash?`, `wallet`, `hatId?`, `linkId?`, `timestamp`, `meta` (JSON).  
+2. **Logging Hook**  
+   - Emit events client-side → `/api/telemetry` (POST).  
+   - Serverless function streams to **Supabase** or **Tinybird** table.  
+3. **Dashboard Stub**  
+   - Spin up a lightweight **Grafana** panel or **Dune** query showing daily counts per event.  
+   - Expose at `/admin/analytics` (basic auth).
+
+### 🚀 Phase 1 – Quick Wins + Hat Readiness (Weeks 1-4)  
+- **Clipboard fallback**, **share badges**, **sorting**, **recently-visited**, **hover preview**.  
+- **Hat-gated Feature Flags**  
+  - Read-only check: wallet → `HatsProtocol.getHats(address)` → boolean flags.  
+  - Gate UI buttons (`AddLink`, `ModerateLink`) based on Hat status.  
+- **Link-Health Cron**  
+  - Daily `GET` on all URLs; mark `dead=true` if 3 consecutive 404/timeout.  
+  - Surface `dead` flag in UI (strikethrough + "Report issue" link).
+
+### 🔄 Phase 2 – Core Sharing & Taxonomy (Weeks 5-12)  
+- Complete **Enhanced Sharing** suite (Web Share API, QR, `zao.link` shortener).  
+- **Improved Tag System** (multi-select filter, tag chips, `/tags/:tag` pages).  
+- **EAS-attested Links v0**  
+  1. Curator Hat can mint attestation (`schemaId = LinkSchemaV1`).  
+  2. UI shows ✅ "Attested" badge when `EAS.getAttestation(linkId)` returns truthy.
+
+### ⚙️ Phase 3 – On-chain Governance & Social Surface (Weeks 13-24)  
+- **Hat Registry UI**  
+  - Mint / transfer / suspend flows via Hats Protocol SDK.  
+- **Quadratic Voting + Dispute Flow**  
+  - Contract: `LinkVotes.sol`, `DisputeResolver.sol`.  
+  - Front-end widgets for up-vote, bond challenge, moderator quorum.  
+- **Subgraph + Farcaster Frame**  
+  - Deploy Graph Node indexing `LinkAttested`, `VoteCast`, `WearHat`.  
+  - Mini-app (`/frames/top-links`) pulls from subgraph & filters by Hat tiers.
+
+### 🌐 Phase 4 – Ecosystem & Advanced Features (Week 25+)  
+- **Cross-DAO Hat Federation**, **TBA profile fusion**, **AI recommendations**, **IPFS/Arweave snapshots**, etc.  
+- Only begin once analytics show:  
+  - ≥ 100 Curator Hats minted  
+  - Average weekly active voters ≥ 50  
+  - Link-health "dead" ratio < 2 %
+
+---
+
+### ✅ Definition of Done (per phase)  
+1. **All unit + integration tests pass.**  
+2. **Telemetry dashboards show expected event flow.**  
+3. **Manual QA checklist in `/docs/QA_PHASE_X.md` is signed off.**  
+4. **Changelog updated + version tag pushed.**
+
+> *If any step is blocked, open a GitHub Issue with label `roadmap-blocker` and assign @bettercallzaal for triage.*
 
 ## License
 

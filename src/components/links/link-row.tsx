@@ -1,43 +1,50 @@
 "use client";
 
 import React from "react";
-import { Link } from "@/types/links";
 import { ExternalLink, Copy, ChevronRight } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 interface LinkRowProps {
-  link: Link & { category?: string; subcategory?: string; tags?: string[]; isNew?: boolean };
+  title: string;
+  description: string;
+  url: string;
+  category?: string;
+  subcategory?: string;
+  tags?: string[];
+  isNew?: boolean;
   expanded?: boolean;
   isExpanded?: boolean;
   onToggle?: () => void;
   onToggleExpand?: () => void;
-  tags?: string[];
-  isNew?: boolean;
   className?: string;
+  children?: React.ReactNode;
 }
 
 export function LinkRow({ 
-  link, 
+  title,
+  description,
+  url,
+  category,
+  subcategory,
+  tags,
+  isNew,
   expanded = false, 
   isExpanded = false, 
   onToggle, 
   onToggleExpand,
-  tags: propTags,
-  isNew: propIsNew,
-  className 
+  className,
+  children
 }: LinkRowProps) {
   // Use props or link properties
   const finalExpanded = expanded || isExpanded;
   const finalOnToggle = onToggle || onToggleExpand;
-  const finalTags = propTags || link.tags;
-  const finalIsNew = propIsNew !== undefined ? propIsNew : link.isNew;
   const [copied, setCopied] = React.useState(false);
 
   const copyToClipboard = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    navigator.clipboard.writeText(link.url);
+    navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -56,8 +63,8 @@ export function LinkRow({
                 finalExpanded && "rotate-90"
               )} 
             />
-            <span className="font-medium">{link.title}</span>
-            {finalIsNew && (
+            <span className="font-medium">{title}</span>
+            {isNew && (
               <span className="rounded-full bg-accent/20 px-2 py-0.5 text-xs text-accent">
                 New
               </span>
@@ -83,7 +90,7 @@ export function LinkRow({
             <Tooltip>
               <TooltipTrigger asChild>
                 <a
-                  href={link.url}
+                  href={url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded p-1 text-muted-foreground transition-colors hover:bg-accent/10 hover:text-accent"
@@ -101,12 +108,12 @@ export function LinkRow({
         {finalExpanded && (
           <div className="animate-slide-in px-11 pb-3">
             <p className="text-sm text-zinc-400">
-              {link.description}
+              {description}
             </p>
             
-            {finalTags && finalTags.length > 0 && (
+            {tags && tags.length > 0 && (
               <div className="mt-2 flex flex-wrap gap-1">
-                {finalTags.map((tag) => (
+                {tags.map((tag) => (
                   <span
                     key={tag}
                     className="rounded bg-accent/20 px-2 py-0.5 text-xs text-accent"
@@ -116,6 +123,8 @@ export function LinkRow({
                 ))}
               </div>
             )}
+            
+            {children}
           </div>
         )}
       </div>

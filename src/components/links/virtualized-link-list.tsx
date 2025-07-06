@@ -304,8 +304,12 @@ export function VirtualizedLinkList({ data, filterTags = [] }: VirtualizedLinkLi
     return (
       <div style={style} className="p-2">
         <LinkCard 
-          link={link} 
-          tags={link.tags}
+          title={link.title}
+          description={link.description}
+          url={link.url}
+          category={link.category}
+          subcategory={link.subcategory}
+          tags={link.tags || []}
           isNew={link.isNew}
           onClick={() => link.tags?.forEach(tag => handleTagSelect(tag))}
         />
@@ -320,11 +324,15 @@ export function VirtualizedLinkList({ data, filterTags = [] }: VirtualizedLinkLi
     return (
       <div style={style} className="p-2">
         <LinkRow 
-          link={link} 
-          isExpanded={isExpanded}
-          onToggleExpand={() => link.id ? toggleItemExpansion(link.id) : undefined}
+          title={link.title}
+          description={link.description}
+          url={link.url}
+          category={link.category}
+          subcategory={link.subcategory}
           tags={link.tags || []}
           isNew={link.isNew || false}
+          isExpanded={isExpanded}
+          onToggleExpand={() => link.id ? toggleItemExpansion(link.id) : undefined}
         />
       </div>
     );

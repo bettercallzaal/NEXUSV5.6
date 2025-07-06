@@ -737,7 +737,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
         ) : (
           <div 
             ref={containerRef}
-            className="w-full rounded-lg border bg-card links-container" 
+            className="w-full rounded-lg border bg-card links-container h-[70vh]" 
             tabIndex={-1} // Make the container focusable
             id="links-container"
             role="region"
@@ -746,10 +746,10 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
             onBlur={handleContainerBlur}
           >
             <AutoSizer>
-              {({ height, width }) => (
+              {({ width }) => (
                 <List
                   ref={listRef}
-                  height={height}
+                  height={700} // Fixed height for the list (70vh equivalent)
                   width={width}
                   itemCount={filteredLinks.length}
                   itemSize={

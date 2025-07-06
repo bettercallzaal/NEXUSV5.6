@@ -13,7 +13,14 @@ interface SheetProps {
 }
 
 const Sheet = ({ open, onOpenChange, children }: SheetProps) => {
-  return <>{children}</>
+  // Pass the open state to children that need it
+  const childrenWithProps = React.Children.map(children, child => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, { open, onOpenChange } as any);
+    }
+    return child;
+  });
+  return <>{childrenWithProps}</>
 }
 
 interface SheetTriggerProps {
@@ -22,13 +29,18 @@ interface SheetTriggerProps {
   onClick?: () => void
 }
 
-const SheetTrigger = ({ children, asChild, onClick }: SheetTriggerProps) => {
+const SheetTrigger = ({ children, asChild, onClick, onOpenChange }: SheetTriggerProps & { onOpenChange?: (open: boolean) => void }) => {
+  const handleClick = React.useCallback(() => {
+    onClick?.();
+    onOpenChange?.(true);
+  }, [onClick, onOpenChange]);
+
   if (asChild) {
     return React.cloneElement(children as React.ReactElement, {
-      onClick,
+      onClick: handleClick,
     })
   }
-  return <div onClick={onClick}>{children}</div>
+  return <div onClick={handleClick}>{children}</div>
 }
 
 interface SheetCloseProps {
@@ -97,27 +109,37 @@ interface SheetContentProps
   onClose?: () => void
 }
 
-const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
-  ({ side = "right", className, children, onClose, ...props }, ref) => (
-    <SheetPortal>
-      <SheetOverlay onClick={onClose} />
-      <div
-        ref={ref}
-        className={cn(sheetVariants({ side }), className)}
-        data-state="open"
-        {...props}
-      >
-        {children}
-        <SheetClose
-          className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
-          onClick={onClose}
+const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps & { open?: boolean, onOpenChange?: (open: boolean) => void }>(
+  ({ side = "right", className, children, onClose, open = false, onOpenChange, ...props }, ref) => {
+    const handleClose = React.useCallback(() => {
+      onClose?.();
+      onOpenChange?.(false);
+    }, [onClose, onOpenChange]);
+
+    // Don't render anything if not open
+    if (!open) return null;
+    
+    return (
+      <SheetPortal>
+        <SheetOverlay onClick={handleClose} />
+        <div
+          ref={ref}
+          className={cn(sheetVariants({ side }), className)}
+          data-state={open ? "open" : "closed"}
+          {...props}
         >
-          <X className="h-4 w-4" />
-          <span className="sr-only">Close</span>
-        </SheetClose>
-      </div>
-    </SheetPortal>
-  )
+          {children}
+          <SheetClose
+            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary"
+            onClick={handleClose}
+          >
+            <X className="h-4 w-4" />
+            <span className="sr-only">Close</span>
+          </SheetClose>
+        </div>
+      </SheetPortal>
+    );
+  }
 )
 SheetContent.displayName = "SheetContent"
 

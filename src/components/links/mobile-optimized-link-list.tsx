@@ -598,7 +598,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
     <TooltipProvider>
       <div className="w-full">
         {/* Sticky search and filter bar */}
-        <div className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm py-2 border-b">
+        <div className="sticky top-16 z-10 bg-background/95 backdrop-blur-sm py-2 border-b">
           <div className="flex flex-col gap-3">
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
               <EnhancedSearch 

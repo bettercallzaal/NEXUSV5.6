@@ -1,17 +1,40 @@
 # ZAO Nexus V5
 
-A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000+ links with wallet connection, token gating, advanced search functionality, and an AI assistant.
+A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000+ links with wallet connection, token gating, advanced search functionality, AI-powered tagging, and an AI assistant.
 
 ## Latest Updates
 
-**[July 5, 2025]** Enhanced the mobile-optimized link list component with improved view modes and spacing:
+**[July 6, 2025]** Implemented advanced filtering and AI-powered tagging system:
+
+- Added comprehensive `AdvancedFilters` component with date range, popularity, read status, and domain filtering
+- Created responsive `TagManager` component with colored tag badges and searchable dialog
+- Implemented AI-powered tag generation using OpenAI GPT with three-tiered fallback system:
+  - Primary: OpenAI GPT-3.5 Turbo for intelligent tag generation
+  - Secondary: REST API fallback for tag suggestions
+  - Tertiary: Local keyword extraction for offline capability
+- Built keyword extraction utility with stopword filtering and n-gram analysis
+- Created new link processor with URL validation, metadata extraction, and favicon generation
+- Implemented intelligent category assignment based on tag content and URL patterns
+- Developed responsive filter sidebar with mobile slide-in animation and desktop persistent mode
+- Enhanced link browser with integrated filtering, tagging, and mobile-optimized display
+- Added interactive demo page to showcase all new features with sample data
+- Fixed TypeScript lint errors and improved code organization
+- Removed references to version 5.3 from Git to prevent accidental pushes
+
+**[July 5, 2025]** Enhanced the mobile-optimized link list component with improved view modes and scrolling:
 
 - Added consistent scrollbar styling across the entire application for a unified user experience
-- Mobile-optimized link list component now uses the global scrollbar styling
-- Mobile-optimized link list component now defaults to compact view for better mobile usability
-- Fixed spacing and layout consistency in all view modes (grid, list, compact)
+- Improved compact view with descriptions and better spacing for all view modes
+- Set compact view as default for better mobile usability
+- Fixed mobile scrolling with improved touch support and momentum scrolling
+- Implemented best practices for nested scrolling with overscroll-behavior
+- Created custom `useScrollLock` hook to prevent body scrolling when modals are open
+- Enhanced nested scrolling UX with proper touch event handling
 - Improved grid item height (280px mobile, 240px desktop) and added padding
 - Enhanced list view with borders, rounded corners, padding, and hover effects
+- Made wallet connection and token balances section more compact
+- Fixed filter sheet auto-open issue and improved UI responsiveness
+- Fixed spacing and layout consistency in all view modes (grid, list, compact)
 - Optimized compact view with efficient spacing and clear visual hierarchy
 - Fixed TypeScript issues and improved component structure
 
@@ -28,10 +51,13 @@ A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000
 - **Multi-Chain Wallet Connection**: Connect with MetaMask or other Ethereum wallets across different networks
 - **Cross-Chain Token Gating**: Access requires holding at least 0.1 $ZAO (on Optimism) or $LOANZ (on Base) token
 - **Link Discovery**: Browse through 5000+ links organized by categories and subcategories
+- **Advanced Filtering**: Filter links by date range, popularity, read status, tags, and domains
+- **AI-Powered Tagging**: Automatically generate relevant tags for new links using AI analysis
 - **Search Functionality**: Fast, fuzzy search across all links, categories, and descriptions
+- **Tag Management**: Add, remove, and filter by colored tags with searchable interface
 - **Dark Mode**: Toggle between light and dark themes
 - **AI Assistant**: Chat widget for user assistance (placeholder implementation)
-- **Responsive Design**: Works on mobile, tablet, and desktop
+- **Responsive Design**: Works on mobile, tablet, and desktop with optimized UI for each form factor
 
 ## Tech Stack
 
@@ -44,6 +70,9 @@ A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000
 - **Search**: Fuse.js for fuzzy searching
 - **Notifications**: Sonner for toast notifications
 - **Virtualization**: react-window and react-virtualized-auto-sizer for efficient list rendering
+- **AI Integration**: OpenAI GPT for tag generation with fallback mechanisms
+- **HTTP Client**: Axios for fetching webpage content
+- **HTML Parsing**: Cheerio for extracting metadata from webpages
 
 ## Getting Started
 
@@ -80,12 +109,19 @@ Below is a brief description of key files and directories in the project:
 - `src/components/links/enhanced-search.tsx` - Advanced search component with suggestions
 - `src/components/links/filter-sheet.tsx` - Mobile-optimized filter panel
 - `src/components/links/category-scroll.tsx` - Horizontal scrollable category navigation
+- `src/components/links/link-filter-sidebar.tsx` - Responsive sidebar for advanced filtering
+- `src/components/links/enhanced-link-browser.tsx` - Integrated link browser with filtering and tagging
+- `src/components/links/add-link-dialog.tsx` - Dialog for adding new links with AI tag generation
 
 #### Wallet Components
 - `src/components/wallet-connector.tsx` - Wallet connection component
 - `src/components/wallet/connect-button.tsx` - Button for connecting wallet
 - `src/components/token-checker.tsx` - Token balance verification component
 - `src/components/token-balance-display.tsx` - Display for token balances
+
+#### Filtering and Tagging Components
+- `src/components/filters/advanced-filters.tsx` - Advanced filtering options for links
+- `src/components/tags/tag-manager.tsx` - Tag management with colored badges and search
 
 #### UI Components
 - `src/components/ui/button.tsx` - Reusable button component
@@ -96,8 +132,17 @@ Below is a brief description of key files and directories in the project:
 ### Hooks and Utilities
 
 - `src/hooks/use-wallet.ts` - Hook for wallet connection and token balance checking
+- `src/hooks/use-media-query.ts` - Hook for responsive design and media queries
+- `src/hooks/useScrollLock.ts` - Hook for managing scroll behavior on mobile devices
 - `src/lib/token-balance-checker.ts` - Utility for checking token balances across chains
 - `src/lib/utils.ts` - General utility functions
+- `src/lib/auto-tagger.ts` - Service for AI-powered tag generation
+
+### Scripts
+
+- `src/scripts/ai-tag-generator.ts` - AI-powered tag generation using OpenAI and fallbacks
+- `src/scripts/keyword-extractor.ts` - Utility for extracting keywords from text content
+- `src/scripts/new-link-processor.ts` - Process new links with metadata extraction and tag generation
 
 ### Data and Types
 
@@ -335,8 +380,31 @@ NEXT_PUBLIC_LOANZ_TOKEN_ADDRESS=0x03315307b202bf9c55ebebb8e9341d30411a0bc4
 NEXT_PUBLIC_OPTIMISM_RPC=https://opt-mainnet.g.alchemy.com/v2/YOUR_API_KEY
 NEXT_PUBLIC_BASE_RPC=https://base-mainnet.g.alchemy.com/v2/YOUR_API_KEY
 
-# Optional: OpenAI API key for AI assistant (if implemented)
-# OPENAI_API_KEY=your_api_key_here
+# AI Tag Generation
+OPENAI_API_KEY=your_openai_api_key  # Required for AI-powered tag generation
+```
+
+### AI Tag Generation Configuration
+
+The AI-powered tag generation feature uses OpenAI's GPT model by default but includes fallback mechanisms:
+
+1. **OpenAI GPT**: Requires `OPENAI_API_KEY` in your environment variables
+2. **REST API Fallback**: If OpenAI fails or no API key is provided
+3. **Local Keyword Extraction**: Works offline with no external dependencies
+
+To customize the AI tag generation behavior, you can modify the settings in `src/lib/auto-tagger.ts`:
+
+```typescript
+// Example configuration options
+const AI_TAG_CONFIG = {
+  maxTags: 5,           // Maximum number of tags to generate
+  minConfidence: 0.7,   // Minimum confidence score for tag inclusion
+  useOpenAI: true,      // Whether to use OpenAI as primary tagger
+  useFallbackAPI: true, // Whether to use REST API as fallback
+  colorPalette: [       // Colors for tag badges
+    "blue", "green", "red", "yellow", "purple", "pink", "orange"
+  ]
+};
 ```
 
 ## Building for Production
@@ -682,6 +750,42 @@ This section organizes all proposed features by implementation difficulty and po
    - Estimated effort: 4-6 weeks
    - Impact: Ensures censorship resistance
    - Key components: IPFS/Arweave integration, content addressing
+
+## Advanced Filtering and AI Tagging
+
+NEXUS V5 includes powerful filtering and AI-powered tagging capabilities to help users organize and discover links more effectively.
+
+### Advanced Filtering
+
+The `AdvancedFilters` component provides comprehensive filtering options:
+
+- **Date Range**: Filter links by when they were added with calendar popovers and quick-select buttons
+- **Popularity**: Filter by popularity score using a slider control
+- **Read Status**: Filter by read, unread, or all links
+- **Attachments**: Toggle to show only links with attachments
+- **Tags**: Select from common tags to filter the link collection
+- **Domains**: Filter by specific domains with add/remove functionality
+
+The filters can be accessed through the sidebar on desktop or via a slide-in panel on mobile devices.
+
+### AI-Powered Tagging
+
+The AI tagging system automatically generates relevant tags for new links:
+
+1. **Content Analysis**: When a new link is added, the system fetches and analyzes the webpage content
+2. **Metadata Extraction**: Title, description, and main content are extracted
+3. **AI Processing**: The content is processed using OpenAI's GPT model to suggest relevant tags
+4. **Fallback Mechanisms**: If AI processing fails, the system falls back to keyword extraction
+5. **Tag Management**: Users can add, remove, and filter by tags through the intuitive UI
+
+### Using the Demo
+
+To try out the advanced filtering and AI tagging features:
+
+1. Navigate to `/demo/enhanced-filtering` in the application
+2. Click "Add Link" to add a new link with AI-generated tags
+3. Use the filter sidebar to explore different filtering options
+4. Try selecting tags to filter the link collection
 
 ## Implementation Roadmap
 

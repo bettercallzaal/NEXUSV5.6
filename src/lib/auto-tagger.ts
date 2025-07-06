@@ -1,8 +1,24 @@
 import { Link } from "@/types/links";
+import { Tag } from "@/components/tags/tag-manager";
+import { analyzeAndTagUrl, LinkContent } from "@/scripts/ai-tag-generator";
+
+// Define a color palette for auto-generated tags
+const TAG_COLORS = [
+  '#3B82F6', // blue
+  '#10B981', // green
+  '#F59E0B', // yellow
+  '#EF4444', // red
+  '#8B5CF6', // purple
+  '#EC4899', // pink
+  '#06B6D4', // cyan
+  '#F97316', // orange
+  '#6366F1', // indigo
+  '#14B8A6', // teal
+];
 
 /**
  * Auto-tagger service that uses AI to generate tags for links
- * This implementation uses OpenAI's API, but could be replaced with any AI service
+ * Enhanced with advanced AI capabilities and fallback mechanisms
  */
 export async function generateTagsForLink(link: Partial<Link>): Promise<string[]> {
   try {
@@ -10,7 +26,18 @@ export async function generateTagsForLink(link: Partial<Link>): Promise<string[]
     if (!link.title && !link.description && !link.url) {
       return [];
     }
+    
+    // If we have a URL, use our advanced AI tag generator
+    if (link.url) {
+      try {
+        const { tags } = await analyzeAndTagUrl(link.url);
+        return tags.map(tag => tag.name);
+      } catch (aiError) {
+        console.error("Advanced AI tagging failed, falling back to API:", aiError);
+      }
+    }
 
+    // Fallback to the API endpoint
     const response = await fetch("/api/auto-tag", {
       method: "POST",
       headers: {
@@ -27,14 +54,14 @@ export async function generateTagsForLink(link: Partial<Link>): Promise<string[]
 
     if (!response.ok) {
       console.error("Error generating tags:", await response.text());
-      return [];
+      return extractKeywordsFromText(link.title + " " + link.description);
     }
 
     const data = await response.json();
     return data.tags;
   } catch (error) {
     console.error("Error generating tags:", error);
-    return [];
+    return extractKeywordsFromText(link.title + " " + link.description);
   }
 }
 

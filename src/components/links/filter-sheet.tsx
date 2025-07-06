@@ -61,7 +61,7 @@ export function FilterSheet({
   newOnly = false,
   officialOnly = false
 }: FilterSheetProps) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); // Ensure this is initialized to false
   
   // Calculate active filters count
   const activeFiltersCount = 

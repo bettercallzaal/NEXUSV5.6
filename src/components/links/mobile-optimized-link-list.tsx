@@ -533,23 +533,26 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
     return (
       <div 
         key={link.id || link.url} 
-        className="flex items-center justify-between py-1 px-2 hover:bg-accent/50 rounded-sm cursor-pointer"
+        className="flex items-center justify-between py-1 px-2 hover:bg-accent/50 rounded-sm cursor-pointer border-b border-border/30 last:border-b-0"
         onClick={() => handleLinkClick(link)}
       >
         <div className="flex-1 min-w-0 mr-2">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <span className="text-sm font-medium truncate">{link.title}</span>
             {link.isNew && (
-              <span className="bg-primary/10 text-primary text-[10px] px-1 py-0.5 rounded-sm">NEW</span>
+              <span className="bg-primary/10 text-primary text-[10px] px-1 py-0.5 rounded-sm flex-shrink-0">NEW</span>
             )}
           </div>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 flex-shrink-0">
           <Button
             variant="ghost"
             size="sm"
             className="h-6 w-6 p-0"
-            onClick={(e) => handleCopyLink(e, link)}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleCopyLink(e, link);
+            }}
           >
             <Copy className="h-3 w-3" />
           </Button>
@@ -557,7 +560,10 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
             variant="ghost"
             size="sm"
             className="h-6 w-6 p-0"
-            onClick={(e) => handleShareLink(e, link)}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleShareLink(e, link);
+            }}
           >
             <Share className="h-3 w-3" />
           </Button>
@@ -739,7 +745,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                       ? (width < 640 ? 220 : 180) 
                       : viewMode === "list" 
                         ? (width < 640 ? 100 : 80)
-                        : 40 // compact view height
+                        : 38 // compact view height - slightly smaller for better density
                   }
                   overscanCount={overscanCount}
                   className="scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent"
@@ -747,7 +753,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   {({ index, style }) => {
                     const link = filteredLinks[index];
                     return (
-                      <div style={style}>
+                      <div style={style} className={viewMode === "compact" ? "px-1" : ""}>
                         {viewMode === "grid" 
                           ? renderGridItem({ index, style })
                           : viewMode === "list"

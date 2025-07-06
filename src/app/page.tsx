@@ -183,8 +183,8 @@ export default function Home() {
       </div>
       
       {/* Links section - integrated directly into the page flow */}
-      <div className="mt-4 sm:mt-8">
-        <Card className="w-full">
+      <div className="mt-4 sm:mt-8 pb-16">
+        <Card className="w-full min-h-[80vh]">
           <CardHeader className="p-4 sm:p-6">
             <CardTitle className="text-lg sm:text-xl">ZAO Ecosystem Links</CardTitle>
             <CardDescription>
@@ -198,7 +198,7 @@ export default function Home() {
                 <span className="ml-2">Loading links...</span>
               </div>
             ) : linksData ? (
-              <div className="links-container-wrapper" ref={linksContainerRef}>
+              <div className="links-container-wrapper h-full" ref={linksContainerRef}>
                 <MobileOptimizedLinkList data={linksData} />
               </div>
             ) : (

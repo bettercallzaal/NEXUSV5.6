@@ -10,9 +10,10 @@
 /* Force styling for link container */
 .links-container-wrapper .links-container {
   border: 2px solid var(--accent) !important;
-  margin-bottom: 2rem !important;
-  padding-bottom: 2rem !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 4rem !important;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  min-height: 70vh !important;
 }
 
 /* Ensure content doesn't create horizontal scrollbars and has proper spacing */

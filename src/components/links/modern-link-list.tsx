@@ -409,7 +409,7 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
       </SheetTrigger>
       <SheetContent 
         side="bottom" 
-        className="h-[70vh] rounded-t-xl overflow-hidden flex flex-col mt-auto"
+        className="max-h-[60vh] rounded-t-xl overflow-hidden flex flex-col fixed bottom-0 left-0 right-0 w-full"
       >
         <SheetHeader className="text-left pb-4 border-b">
           <div className="flex items-center justify-between">

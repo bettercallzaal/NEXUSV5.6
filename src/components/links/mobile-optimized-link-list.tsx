@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import { FixedSizeList as List } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import Fuse from "fuse.js";
@@ -114,13 +115,18 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
   
   // Refs
   const listRef = useRef<List>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   
   // Telemetry logging
   const logEvent = useLogEvent();
   
+  // Use the scroll lock hook
+  const { registerScrollable } = useScrollLock();
+  
   // Handle scroll events for the virtualized list
   const handleScroll = useCallback(({ scrollOffset, scrollDirection }: { scrollOffset: number; scrollDirection: "forward" | "backward" }) => {
     // This function can be used to track scroll position in the virtualized list if needed
+    // We can add scroll position tracking here if needed in the future
   }, []);
   
   // Handle scroll events for the container
@@ -132,9 +138,19 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
   // Simulate loading state for better UX
   useEffect(() => {
     setIsLoading(true);
-    const timer = setTimeout(() => setIsLoading(false), 500);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
     return () => clearTimeout(timer);
-  }, [searchQuery, selectedCategory, selectedSubcategory, selectedTags, viewMode, sortBy, newOnly, officialOnly]);
+  }, []);
+  
+  // Register the container as a scrollable element
+  useEffect(() => {
+    if (containerRef.current) {
+      const cleanup = registerScrollable(containerRef.current);
+      return cleanup;
+    }
+  }, [registerScrollable]);
   
   // Update items per row based on screen width
   useEffect(() => {
@@ -757,6 +773,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
           </div>
         ) : (
           <div 
+            ref={containerRef}
             className="w-full rounded-lg border bg-card links-container" 
             style={{ height: 'min(70vh, 600px)' }}
             tabIndex={-1} // Make the container focusable

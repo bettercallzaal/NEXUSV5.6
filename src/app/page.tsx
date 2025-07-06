@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
+import { useScrollLock } from "@/hooks/useScrollLock";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { TokenChecker } from "@/components/token-checker";
@@ -46,26 +47,62 @@ export default function Home() {
     setLoanzBalance(loanzBalance);
   };
   
-  // Setup intersection observer for seamless scrolling between page and links container
+  // Use our scroll lock hook
+  const { registerScrollable } = useScrollLock();
+  
+  // Setup improved nested scrolling using both IntersectionObserver and touch event handling
   useEffect(() => {
     if (!linksContainerRef.current) return;
+    
+    // Register the links container as a scrollable element
+    const cleanup = registerScrollable(linksContainerRef.current);
     
     // Create an intersection observer to detect when the links container is in view
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
         if (entry.isIntersecting) {
-          // When the container comes into view, we can prepare it for receiving focus
+          // When the container comes into view, prepare it for receiving focus
           const scrollableElement = entry.target.querySelector('.links-list') as HTMLDivElement;
           if (scrollableElement) {
             scrollableElement.setAttribute('tabindex', '-1');
+            
+            // Add a sentinel element at the bottom of the page to detect when user has scrolled to bottom
+            const sentinel = document.createElement('div');
+            sentinel.id = 'scroll-sentinel';
+            sentinel.style.height = '1px';
+            sentinel.style.width = '100%';
+            sentinel.style.position = 'absolute';
+            sentinel.style.bottom = '0';
+            document.body.appendChild(sentinel);
+            
+            // Create another observer for the sentinel
+            const sentinelObserver = new IntersectionObserver(
+              (sentinelEntries) => {
+                if (sentinelEntries[0].isIntersecting) {
+                  // User has reached bottom of page, focus the scrollable element
+                  scrollableElement.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => scrollableElement.focus(), 100);
+                }
+              },
+              { threshold: 1.0 } // Trigger when fully visible
+            );
+            
+            sentinelObserver.observe(sentinel);
+            
+            // Clean up sentinel observer when component unmounts
+            return () => {
+              sentinelObserver.disconnect();
+              if (sentinel.parentNode) {
+                sentinel.parentNode.removeChild(sentinel);
+              }
+            };
           }
         }
       },
       {
-        // Start observing when the element is 100px away from entering the viewport
         rootMargin: '100px',
-        threshold: 0.1, // Trigger when at least 10% of the element is visible
+        threshold: 0.1,
       }
     );
     
@@ -74,11 +111,12 @@ export default function Home() {
     
     // Clean up
     return () => {
+      cleanup();
       if (linksContainerRef.current) {
         observer.unobserve(linksContainerRef.current);
       }
     };
-  }, [linksContainerRef.current]);
+  }, [linksContainerRef.current, registerScrollable]);
   
   // Load links data
   useEffect(() => {

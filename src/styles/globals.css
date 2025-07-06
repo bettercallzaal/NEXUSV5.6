@@ -115,6 +115,12 @@
 
 /* Mobile-friendly and responsive styles */
 @layer components {
+  /* Scroll lock for modals and overlays */
+  body.scroll-locked {
+    overflow: hidden;
+    touch-action: none;
+  }
+
   /* Fix for the links container to integrate with page scroll */
   .links-container {
     width: 100%;

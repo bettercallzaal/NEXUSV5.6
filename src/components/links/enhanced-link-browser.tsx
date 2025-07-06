@@ -220,7 +220,28 @@ export function EnhancedLinkBrowser({ initialLinks = [], className }: EnhancedLi
                 initialFilters={activeFilters}
               />
             )}
-            <AddLinkDialog data={mockData} onAddLink={handleAddLink} />
+            <AddLinkDialog data={{
+                categories: [
+                  {
+                    name: 'Official',
+                    subcategories: [
+                      {
+                        name: 'Websites',
+                        links: []
+                      }
+                    ]
+                  },
+                  {
+                    name: 'Community',
+                    subcategories: [
+                      {
+                        name: 'Forums',
+                        links: []
+                      }
+                    ]
+                  }
+                ]
+              }} onAddLink={handleAddLink} />
           </div>
         </div>
         

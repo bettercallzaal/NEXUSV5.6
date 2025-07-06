@@ -122,12 +122,15 @@
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
     overflow-y: auto;
+    overscroll-behavior: contain; /* Prevent scroll chaining to parent */
   }
   
   /* Ensure links list has proper mobile touch support */
   .links-list {
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
+    overscroll-behavior: contain; /* Prevent scroll chaining to parent */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
   }
   
   /* Mobile-specific adjustments */

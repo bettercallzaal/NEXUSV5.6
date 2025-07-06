@@ -118,10 +118,15 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
   // Telemetry logging
   const logEvent = useLogEvent();
   
-  // Handle scroll events for mobile touch support
-  const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
-    // This function helps with mobile scrolling by ensuring scroll events are properly handled
-    // We could add additional scroll-related functionality here if needed
+  // Handle scroll events for the virtualized list
+  const handleScroll = useCallback(({ scrollOffset, scrollDirection }: { scrollOffset: number; scrollDirection: "forward" | "backward" }) => {
+    // This function can be used to track scroll position in the virtualized list if needed
+  }, []);
+  
+  // Handle scroll events for the container
+  const handleDivScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
+    // Prevent scroll events from bubbling up to avoid unwanted behavior
+    event.stopPropagation();
   }, []);
   
   // Simulate loading state for better UX
@@ -751,7 +756,12 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
             </Button>
           </div>
         ) : (
-          <div className="w-full rounded-lg border bg-card links-container" style={{ height: 'min(70vh, 600px)', WebkitOverflowScrolling: 'touch' }}>
+          <div 
+            className="w-full rounded-lg border bg-card links-container" 
+            style={{ height: 'min(70vh, 600px)' }}
+            tabIndex={-1} // Make the container focusable
+            id="links-container"
+          >
             <AutoSizer>
               {({ height, width }) => (
                 <List
@@ -768,7 +778,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   }
                   overscanCount={overscanCount}
                   className="links-list"
-                  style={{ WebkitOverflowScrolling: 'touch' }}
+                  onScroll={handleScroll}
                 >
                   {({ index, style }) => {
                     const link = filteredLinks[index];

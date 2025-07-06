@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { TokenChecker } from "@/components/token-checker";
@@ -17,6 +17,9 @@ export default function Home() {
   const [loanzBalance, setLoanzBalance] = useState("0");
   const [linksData, setLinksData] = useState<LinksData | null>(null);
   const [loading, setLoading] = useState(true);
+  
+  // Refs for scroll handling
+  const linksContainerRef = useRef<HTMLDivElement>(null);
 
   // Handle wallet connection
   const handleWalletConnected = (address: string) => {
@@ -42,6 +45,40 @@ export default function Home() {
     setZaoBalance(zaoBalance);
     setLoanzBalance(loanzBalance);
   };
+  
+  // Setup intersection observer for seamless scrolling between page and links container
+  useEffect(() => {
+    if (!linksContainerRef.current) return;
+    
+    // Create an intersection observer to detect when the links container is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          // When the container comes into view, we can prepare it for receiving focus
+          const scrollableElement = entry.target.querySelector('.links-list') as HTMLDivElement;
+          if (scrollableElement) {
+            scrollableElement.setAttribute('tabindex', '-1');
+          }
+        }
+      },
+      {
+        // Start observing when the element is 100px away from entering the viewport
+        rootMargin: '100px',
+        threshold: 0.1, // Trigger when at least 10% of the element is visible
+      }
+    );
+    
+    // Start observing the links container
+    observer.observe(linksContainerRef.current);
+    
+    // Clean up
+    return () => {
+      if (linksContainerRef.current) {
+        observer.unobserve(linksContainerRef.current);
+      }
+    };
+  }, [linksContainerRef.current]);
   
   // Load links data
   useEffect(() => {
@@ -123,7 +160,7 @@ export default function Home() {
                 <span className="ml-2">Loading links...</span>
               </div>
             ) : linksData ? (
-              <div className="links-container">
+              <div className="links-container" ref={linksContainerRef}>
                 <MobileOptimizedLinkList data={linksData} />
               </div>
             ) : (

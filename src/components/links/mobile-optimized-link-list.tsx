@@ -745,7 +745,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
             </Button>
           </div>
         ) : (
-          <div className="w-full rounded-lg border bg-card" style={{ height: 'min(70vh, 600px)' }}>
+          <div className="w-full rounded-lg border bg-card links-container" style={{ height: 'min(70vh, 600px)' }}>
             <AutoSizer>
               {({ height, width }) => (
                 <List
@@ -761,7 +761,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                         : 64 // compact view height with description
                   }
                   overscanCount={overscanCount}
-                  className="scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent"
+                  className="links-list"
                 >
                   {({ index, style }) => {
                     const link = filteredLinks[index];

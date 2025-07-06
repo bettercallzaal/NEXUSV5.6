@@ -6,10 +6,12 @@ A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000
 
 **[July 5, 2025]** Enhanced the mobile-optimized link list component with improved view modes and spacing:
 
-- Set compact view as the default display mode for better mobile experience
-- Improved spacing and layout consistency across grid, list, and compact views
-- Enhanced grid view with increased item height (280px on mobile, 240px on desktop) and better padding
-- Improved list view with proper borders, rounded corners, and hover effects
+- Added consistent scrollbar styling across the entire application for a unified user experience
+- Mobile-optimized link list component now uses the global scrollbar styling
+- Mobile-optimized link list component now defaults to compact view for better mobile usability
+- Fixed spacing and layout consistency in all view modes (grid, list, compact)
+- Improved grid item height (280px mobile, 240px desktop) and added padding
+- Enhanced list view with borders, rounded corners, padding, and hover effects
 - Optimized compact view with efficient spacing and clear visual hierarchy
 - Fixed TypeScript issues and improved component structure
 

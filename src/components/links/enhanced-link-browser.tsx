@@ -6,6 +6,51 @@ import { AddLinkDialog } from '@/components/links/add-link-dialog';
 import { Button } from '@/components/ui/button';
 import { useMediaQuery } from '@/hooks/use-media-query';
 import { cn } from '@/lib/utils';
+import { Data, Link } from '@/types/links';
+
+// Create a mock data structure that matches the Data interface
+const mockData: Data = {
+  categories: [
+    {
+      name: 'Official',
+      subcategories: [
+        {
+          name: 'Websites',
+          links: [
+            {
+              id: '1',
+              title: 'ZAO Official Website',
+              url: 'https://zao.io',
+              description: 'The official website for ZAO ecosystem',
+              category: 'Official',
+              subcategory: 'Websites',
+              tags: ['official', 'website'],
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Community',
+      subcategories: [
+        {
+          name: 'Forums',
+          links: [
+            {
+              id: '2',
+              title: 'ZAO Community Forum',
+              url: 'https://forum.zao.io',
+              description: 'Community discussions and support',
+              category: 'Community',
+              subcategory: 'Forums',
+              tags: ['community', 'forum'],
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
 
 interface EnhancedLinkBrowserProps {
   initialLinks?: any[];
@@ -182,8 +227,20 @@ export function EnhancedLinkBrowser({ initialLinks = [], className }: EnhancedLi
         {/* Link list with applied filters */}
         <div className="flex-1 overflow-hidden">
           <MobileOptimizedLinkList 
-            links={filteredLinks}
-            isLoading={isLoading}
+            data={{
+              categories: [
+                {
+                  name: 'All Links',
+                  subcategories: [
+                    {
+                      name: 'All',
+                      links: filteredLinks
+                    }
+                  ]
+                }
+              ]
+            }}
+            filterTags={activeFilters.tags || []}
           />
         </div>
       </div>

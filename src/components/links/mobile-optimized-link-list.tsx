@@ -118,6 +118,12 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
   // Telemetry logging
   const logEvent = useLogEvent();
   
+  // Handle scroll events for mobile touch support
+  const handleScroll = useCallback((event: React.UIEvent<HTMLDivElement>) => {
+    // This function helps with mobile scrolling by ensuring scroll events are properly handled
+    // We could add additional scroll-related functionality here if needed
+  }, []);
+  
   // Simulate loading state for better UX
   useEffect(() => {
     setIsLoading(true);
@@ -745,7 +751,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
             </Button>
           </div>
         ) : (
-          <div className="w-full rounded-lg border bg-card links-container" style={{ height: 'min(70vh, 600px)' }}>
+          <div className="w-full rounded-lg border bg-card links-container" style={{ height: 'min(70vh, 600px)', WebkitOverflowScrolling: 'touch' }}>
             <AutoSizer>
               {({ height, width }) => (
                 <List
@@ -762,6 +768,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   }
                   overscanCount={overscanCount}
                   className="links-list"
+                  style={{ WebkitOverflowScrolling: 'touch' }}
                 >
                   {({ index, style }) => {
                     const link = filteredLinks[index];

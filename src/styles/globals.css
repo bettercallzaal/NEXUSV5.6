@@ -119,6 +119,15 @@
   .links-container {
     width: 100%;
     height: 100%;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overflow-y: auto;
+  }
+  
+  /* Ensure links list has proper mobile touch support */
+  .links-list {
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
   }
   
   /* Mobile-specific adjustments */

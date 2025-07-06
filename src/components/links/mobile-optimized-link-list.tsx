@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useScrollLock } from "@/hooks/useScrollLock";
-import { FixedSizeList as List } from "react-window";
-import AutoSizer from "react-virtualized-auto-sizer";
 import Fuse from "fuse.js";
 import { ExternalLink, Grid2X2, List as ListIcon, Loader2, Share, Copy, Clock, CheckCircle, AlignJustify } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -737,7 +735,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
         ) : (
           <div 
             ref={containerRef}
-            className="w-full rounded-lg border bg-card links-container h-[70vh]" 
+            className="w-full rounded-lg border bg-card links-container h-[80vh] overflow-y-auto" 
             tabIndex={-1} // Make the container focusable
             id="links-container"
             role="region"
@@ -745,43 +743,67 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
             onFocus={handleContainerFocus}
             onBlur={handleContainerBlur}
           >
-            <AutoSizer>
-              {({ width }) => (
-                <List
-                  ref={listRef}
-                  height={700} // Fixed height for the list (70vh equivalent)
-                  width={width}
-                  itemCount={filteredLinks.length}
-                  itemSize={
-                    viewMode === "grid" 
-                      ? (width < 640 ? 280 : 240) 
-                      : viewMode === "list" 
-                        ? (width < 640 ? 140 : 120)
-                        : (width < 640 ? 72 : 64) // compact view height with description, larger on mobile
-                  }
-                  overscanCount={overscanCount}
-                  className="links-list"
-                  onScroll={handleScroll}
-                  aria-label="Links list"
+            <div className="p-2">
+              {filteredLinks.map((link, index) => (
+                <div 
+                  key={link.id || index}
+                  className="mb-4"
+                  role="listitem"
                 >
-                  {({ index, style }) => {
-                    const link = filteredLinks[index];
-                    return (
-                      <div 
-                        style={style} 
-                        className="link-item-touch-target"
-                        role="listitem"
-                      >
-                        {viewMode === "grid" 
-                          ? renderGridItem({ index, style })
-                          : renderListItem({ index, style })
-                        }
+                  {viewMode === "grid" 
+                    ? (
+                      <div className="p-3">
+                        <LinkCard 
+                          title={link.title}
+                          description={link.description}
+                          url={link.url}
+                          category={link.category}
+                          subcategory={link.subcategory}
+                          tags={link.tags}
+                          isNew={link.isNew}
+                          onClick={() => handleLinkClick(link)}
+                          className="h-full transition-all hover:shadow-md border border-border/40 rounded-md overflow-hidden"
+                        />
                       </div>
-                    );
-                  }}
-                </List>
-              )}
-            </AutoSizer>
+                    ) : (
+                      <div className="px-3 py-2">
+                        <LinkRow 
+                          title={link.title}
+                          description={link.description}
+                          url={link.url}
+                          category={link.category}
+                          subcategory={link.subcategory}
+                          tags={link.tags}
+                          isNew={link.isNew}
+                          className="border border-border/40 rounded-md p-3 hover:bg-accent/30 transition-colors"
+                          isExpanded={link.id ? expandedItems.has(link.id) : false}
+                          onToggleExpand={() => link.id && handleToggleExpand(link.id)}
+                        >
+                          {link.id && expandedItems.has(link.id) && (
+                            <div className="mt-3 animate-fade-in flex gap-2">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={(e: React.MouseEvent) => handleShareLink(e, link)}
+                              >
+                                <Share className="mr-1 h-3 w-3" /> Share
+                              </Button>
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={(e: React.MouseEvent) => handleCopyLink(e, link)}
+                              >
+                                <Copy className="mr-1 h-3 w-3" /> Copy URL
+                              </Button>
+                            </div>
+                          )}
+                        </LinkRow>
+                      </div>
+                    )
+                  }
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

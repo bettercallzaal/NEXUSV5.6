@@ -44,7 +44,7 @@ export default function RootLayout({
           <ClientProviders>
             <div className="relative flex min-h-screen flex-col">
               <Header />
-              <main className="flex-1 container py-6">{children}</main>
+              <main className="flex-1 container py-6 pb-16">{children}</main>
               <Footer />
               <ChatBot />
             </div>

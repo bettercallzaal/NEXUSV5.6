@@ -120,8 +120,30 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
   // Telemetry logging
   const logEvent = useLogEvent();
   
-  // Use the scroll lock hook
-  const { registerScrollable } = useScrollLock();
+  // Use the scroll lock hook for better mobile scrolling
+  const { registerScrollable, lockScroll, unlockScroll } = useScrollLock();
+  
+  // Register the container for scroll locking when it's mounted
+  useEffect(() => {
+    if (containerRef.current) {
+      registerScrollable(containerRef.current);
+    }
+  }, [registerScrollable]);
+  
+  // Handle focus management for keyboard accessibility
+  const handleContainerFocus = useCallback(() => {
+    if (containerRef.current) {
+      // When container receives focus, ensure proper tab navigation
+      containerRef.current.setAttribute('tabindex', '0');
+    }
+  }, []);
+  
+  const handleContainerBlur = useCallback(() => {
+    if (containerRef.current) {
+      // Reset tabindex when focus leaves the container
+      containerRef.current.setAttribute('tabindex', '-1');
+    }
+  }, []);
   
   // Handle scroll events for the virtualized list
   const handleScroll = useCallback(({ scrollOffset, scrollDirection }: { scrollOffset: number; scrollDirection: "forward" | "backward" }) => {
@@ -157,20 +179,24 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 640) {
-        setItemsPerRow(1);
-      } else if (width < 768) {
-        setItemsPerRow(2);
+        setItemsPerRow(1); // Mobile
+        // Ensure compact view on small screens for better usability
+        if (viewMode !== "compact") {
+          setViewMode("compact");
+        }
       } else if (width < 1024) {
-        setItemsPerRow(3);
+        setItemsPerRow(2); // Tablet
+      } else if (width < 1440) {
+        setItemsPerRow(3); // Desktop
       } else {
-        setItemsPerRow(4);
+        setItemsPerRow(4); // Large Desktop
       }
     };
-    
+
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [viewMode]);
   
   // Increase overscan when scrolling for smoother experience
   useEffect(() => {
@@ -537,58 +563,21 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
     );
   }, [filteredLinks, expandedItems, handleToggleExpand, handleShareLink, handleCopyLink]);
 
-  // Render compact item
-  const renderCompactItem = useCallback((link: FlattenedLink) => {
-    return (
-      <div 
-        key={link.id || link.url} 
-        className="flex items-center justify-between py-1.5 px-3 hover:bg-accent/50 rounded-sm cursor-pointer border-b border-border/30 last:border-b-0"
-        onClick={() => handleLinkClick(link)}
       >
-        <div className="flex-1 min-w-0 mr-2">
-          <div className="flex items-center gap-1.5">
-            {link.isOfficial && (
-              <span className="flex-shrink-0 text-blue-500 dark:text-blue-400">
-                <CheckCircle className="h-3 w-3" />
-              </span>
-            )}
-            <span className="text-sm font-medium truncate">{link.title}</span>
-            {link.isNew && (
-              <span className="bg-primary/10 text-primary text-[10px] px-1 py-0.5 rounded-sm flex-shrink-0">NEW</span>
-            )}
-          </div>
-          {link.description && (
-            <p className="text-xs text-muted-foreground truncate mt-0.5 ml-0.5">{link.description}</p>
-          )}
-        </div>
-        <div className="flex items-center gap-1.5 flex-shrink-0">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-6 w-6 p-0"
-            onClick={(e) => {
-              e.stopPropagation();
-              handleCopyLink(e, link);
-            }}
-          >
-            <Copy className="h-3 w-3" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-6 w-6 p-0"
-            onClick={(e) => {
-              e.stopPropagation();
-              handleShareLink(e, link);
-            }}
-          >
-            <Share className="h-3 w-3" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-6 w-6 p-0"
-            onClick={(e) => {
+        <div className="flex items-center space-x-3 overflow-hidden flex-1">
+          <div
+            className="w-2 h-2 rounded-full flex-shrink-0"
+            style={{ backgroundColor: getCategoryColor(link.category) }}
+            aria-hidden="true"
+          />
+          <div className="truncate flex-1">
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:underline truncate block"
+              onClick={() => logEvent("link_clicked", { link_id: link.id })}
+              aria-label={`Open ${link.title}`}
               e.stopPropagation();
               window.open(link.url, "_blank", "noopener,noreferrer");
             }}
@@ -775,9 +764,12 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
           <div 
             ref={containerRef}
             className="w-full rounded-lg border bg-card links-container" 
-            style={{ height: 'min(70vh, 600px)' }}
             tabIndex={-1} // Make the container focusable
             id="links-container"
+            role="region"
+            aria-label="Links collection"
+            onFocus={handleContainerFocus}
+            onBlur={handleContainerBlur}
           >
             <AutoSizer>
               {({ height, width }) => (
@@ -791,16 +783,22 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                       ? (width < 640 ? 280 : 240) 
                       : viewMode === "list" 
                         ? (width < 640 ? 140 : 120)
-                        : 64 // compact view height with description
+                        : (width < 640 ? 72 : 64) // compact view height with description, larger on mobile
                   }
                   overscanCount={overscanCount}
                   className="links-list"
                   onScroll={handleScroll}
+                  aria-label="Links list"
+                  role="list"
                 >
                   {({ index, style }) => {
                     const link = filteredLinks[index];
                     return (
-                      <div style={style}>
+                      <div 
+                        style={style} 
+                        className="link-item-touch-target"
+                        role="listitem"
+                      >
                         {viewMode === "grid" 
                           ? renderGridItem({ index, style })
                           : viewMode === "list"

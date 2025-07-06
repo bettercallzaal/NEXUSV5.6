@@ -184,7 +184,7 @@ export default function Home() {
       
       {/* Links section - integrated directly into the page flow */}
       <div className="mt-4 sm:mt-8 mb-20">
-        <Card className="w-full min-h-[500px] flex flex-col">
+        <Card className="w-full min-h-[500px] flex flex-col shadow-none">
           <CardHeader className="p-4 sm:p-6">
             <CardTitle className="text-lg sm:text-xl">ZAO Ecosystem Links</CardTitle>
             <CardDescription>

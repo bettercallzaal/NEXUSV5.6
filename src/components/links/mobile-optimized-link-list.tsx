@@ -112,7 +112,6 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   
   // Refs
-  const listRef = useRef<List>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Telemetry logging

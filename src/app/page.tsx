@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { TokenChecker } from "@/components/token-checker";
 import { WalletConnector } from "@/components/wallet-connector";
-import { MobileOptimizedLinkList } from "@/components/links/mobile-optimized-link-list";
+import { ModernLinkList } from "@/components/links/modern-link-list";
 import { LinksData } from "@/types/links";
 import { Loader2 } from "lucide-react";
 import { Toaster } from "@/components/ui/use-toast";
@@ -199,7 +199,7 @@ export default function Home() {
               </div>
             ) : linksData ? (
               <div className="links-container-wrapper" ref={linksContainerRef}>
-                <MobileOptimizedLinkList data={linksData} />
+                <ModernLinkList data={linksData} />
               </div>
             ) : (
               <div className="text-center py-8">

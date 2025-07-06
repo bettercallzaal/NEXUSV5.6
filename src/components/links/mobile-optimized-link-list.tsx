@@ -563,32 +563,6 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
     );
   }, [filteredLinks, expandedItems, handleToggleExpand, handleShareLink, handleCopyLink]);
 
-      >
-        <div className="flex items-center space-x-3 overflow-hidden flex-1">
-          <div
-            className="w-2 h-2 rounded-full flex-shrink-0"
-            style={{ backgroundColor: getCategoryColor(link.category) }}
-            aria-hidden="true"
-          />
-          <div className="truncate flex-1">
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium hover:underline truncate block"
-              onClick={() => logEvent("link_clicked", { link_id: link.id })}
-              aria-label={`Open ${link.title}`}
-              e.stopPropagation();
-              window.open(link.url, "_blank", "noopener,noreferrer");
-            }}
-          >
-            <ExternalLink className="h-3 w-3" />
-          </Button>
-        </div>
-      </div>
-    );
-  }, [handleLinkClick, handleCopyLink, handleShareLink]);
-
   // Render recently viewed links
   const renderRecentlyViewed = useCallback(() => {
     // In a real implementation, this would come from localStorage or a backend
@@ -789,7 +763,6 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   className="links-list"
                   onScroll={handleScroll}
                   aria-label="Links list"
-                  role="list"
                 >
                   {({ index, style }) => {
                     const link = filteredLinks[index];
@@ -801,9 +774,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                       >
                         {viewMode === "grid" 
                           ? renderGridItem({ index, style })
-                          : viewMode === "list"
-                            ? renderListItem({ index, style })
-                            : renderCompactItem(link)
+                          : renderListItem({ index, style })
                         }
                       </div>
                     );

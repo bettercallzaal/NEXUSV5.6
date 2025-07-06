@@ -734,7 +734,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
         ) : (
           <div 
             ref={containerRef}
-            className="w-full rounded-lg border-2 border-accent bg-card links-container h-auto max-h-[calc(100vh-200px)] mb-16 pb-8 shadow-lg" 
+            className="w-full rounded-lg border-2 border-accent bg-card links-container h-full overflow-y-auto pb-16" 
             tabIndex={-1} // Make the container focusable
             id="links-container"
             role="region"
@@ -746,7 +746,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
               {filteredLinks.map((link, index) => (
                 <div 
                   key={link.id || index}
-                  className="mb-6 p-3 bg-secondary rounded-md hover:bg-secondary/80 transition-colors"
+                  className="mb-4 p-2 bg-secondary/50 rounded-md hover:bg-secondary/80 transition-colors"
                   role="listitem"
                 >
                   {viewMode === "grid" 

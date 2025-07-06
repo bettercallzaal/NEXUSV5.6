@@ -734,7 +734,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
         ) : (
           <div 
             ref={containerRef}
-            className="w-full rounded-lg border-2 border-accent bg-card links-container h-full overflow-y-auto pb-16" 
+            className="w-full rounded-lg bg-card links-container overflow-visible" 
             tabIndex={-1} // Make the container focusable
             id="links-container"
             role="region"
@@ -742,7 +742,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
             onFocus={handleContainerFocus}
             onBlur={handleContainerBlur}
           >
-            <div className="p-2 overflow-visible">
+            <div className="p-4 pb-20">
               {filteredLinks.map((link, index) => (
                 <div 
                   key={link.id || index}

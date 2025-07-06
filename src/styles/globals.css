@@ -2,23 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Prevent multiple scrollbars and ensure proper styling */
+/* Clean UI styling */
+html, body {
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+
+/* Simple container styling */
 .links-container {
-  overflow: visible !important;
+  overflow: visible;
 }
 
-/* Force styling for link container */
 .links-container-wrapper {
-  height: 100% !important;
-  padding-bottom: 2rem !important;
-}
-
-.links-container-wrapper .links-container {
-  border: 2px solid var(--accent) !important;
-  border-radius: 0.5rem !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 6rem !important;
-  min-height: 80vh !important;
+  padding-bottom: 2rem;
 }
 
 /* Ensure content doesn't create horizontal scrollbars and has proper spacing */
@@ -27,14 +23,16 @@ html, body {
   padding-bottom: 2rem;
 }
 
-/* Improve spacing for filter buttons */
+/* Filter buttons styling */
 .filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 1rem;
   padding: 0.5rem;
-  display: flex;
-  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(var(--accent-rgb), 0.1);
   align-items: center;
-  flex-wrap: wrap;
 }
 
 @layer base {

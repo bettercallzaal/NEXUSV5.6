@@ -3,9 +3,8 @@
  * 
  * This service provides AI-powered tagging functionality for links.
  * It analyzes link content and suggests relevant tags based on the title, description, and URL.
+ * Uses a server-side API endpoint to generate tags securely.
  */
-
-import { OpenAI } from 'openai';
 
 // Define the response structure from the AI tagging service
 export interface TaggingResponse {
@@ -23,115 +22,33 @@ export interface TaggingRequest {
 }
 
 export class AITaggingService {
-  private openai: OpenAI | null = null;
-  private apiKey: string | null = null;
-
-  constructor(apiKey?: string) {
-    if (apiKey) {
-      this.initialize(apiKey);
-    }
-  }
-
-  /**
-   * Initialize the OpenAI client with an API key
-   */
-  public initialize(apiKey: string): void {
-    this.apiKey = apiKey;
-    this.openai = new OpenAI({
-      apiKey: this.apiKey,
-    });
-  }
-
-  /**
-   * Check if the service is initialized with an API key
-   */
-  public isInitialized(): boolean {
-    return !!this.openai;
-  }
-
   /**
    * Generate tags for a link based on its content
+   * Uses a server-side API endpoint to generate tags securely
    */
   public async generateTags(request: TaggingRequest): Promise<TaggingResponse> {
-    if (!this.openai) {
-      throw new Error('AI Tagging Service is not initialized. Please provide an OpenAI API key.');
-    }
-
     try {
-      // Create a prompt for the AI to generate tags
-      const prompt = this.createTaggingPrompt(request);
-      
-      // Call OpenAI API to generate tags
-      const response = await this.openai.chat.completions.create({
-        model: "gpt-3.5-turbo",
-        messages: [
-          {
-            role: "system",
-            content: "You are a helpful assistant that generates relevant tags for web links. Respond with JSON only."
-          },
-          {
-            role: "user",
-            content: prompt
-          }
-        ],
-        temperature: 0.3,
-        response_format: { type: "json_object" }
+      // Call the server-side API endpoint to generate tags
+      const response = await fetch('/api/generate-tags', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(request),
       });
 
-      // Parse the response
-      const content = response.choices[0].message.content;
-      if (!content) {
-        throw new Error('Empty response from OpenAI API');
+      if (!response.ok) {
+        throw new Error(`Failed to generate tags: ${response.status}`);
       }
 
-      const parsedResponse = JSON.parse(content);
-      
-      return {
-        suggestedTags: parsedResponse.tags || [],
-        confidence: parsedResponse.confidence || 0.7,
-        categories: parsedResponse.categories || []
-      };
+      const data = await response.json();
+      return data;
     } catch (error) {
       console.error('Error generating tags:', error);
       
       // Fallback to local tag generation if API fails
       return this.generateTagsLocally(request);
     }
-  }
-
-  /**
-   * Create a prompt for the AI to generate tags
-   */
-  private createTaggingPrompt(request: TaggingRequest): string {
-    const { title, description, url, existingTags } = request;
-    
-    let prompt = `Generate relevant tags for the following link:\n\nTitle: ${title}\n`;
-    
-    if (description) {
-      prompt += `Description: ${description}\n`;
-    }
-    
-    if (url) {
-      prompt += `URL: ${url}\n`;
-    }
-    
-    if (existingTags && existingTags.length > 0) {
-      prompt += `Existing tags: ${existingTags.join(', ')}\n`;
-    }
-    
-    prompt += `\nRespond with a JSON object containing:
-1. An array of suggested tags (5-10 tags)
-2. A confidence score between 0 and 1
-3. An array of suggested categories
-
-Example response format:
-{
-  "tags": ["tag1", "tag2", "tag3"],
-  "confidence": 0.85,
-  "categories": ["category1", "category2"]
-}`;
-    
-    return prompt;
   }
 
   /**
@@ -176,4 +93,4 @@ Example response format:
 }
 
 // Create a singleton instance
-export const aiTaggingService = new AITaggingService(process.env.OPENAI_API_KEY);
+export const aiTaggingService = new AITaggingService();

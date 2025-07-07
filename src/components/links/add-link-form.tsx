@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { AddLinkRequest } from "@/services/link-service";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
@@ -56,7 +57,7 @@ const categories = [
 ];
 
 interface AddLinkFormProps {
-  onSubmit: (data: LinkFormValues & { tags: string[] }) => void;
+  onSubmit: (data: AddLinkRequest) => void;
   onCancel?: () => void;
   isLoading?: boolean;
 }

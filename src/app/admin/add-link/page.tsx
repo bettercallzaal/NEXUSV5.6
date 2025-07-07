@@ -5,44 +5,18 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AddLinkForm } from "@/components/links/add-link-form";
-import { v4 as uuidv4 } from "uuid";
-
-interface LinkFormData {
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  subcategory?: string;
-  tags: string[];
-  isNew: boolean;
-  isOfficial: boolean;
-}
+import { LinkService, AddLinkRequest } from "@/services/link-service";
 
 export default function AddLinkPage() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (data: LinkFormData) => {
+  const handleSubmit = async (data: AddLinkRequest) => {
     setIsLoading(true);
 
     try {
-      // Create a new link object
-      const newLink = {
-        id: uuidv4(),
-        title: data.title,
-        description: data.description,
-        url: data.url,
-        category: data.category,
-        subcategory: data.subcategory || "",
-        tags: data.tags,
-        isNew: data.isNew,
-        isOfficial: data.isOfficial,
-        createdAt: new Date().toISOString(),
-      };
-
-      // In a real application, you would send this to your API
-      // For now, we'll simulate an API call with a timeout
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Use the LinkService to add the new link
+      const newLink = await LinkService.addLink(data);
 
       // Log the new link for debugging
       console.log("New link created:", newLink);

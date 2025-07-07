@@ -76,13 +76,13 @@ export function AdvancedFilters({ onFilterChange, initialFilters }: AdvancedFilt
   };
 
   return (
-    <div className="space-y-6 p-4 bg-card rounded-lg border">
-      <h3 className="text-lg font-medium">Advanced Filters</h3>
+    <div className="space-y-2 p-2 bg-card rounded-lg border">
+      <h3 className="text-sm font-medium">Advanced Filters</h3>
       
       {/* Date Range Filter */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Date Added</h4>
-        <div className="flex flex-wrap gap-2">
+      <div className="space-y-1">
+        <h4 className="text-xs font-medium">Date Added</h4>
+        <div className="flex flex-wrap gap-1">
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -187,9 +187,9 @@ export function AdvancedFilters({ onFilterChange, initialFilters }: AdvancedFilt
       </div>
       
       {/* Popularity Filter */}
-      <div className="space-y-2">
+      <div className="space-y-1">
         <div className="flex justify-between">
-          <h4 className="text-sm font-medium">Popularity Score</h4>
+          <h4 className="text-xs font-medium">Popularity Score</h4>
           <span className="text-sm text-muted-foreground">
             {filters.popularityRange[0]} - {filters.popularityRange[1]}
           </span>
@@ -209,9 +209,9 @@ export function AdvancedFilters({ onFilterChange, initialFilters }: AdvancedFilt
       </div>
       
       {/* Read Status Filter */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Read Status</h4>
-        <div className="flex space-x-2">
+      <div className="space-y-1">
+        <h4 className="text-xs font-medium">Read Status</h4>
+        <div className="flex space-x-1">
           <Button 
             variant={filters.readStatus === 'all' ? 'default' : 'outline'} 
             size="sm"
@@ -252,9 +252,9 @@ export function AdvancedFilters({ onFilterChange, initialFilters }: AdvancedFilt
       </div>
       
       {/* Tags Filter */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Tags</h4>
-        <div className="flex flex-wrap gap-2">
+      <div className="space-y-1">
+        <h4 className="text-xs font-medium">Tags</h4>
+        <div className="flex flex-wrap gap-1">
           {commonTags.map(tag => (
             <Badge 
               key={tag}
@@ -269,8 +269,8 @@ export function AdvancedFilters({ onFilterChange, initialFilters }: AdvancedFilt
       </div>
       
       {/* Domain Filters */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-medium">Domain Filters</h4>
+      <div className="space-y-1">
+        <h4 className="text-xs font-medium">Domain Filters</h4>
         <div className="flex">
           <input 
             type="text" 
@@ -320,7 +320,8 @@ export function AdvancedFilters({ onFilterChange, initialFilters }: AdvancedFilt
       {/* Reset Filters */}
       <Button 
         variant="outline" 
-        className="w-full"
+        size="sm"
+        className="w-full mt-1"
         onClick={() => {
           setFilters({
             dateRange: { from: undefined, to: undefined },

@@ -56,12 +56,12 @@ export function LinkFilterSidebar({
       {/* Desktop sidebar - always visible on larger screens */}
       <div 
         className={cn(
-          "hidden md:block w-72 shrink-0 border-r p-4 h-full overflow-y-auto",
+          "hidden md:block w-72 shrink-0 border-r p-2 h-full overflow-y-auto",
           className
         )}
       >
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-medium">Filters</h3>
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-base font-medium">Filters</h3>
           <SlidersHorizontal className="h-4 w-4" />
         </div>
         <AdvancedFilters 

@@ -133,8 +133,13 @@ export default function Home() {
       } catch (error) {
         console.error("Error loading links:", error);
         // Load from static file as a fallback
-        const data = await import('@/data/links.json');
-        setLinksData(data);
+        const jsonData = await import('@/data/links.json');
+        // Extract the default export and ensure it conforms to the Data interface
+        const data = jsonData.default;
+        setLinksData({
+          categories: data.categories || [],
+          links: data.links || []
+        });
       } finally {
         setLoading(false);
       }

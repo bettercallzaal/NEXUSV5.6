@@ -23,6 +23,7 @@ export interface Category {
 
 export interface Data {
   categories: Category[];
+  links: Link[];
 }
 
 // Alias for backward compatibility

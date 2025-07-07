@@ -27,6 +27,11 @@ async function loadLinksData(dataset = 'default'): Promise<Data> {
     linksData = JSON.parse(fileContent);
   }
   
+  // Ensure links array exists
+  if (!linksData.links) {
+    linksData.links = [];
+  }
+  
   return linksData;
 }
 

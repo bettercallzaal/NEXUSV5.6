@@ -68,25 +68,81 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Required fields for categorization
+    if (!link.category) {
+      return NextResponse.json(
+        { error: 'Category is required for link placement' },
+        { status: 400 }
+      );
+    }
     
     const dataset = request.nextUrl.searchParams.get('dataset') || 'default';
     const linksData = await loadLinksData(dataset);
     
-    // Check if link with same ID already exists
+    // First check if the link exists in the top-level links array (for backward compatibility)
+    let existingLinkFound = false;
     const existingLinkIndex = linksData.links.findIndex(l => l.id === link.id);
     
     if (existingLinkIndex >= 0) {
-      // Update existing link
+      // Update existing link in the top-level links array
       linksData.links[existingLinkIndex] = {
         ...linksData.links[existingLinkIndex],
         ...link,
         updatedAt: new Date().toISOString()
       };
-    } else {
-      // Add new link
-      linksData.links.push({
-        ...link,
+      existingLinkFound = true;
+    }
+
+    // Find or create the category
+    let category = linksData.categories.find(c => c.name.toLowerCase() === link.category.toLowerCase());
+    if (!category) {
+      category = {
+        name: link.category,
+        subcategories: []
+      };
+      linksData.categories.push(category);
+    }
+
+    // Find or create the subcategory
+    const subcategoryName = link.subcategory || 'General';
+    let subcategory = category.subcategories.find(s => s.name.toLowerCase() === subcategoryName.toLowerCase());
+    if (!subcategory) {
+      subcategory = {
+        name: subcategoryName,
+        links: []
+      };
+      category.subcategories.push(subcategory);
+    }
+
+    // Check if the link already exists in the subcategory
+    const subcategoryLinkIndex = subcategory.links.findIndex(l => l.id === link.id);
+    
+    if (subcategoryLinkIndex >= 0) {
+      // Update existing link in the subcategory
+      subcategory.links[subcategoryLinkIndex] = {
+        ...subcategory.links[subcategoryLinkIndex],
+        title: link.title,
+        url: link.url,
+        description: link.description,
+        updatedAt: new Date().toISOString()
+      };
+      existingLinkFound = true;
+    } else if (!existingLinkFound) {
+      // Add new link to the subcategory
+      const newLink = {
+        id: link.id,
+        title: link.title,
+        url: link.url,
+        description: link.description || '',
         createdAt: new Date().toISOString()
+      };
+      
+      subcategory.links.push(newLink);
+      
+      // Also add to top-level links array for backward compatibility
+      linksData.links.push({
+        ...newLink
       });
     }
     

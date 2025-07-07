@@ -124,7 +124,12 @@ export async function POST(request: NextRequest) {
         ...subcategory.links[subcategoryLinkIndex],
         title: link.title,
         url: link.url,
-        description: link.description,
+        description: link.description || '',
+        tags: link.tags || subcategory.links[subcategoryLinkIndex].tags || [],
+        category: link.category,
+        subcategory: subcategoryName,
+        isNew: link.isNew !== undefined ? link.isNew : subcategory.links[subcategoryLinkIndex].isNew,
+        isOfficial: link.isOfficial !== undefined ? link.isOfficial : subcategory.links[subcategoryLinkIndex].isOfficial,
         updatedAt: new Date().toISOString()
       };
       existingLinkFound = true;
@@ -135,6 +140,11 @@ export async function POST(request: NextRequest) {
         title: link.title,
         url: link.url,
         description: link.description || '',
+        tags: link.tags || [],
+        category: link.category,
+        subcategory: subcategoryName,
+        isNew: link.isNew !== undefined ? link.isNew : false,
+        isOfficial: link.isOfficial !== undefined ? link.isOfficial : false,
         createdAt: new Date().toISOString()
       };
       

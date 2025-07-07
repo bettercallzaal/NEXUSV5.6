@@ -7,6 +7,7 @@ export interface Link {
   subcategory?: string;
   tags?: string[];
   isNew?: boolean;
+  isOfficial?: boolean;
   createdAt?: string;
   updatedAt?: string;
 }

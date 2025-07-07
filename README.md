@@ -138,9 +138,15 @@ Below is a brief description of key files and directories in the project:
 - `src/lib/utils.ts` - General utility functions
 - `src/lib/auto-tagger.ts` - Service for AI-powered tag generation
 
-### Scripts
+### Scripts and Admin Utilities
 
 - `src/scripts/ai-tag-generator.ts` - AI-powered tag generation using OpenAI and fallbacks
+- `src/admin/batch-import-links.ts` - Batch import utility for links from CSV or JSON files
+- `src/admin/recategorize-by-tags.ts` - Utility to recategorize links based on their tags
+- `src/admin/admin-cli.ts` - Command-line interface for admin utilities
+- `src/admin/utils/links-data-utils.ts` - Helper functions for loading and saving links data
+- `src/admin/utils/tagging-utils.ts` - Utilities for generating tags for links
+- `src/admin/utils/link-utils.ts` - Utilities for working with links (ID generation, URL normalization)
 - `src/scripts/keyword-extractor.ts` - Utility for extracting keywords from text content
 - `src/scripts/new-link-processor.ts` - Process new links with metadata extraction and tag generation
 
@@ -383,6 +389,94 @@ NEXT_PUBLIC_BASE_RPC=https://base-mainnet.g.alchemy.com/v2/YOUR_API_KEY
 # AI Tag Generation
 OPENAI_API_KEY=your_openai_api_key  # Required for AI-powered tag generation
 ```
+
+## Admin Utilities
+
+The project includes several admin utilities for managing links data. These utilities are located in the `src/admin` directory and can be run using Node.js.
+
+### Batch Import Utility
+
+The batch import utility allows importing multiple links from a CSV or JSON file. It supports validation, deduplication, and automatic categorization.
+
+#### Usage
+
+```bash
+# Run the batch import utility directly
+node -r ts-node/register src/admin/batch-import-links.ts --file=path/to/links.csv --type=csv --generate-tags --dry-run
+
+# Or use the admin CLI
+node -r ts-node/register src/admin/admin-cli.ts import --file=path/to/links.csv --type=csv --generate-tags
+```
+
+#### Options
+
+- `--file`: Path to the CSV or JSON file containing links to import (required)
+- `--type`: File type, either 'csv' or 'json' (required)
+- `--generate-tags`: Generate tags for links using AI or local fallback (optional)
+- `--dry-run`: Run the import without saving changes (optional)
+- `--dataset`: Specify which dataset to use (default: 'default') (optional)
+
+#### CSV Format
+
+The CSV file should have the following columns:
+
+```
+title,url,description,category,subcategory,tags
+"Example Link","https://example.com","This is an example","Resources","Tools","example,tool"
+```
+
+#### JSON Format
+
+The JSON file should contain an array of link objects:
+
+```json
+[
+  {
+    "title": "Example Link",
+    "url": "https://example.com",
+    "description": "This is an example",
+    "category": "Resources",
+    "subcategory": "Tools",
+    "tags": ["example", "tool"]
+  }
+]
+```
+
+### Recategorization Utility
+
+The recategorization utility helps suggest and apply category/subcategory changes based on tags.
+
+#### Usage
+
+```bash
+# Run the recategorization utility directly
+node -r ts-node/register src/admin/recategorize-by-tags.ts --dry-run --interactive
+
+# Or use the admin CLI
+node -r ts-node/register src/admin/admin-cli.ts recategorize --dry-run --interactive
+```
+
+#### Options
+
+- `--dry-run`: Show suggested changes without applying them (optional)
+- `--interactive`: Confirm each change individually (optional)
+- `--dataset`: Specify which dataset to use (default: 'default') (optional)
+
+### Admin CLI
+
+The admin CLI provides a unified interface for all admin utilities.
+
+#### Usage
+
+```bash
+node -r ts-node/register src/admin/admin-cli.ts <command> [options]
+```
+
+#### Commands
+
+- `import`: Run the batch import utility
+- `recategorize`: Run the recategorization utility
+- `backup`: Create a backup of the links data
 
 ### AI Tag Generation Configuration
 

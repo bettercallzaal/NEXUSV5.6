@@ -1,0 +1,92 @@
+[
+  {
+    "tag": "development",
+    "category": "Development",
+    "subcategory": "Programming",
+    "priority": 10
+  },
+  {
+    "tag": "javascript",
+    "category": "Development",
+    "subcategory": "JavaScript",
+    "priority": 20
+  },
+  {
+    "tag": "python",
+    "category": "Development",
+    "subcategory": "Python",
+    "priority": 20
+  },
+  {
+    "tag": "react",
+    "category": "Development",
+    "subcategory": "Frontend",
+    "priority": 15
+  },
+  {
+    "tag": "nodejs",
+    "category": "Development",
+    "subcategory": "Backend",
+    "priority": 15
+  },
+  {
+    "tag": "ai",
+    "category": "Technology",
+    "subcategory": "AI & ML",
+    "priority": 25
+  },
+  {
+    "tag": "machine learning",
+    "category": "Technology",
+    "subcategory": "AI & ML",
+    "priority": 25
+  },
+  {
+    "tag": "blockchain",
+    "category": "Technology",
+    "subcategory": "Blockchain",
+    "priority": 20
+  },
+  {
+    "tag": "crypto",
+    "category": "Finance",
+    "subcategory": "Cryptocurrency",
+    "priority": 20
+  },
+  {
+    "tag": "investing",
+    "category": "Finance",
+    "subcategory": "Investing",
+    "priority": 15
+  },
+  {
+    "tag": "tutorial",
+    "category": "Education",
+    "subcategory": "Tutorials",
+    "priority": 5
+  },
+  {
+    "tag": "course",
+    "category": "Education",
+    "subcategory": "Courses",
+    "priority": 10
+  },
+  {
+    "tag": "design",
+    "category": "Design",
+    "subcategory": "General",
+    "priority": 10
+  },
+  {
+    "tag": "ui",
+    "category": "Design",
+    "subcategory": "UI/UX",
+    "priority": 15
+  },
+  {
+    "tag": "ux",
+    "category": "Design",
+    "subcategory": "UI/UX",
+    "priority": 15
+  }
+]

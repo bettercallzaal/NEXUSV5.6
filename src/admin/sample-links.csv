@@ -1,0 +1,9 @@
+title,url,description,category,subcategory,tags
+"JavaScript Fundamentals","https://javascript.info/","A modern JavaScript tutorial with concepts and examples","Development","JavaScript","javascript,tutorial,development"
+"React Documentation","https://reactjs.org/","Official React documentation and guides","Development","Frontend","react,javascript,frontend,development"
+"Python for Data Science","https://www.datacamp.com/courses/intro-to-python-for-data-science","Learn Python basics for data analysis","Development","Python","python,data science,tutorial"
+"Machine Learning Crash Course","https://developers.google.com/machine-learning/crash-course","Google's fast-paced, practical introduction to machine learning","Technology","AI & ML","ai,machine learning,tutorial,google"
+"Crypto Market Analysis","https://coinmarketcap.com/","Cryptocurrency market cap rankings, charts, and more","Finance","Cryptocurrency","crypto,finance,investing"
+"UI Design Principles","https://www.nngroup.com/articles/","Articles on UI/UX best practices and research","Design","UI/UX","design,ui,ux,usability"
+"Web Development Roadmap","https://roadmap.sh/","Community-driven roadmaps for different developer paths","Development","Career","development,tutorial,career"
+"GitHub Actions Documentation","https://docs.github.com/en/actions","Learn how to automate your workflows with GitHub Actions","Development","DevOps","github,devops,automation,ci/cd"

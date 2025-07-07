@@ -514,7 +514,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
           tags={link.tags}
           isNew={link.isNew}
           onClick={() => handleLinkClick(link)}
-          className="h-full transition-all hover:shadow-md border border-border/40 rounded-md overflow-hidden"
+          className="h-full transition-all border border-border/40 rounded-md overflow-hidden"
         />
       </div>
     );
@@ -636,7 +636,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                   officialOnly={officialOnly}
                 />
                 
-                <div className="filter-buttons bg-accent/20 p-4 rounded-lg shadow-md mb-4">
+                <div className="filter-buttons bg-accent/20 p-4 rounded-lg mb-4">
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <Button
@@ -761,7 +761,7 @@ export function MobileOptimizedLinkList({ data, filterTags = [] }: MobileOptimiz
                           tags={link.tags}
                           isNew={link.isNew}
                           onClick={() => handleLinkClick(link)}
-                          className="h-full transition-all hover:shadow-md border border-border/40 rounded-md overflow-hidden"
+                          className="h-full transition-all border border-border/40 rounded-md overflow-hidden"
                         />
                       </div>
                     ) : (

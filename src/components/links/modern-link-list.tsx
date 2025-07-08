@@ -692,12 +692,9 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
 
   return (
     <TooltipProvider>
-      {/* Add a spacer div at the top */}
-      <div className="h-32 md:h-40"></div>
-      
       <div className="w-full space-y-4">
-        {/* Fixed position search and filter bar */}
-        <div className="fixed top-[180px] left-0 right-0 z-50 bg-background py-3 border-b shadow-md px-4 md:px-8">
+        {/* Sticky search and filter bar - positioned at the top */}
+        <div className="sticky top-[70px] z-50 bg-background py-3 border-b shadow-md">
           <div className="flex flex-col gap-4">
             {/* Search and view mode controls */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
@@ -771,10 +768,10 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
           {filteredLinks.length} {filteredLinks.length === 1 ? 'result' : 'results'}
         </div>
         
-        {/* Links - with added top padding to account for fixed header */}
+        {/* Links */}
         <div 
           ref={containerRef}
-          className="w-full rounded-lg bg-card links-container overflow-visible pt-16" 
+          className="w-full rounded-lg bg-card links-container overflow-visible" 
           id="links-container"
           role="region"
           aria-label="Links collection"

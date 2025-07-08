@@ -694,7 +694,7 @@ export function ModernLinkList({ data, filterTags = [] }: ModernLinkListProps) {
     <TooltipProvider>
       <div className="w-full space-y-4">
         {/* Sticky search and filter bar */}
-        <div className="sticky top-16 z-10 bg-background/95 backdrop-blur-sm py-3 border-b">
+        <div className="sticky top-40 z-10 bg-background/95 backdrop-blur-sm py-3 border-b">
           <div className="flex flex-col gap-4">
             {/* Search and view mode controls */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">

@@ -1,6 +1,36 @@
 {
-  "links": [],
+  "links": [
+    {
+      "id": "link_ob4noeufoiodenzqshi5c",
+      "title": "Optimism Superchain Documentation",
+      "url": "https://docs.optimism.io/stack/explainer",
+      "description": "Comprehensive documentation about the Optimism Superchain architecture and ecosystem",
+      "category": "Web3 Resources",
+      "subcategory": "Documentation",
+      "tags": ["optimism", "ethereum", "layer2", "superchain", "op-stack", "blockchain", "technology"],
+      "createdAt": "2025-07-10T22:18:56-04:00"
+    }],
   "categories": [
+    {
+      "name": "Web3 Resources",
+      "subcategories": [
+        {
+          "name": "Documentation",
+          "links": [
+            {
+              "id": "link_ob4noeufoiodenzqshi5c",
+              "title": "Optimism Superchain Documentation",
+              "url": "https://docs.optimism.io/stack/explainer",
+              "description": "Comprehensive documentation about the Optimism Superchain architecture and ecosystem",
+              "category": "Web3 Resources",
+              "subcategory": "Documentation",
+              "tags": ["optimism", "ethereum", "layer2", "superchain", "op-stack", "blockchain", "technology"],
+              "createdAt": "2025-07-10T22:18:56-04:00"
+            }
+          ]
+        }
+      ]
+    },
     {
       "name": "ZAO Onchain",
       "subcategories": [

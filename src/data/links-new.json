@@ -1,0 +1,3210 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-07-11T10:41:16.480Z",
+  "metadata": {
+    "totalLinks": 70,
+    "totalCategories": 6,
+    "totalTags": 87
+  },
+  "links": [
+    {
+      "id": "link_ob4noeufoiodenzqshi5c",
+      "title": "Optimism Superchain Documentation",
+      "url": "https://docs.optimism.io/stack/explainer",
+      "description": "Comprehensive documentation about the Optimism Superchain architecture and ecosystem",
+      "favicon": "https://docs.optimism.io/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "op-stack",
+        "blockchain",
+        "technology",
+        "stack",
+        "paragraph",
+        "news"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-10T22:18:56-04:00",
+        "updatedAt": "2025-07-11T10:37:15.131Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.131Z"
+      }
+    },
+    {
+      "id": "link_ytthj4gvpwcjgjysnvvb",
+      "title": "Mint ZAO-CHELLA Vibez Track on Zora",
+      "url": "https://song.thezao.com",
+      "description": "Own a piece of the ZAO-CHELLA experience by minting the Vibez track.",
+      "favicon": "https://song.thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "music",
+        "zao",
+        "song",
+        "zao-chella",
+        "design",
+        "technology",
+        "news",
+        "midipunkz",
+        "spotify"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_srnarjn4mjjsdendud",
+      "title": "Mint Attabotty ZAO-PALOOZA Card",
+      "url": "https://attabotty.zao.cards",
+      "description": "Collect the limited-edition Attabotty artist card from ZAO-PALOOZA.",
+      "favicon": "https://attabotty.zao.cards/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zao",
+        "design",
+        "music",
+        "attabotty",
+        "artist",
+        "thezao",
+        "festival",
+        "youtube",
+        "paragraph",
+        "technology"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_3w3sjmegdgcepodi",
+      "title": "Mint Zalora – the ZAO Mascot (MidiVerse)",
+      "url": "https://zalora.thezao.com",
+      "description": "Bring Zalora into your wallet – the on-chain mascot of the ZAO.",
+      "favicon": "https://zalora.thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "technology",
+        "zao",
+        "zalora",
+        "music",
+        "design",
+        "news",
+        "paragraph",
+        "optimism",
+        "ethereum"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_kfrgmu4bxf7dyipfss",
+      "title": "ZAO song #1: ZAO-CHELLA VIBEZ",
+      "url": "https://zora.co/collect/base:0x1458f7d12c1fe1747e13793d99dcb6da6f9d6123/1?referrer=0xa46b072e6607d37413000220653d3bca5be32513",
+      "description": "Vibe to the first official ZAO track from ZAO-CHELLA.",
+      "favicon": "https://zora.co/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zora",
+        "music",
+        "zao",
+        "nft",
+        "web3",
+        "collect",
+        "zao-chella",
+        "design",
+        "thezao",
+        "midipunkz"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_zyzb7wmguhz7okjnkt9f",
+      "title": "ZAO song #2: ZAO-CHELLA CYPHER",
+      "url": "https://www.thezao.com/zao-cypher",
+      "description": "Listen to the multi-artist Cypher track from ZAO-CHELLA.",
+      "favicon": "https://www.thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "design",
+        "music",
+        "zao",
+        "zao-cypher",
+        "artist",
+        "zao-chella",
+        "technology",
+        "news",
+        "paragraph"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_3cqkuurrvprcglvqq40l",
+      "title": "ZAO song #3: Side by Side (ZAO Side)",
+      "url": "https://ima.midipunkz.com/midivaderz/side-by-side-thezao",
+      "description": "Watch the Side-by-Side collab in MidiVaderZ – ZAO's side.",
+      "favicon": "https://ima.midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "music",
+        "zao",
+        "ima",
+        "midivaderz",
+        "social",
+        "technology",
+        "entertainment",
+        "design",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_4lch2jowxfolimhydk7w",
+      "title": "ZAO song #3.1: Side by Side (MidiPunkz Side)",
+      "url": "https://ima.midipunkz.com/midivaderz/side-by-side-midipunkz",
+      "description": "Watch the Side-by-Side collab in MidiVaderZ – MidiPunkz's side.",
+      "favicon": "https://ima.midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "music",
+        "zao",
+        "ima",
+        "midivaderz",
+        "social",
+        "technology",
+        "entertainment",
+        "design",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_cdl3rk367o5lztd2woje",
+      "title": "ZAO Website",
+      "url": "https://thezao.com",
+      "description": "Visit the official ZAO website for all the latest news and resources.",
+      "favicon": "https://thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "news",
+        "zao",
+        "music",
+        "design",
+        "technology",
+        "paragraph",
+        "t",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.137Z",
+        "updatedAt": "2025-07-11T10:37:15.137Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.137Z"
+      }
+    },
+    {
+      "id": "link_qnn3wybfbrlsmwe0sqcv",
+      "title": "ZVerse (ZAO Hivemind)",
+      "url": "https://thezao.xyz",
+      "description": "Explore the ZVerse, where the ZAO Hivemind connects ideas and innovations.",
+      "favicon": "https://thezao.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "zao",
+        "innovation",
+        "connect",
+        "zverse",
+        "music",
+        "design",
+        "technology",
+        "news",
+        "festival"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_z0ne0rfwxpnpzveqa0y4",
+      "title": "ZAO ORG CHART (Hats Tree)",
+      "url": "https://hats.thezao.com",
+      "description": "Dive into the ZAO ORG CHART to see our team and projects.",
+      "favicon": "https://hats.thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "design",
+        "zao",
+        "hats",
+        "music",
+        "technology",
+        "news",
+        "paragraph",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_2qse2beifxaseimgjkl0",
+      "title": "ZAO Google Calendar",
+      "url": "https://calendar.google.com/calendar/u/0?cid=MmY3YTQ4YTY2MWIyNzVlMmFkZTgxYzlhYjJkMGFhM2E1YTBmNThiNTA3MDVhOTYxZGE2NWNmNTE0MTZjZGU3NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
+      "description": "Stay up to date with ZAO events on Google Calendar.",
+      "favicon": "https://calendar.google.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "google",
+        "festival",
+        "zao",
+        "calendar",
+        "lu",
+        "entertainment",
+        "zaofestivals",
+        "thezao",
+        "music",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_xkhvuowlywwawoafcps",
+      "title": "ZAO Calendar",
+      "url": "https://lu.ma/zao",
+      "description": "Browse upcoming ZAO events and activities on Luma.",
+      "favicon": "https://lu.ma/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "lu",
+        "festival",
+        "zao",
+        "entertainment",
+        "music",
+        "zaofestivals",
+        "google",
+        "thezao",
+        "design",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_nbyk5fuu6c2ju2saio",
+      "title": "ZAO Music Events Calendar",
+      "url": "https://lu.ma/zao-m",
+      "description": "Explore ZAO music-related events and gigs on Luma.",
+      "favicon": "https://lu.ma/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "lu",
+        "entertainment",
+        "music",
+        "festival",
+        "zao",
+        "zao-m",
+        "youtube",
+        "design",
+        "thezao",
+        "midipunkz"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_tx4bdmztlswwi402dinb",
+      "title": "Discord",
+      "url": "https://discord.gg/ACJyYQH3BE",
+      "description": "Join our ZAO Discord for real-time group chats.",
+      "favicon": "https://discord.gg/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "discord",
+        "zao",
+        "acjyyqh3be",
+        "thezao",
+        "music",
+        "festival",
+        "design",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_0vtv8ctani2lxscc0hcu",
+      "title": "Telegram",
+      "url": "https://t.me/+iMH5Y_t2Mks1NmVh",
+      "description": "Connect with us on Telegram for updates and discussions.",
+      "favicon": "https://t.me/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "t",
+        "news",
+        "social",
+        "+imh5y_t2mks1nmvh",
+        "update",
+        "discussion",
+        "connect",
+        "paragraph",
+        "technology",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_b3uhsqkzaqwvmudec7m",
+      "title": "ZAO Whitepaper Draft",
+      "url": "https://app.charmverse.io/the-zao/the-zao-whitepaper-draft-2-6565388910657037",
+      "description": "Dive into the ZAO Whitepaper for a deeper understanding of the ecosystem.",
+      "favicon": "https://app.charmverse.io/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "charmverse",
+        "zao",
+        "the-zao",
+        "thezao",
+        "music",
+        "festival",
+        "design",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_zwgxygj5ndbo26x3qq2",
+      "title": "Daily Newsletter Articles",
+      "url": "https://paragraph.xyz/@thezao",
+      "description": "Read daily newsletter articles.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "technology",
+        "news",
+        "design",
+        "@thezao",
+        "article",
+        "optimism",
+        "ethereum",
+        "layer2",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_exo1v84c9gsvjj5jrz",
+      "title": "Subscribe to the newsletter",
+      "url": "https://paragraph.xyz/@thezao/subscribe",
+      "description": "Subscribe for daily updates.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "technology",
+        "news",
+        "@thezao",
+        "update",
+        "design",
+        "optimism",
+        "ethereum",
+        "layer2",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_ekrk2j157x1f195hrpsc",
+      "title": "WaveWarZ Twitter",
+      "url": "https://x.com/WaveWarZ",
+      "description": "Check out the latest updates on WaveWarZ Twitter.",
+      "favicon": "https://x.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "x",
+        "news",
+        "wavewarz",
+        "update",
+        "festival",
+        "zao",
+        "technology",
+        "paragraph",
+        "thezao",
+        "t"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_sjatuek6lts9ye4tubdp",
+      "title": "WaveWarZ V1 SOL Testnet",
+      "url": "https://www.wavewarz.com",
+      "description": "Access the WaveWarZ DAPP on the SOL Testnet (V1).",
+      "favicon": "https://www.wavewarz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "wavewarz"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_16g8u0nq2bbipzuqfgpj",
+      "title": "ZAO Festivals Website",
+      "url": "https://zaofestivals.com/",
+      "description": "Visit the official ZAO Festivals website.",
+      "favicon": "https://zaofestivals.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zaofestivals",
+        "festival",
+        "zao",
+        "lu",
+        "entertainment",
+        "google",
+        "thezao",
+        "music",
+        "design",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_wi17n8bmm7mdab9rtak",
+      "title": "Merch",
+      "url": "https://merch.zaofestivals.com",
+      "description": "Shop for ZAO Festivals merchandise.",
+      "favicon": "https://merch.zaofestivals.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zaofestivals",
+        "festival",
+        "zao",
+        "merch",
+        "lu",
+        "entertainment",
+        "google",
+        "thezao",
+        "music",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_m5ovyrvel3ksvd2lcxmr",
+      "title": "Donate",
+      "url": "https://giveth.io/project/sustaining-zao-festivals-creativity-technology?tab=donations",
+      "description": "Donate to support ZAO Festivals.",
+      "favicon": "https://giveth.io/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "giveth",
+        "festival",
+        "zao",
+        "project",
+        "lu",
+        "entertainment",
+        "zaofestivals",
+        "google",
+        "thezao",
+        "music"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_wzyqb6swylgqsi0f5ed9",
+      "title": "ZAO PALOOZA Artist Cards",
+      "url": "https://zao.cards",
+      "description": "View ZAO PALOOZA Artist Cards.",
+      "favicon": "https://zao.cards/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zao",
+        "design",
+        "music",
+        "artist",
+        "thezao",
+        "festival",
+        "youtube",
+        "paragraph",
+        "technology",
+        "midipunkz"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_s4nl5im6fx8bowetbj",
+      "title": "Twitter",
+      "url": "https://x.com/zaofestivals?lang=en",
+      "description": "Follow ZAO Festivals on Twitter.",
+      "favicon": "https://x.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "x",
+        "festival",
+        "zao",
+        "zaofestivals",
+        "news",
+        "technology",
+        "lu",
+        "entertainment",
+        "google",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_9k59zjkvoltffwv502w",
+      "title": "Instagram",
+      "url": "https://www.instagram.com/zaofestivals/",
+      "description": "Follow ZAO Festivals on Instagram.",
+      "favicon": "https://www.instagram.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "instagram",
+        "festival",
+        "zao",
+        "zaofestivals",
+        "lu",
+        "entertainment",
+        "google",
+        "thezao",
+        "music",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_ipfkiqytgxfb3yw1r3oh",
+      "title": "Facebook",
+      "url": "https://www.facebook.com/ZAOFestivals",
+      "description": "Like ZAO Festivals on Facebook.",
+      "favicon": "https://www.facebook.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "facebook",
+        "festival",
+        "zao",
+        "zaofestivals",
+        "lu",
+        "entertainment",
+        "google",
+        "thezao",
+        "music",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_jnnxdr4yhpxwsquugk3g",
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/company/zaofestivals",
+      "description": "Connect with ZAO Festivals on LinkedIn.",
+      "favicon": "https://www.linkedin.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "linkedin",
+        "festival",
+        "zao",
+        "company",
+        "connect",
+        "lu",
+        "entertainment",
+        "zaofestivals",
+        "google",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_jca4a7nbolhccij2yl8",
+      "title": "YouTube",
+      "url": "https://www.youtube.com/@zaofestivals",
+      "description": "Watch ZAO Festivals videos on YouTube.",
+      "favicon": "https://www.youtube.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "youtube",
+        "entertainment",
+        "festival",
+        "zao",
+        "@zaofestivals",
+        "finance",
+        "web3",
+        "lu",
+        "music",
+        "zaofestivals"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_uvg59lhffnhsus9kkbx",
+      "title": "$Loanz OG Whitepaper",
+      "url": "https://paragraph.xyz/@thezao/student-loanz-whitepaper",
+      "description": "Dive into the original $Loanz Whitepaper for in-depth info on Student Loanz.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_zkm87h0pn4uyqxletsep",
+      "title": "$Loanz website",
+      "url": "https://studentloanz.xyz/",
+      "description": "Visit the official $Loanz website to explore student loan solutions.",
+      "favicon": "https://studentloanz.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "studentloanz"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_hguqdws3gk97h0k6xq3l",
+      "title": "$Loanz memebook",
+      "url": "https://zao.lol",
+      "description": "Make your own $loanz memes.",
+      "favicon": "https://zao.lol/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zao",
+        "thezao",
+        "music",
+        "festival",
+        "design",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_ippfdp3khboey9zj4lwp",
+      "title": "Loanz Daily Spaces",
+      "url": "https://x.com/loanzonbase",
+      "description": "Loanz Daily Spaces.",
+      "favicon": "https://x.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "x",
+        "technology",
+        "loanzonbase",
+        "news",
+        "festival",
+        "zao",
+        "paragraph",
+        "optimism",
+        "ethereum",
+        "layer2"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_cfkiasw6svbxakwunugu",
+      "title": "ZAO Spotify 2024",
+      "url": "https://open.spotify.com/playlist/2IIl13a4YNxQTLNJhDKr32?si=1bb3ef92068143cf",
+      "description": "Listen to ZAO Spotify 2024 playlist.",
+      "favicon": "https://open.spotify.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "spotify",
+        "music",
+        "zao",
+        "open",
+        "playlist",
+        "design",
+        "thezao",
+        "midipunkz",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_9b2wskn5hbdpmuw2j0ej",
+      "title": "ZAO Spotify 2025",
+      "url": "https://open.spotify.com/playlist/7MCDgGzyqbnsyKSNuMUUpM?si=2652032d60de4b93",
+      "description": "Listen to ZAO Spotify 2025 playlist.",
+      "favicon": "https://open.spotify.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "spotify",
+        "music",
+        "zao",
+        "open",
+        "playlist",
+        "design",
+        "thezao",
+        "midipunkz",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_80oanve7cq7wjf54hzq",
+      "title": "ZAO SOUND.XYZ Playlist",
+      "url": "https://www.sound.xyz/playlist/1e1ab680-2f45-4232-9c34-b6ba9dc1a1d3",
+      "description": "Listen to the ZAO SOUND.XYZ Playlist.",
+      "favicon": "https://www.sound.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "sound",
+        "music",
+        "zao",
+        "playlist",
+        "design",
+        "thezao",
+        "midipunkz",
+        "spotify",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_oveet1bghzsbh0crlulp",
+      "title": "Daniel Obute Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalentnewsletter12",
+      "description": "Daniel Obute Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_xdnam7foffcr9kv6yqeh",
+      "title": "Davyd Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalent-interview-1-davyd",
+      "description": "Davyd Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_tunpgv4ifcsv7xdeenyw",
+      "title": "Tej Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalent-interview-2",
+      "description": "Tej Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_zmnglqz7htnkvkabfbb",
+      "title": "Ohnahji B Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalent-interview-3",
+      "description": "Ohnahji B Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_p4jrpng4nyryjuchp7w",
+      "title": "CandyToyBox Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalent-interview-4",
+      "description": "CandyToyBox Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_pn4ukoba48hu74lchde",
+      "title": "Hurric4n3Ike Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalent-interview-5-hurric4n3ike",
+      "description": "Hurric4n3Ike Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_zjhxeljronnbrozyomrv",
+      "title": "Heather Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalent-interview-6",
+      "description": "Heather Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_tnoihlpypismjjzukbw",
+      "title": "Attabotty Interview",
+      "url": "https://paragraph.xyz/@thezao/ztalent-interview-7-attabotty",
+      "description": "Attabotty Interview.",
+      "favicon": "https://paragraph.xyz/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.138Z",
+        "updatedAt": "2025-07-11T10:37:15.138Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.138Z"
+      }
+    },
+    {
+      "id": "link_dtlvi0b8diarmoaoeyld",
+      "title": "Coming Soon",
+      "url": "#",
+      "description": "Links for Defi Space Donkeys will appear here.",
+      "favicon": null,
+      "screenshot": null,
+      "tags": [
+        "web3",
+        "finance",
+        "zao",
+        "youtube",
+        "thezao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_blqbkh2zqbwatyuqali",
+      "title": "Main website",
+      "url": "https://midipunkz.com/",
+      "description": "The official MidiPunkZ website.",
+      "favicon": "https://midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "technology",
+        "zao",
+        "social",
+        "music",
+        "entertainment",
+        "paragraph",
+        "news",
+        "optimism",
+        "ethereum"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_ddbwsjbwxldltttpk",
+      "title": "MidiVaderz game",
+      "url": "https://midipunkz.com/games",
+      "description": "Play MidiVaderz on the MidiPunkZ website.",
+      "favicon": "https://midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "entertainment",
+        "games",
+        "zao",
+        "social",
+        "music",
+        "technology",
+        "festival",
+        "lu",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_5gav4njioc7fuftavirc",
+      "title": "MidiPunkz Community",
+      "url": "https://ima.midipunkz.com/communities/midipunkz",
+      "description": "Join the MidiPunkZ community on IMA.",
+      "favicon": "https://ima.midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "social",
+        "ima",
+        "communities",
+        "community",
+        "zao",
+        "music",
+        "technology",
+        "entertainment",
+        "t"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_tbla7u77hdmpty93m1ud",
+      "title": "MiDi FeatherFrogs Community",
+      "url": "https://ima.midipunkz.com/communities/featherfrogs",
+      "description": "Explore the FeatherFrogs community on IMA.",
+      "favicon": "https://ima.midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "social",
+        "ima",
+        "communities",
+        "community",
+        "zao",
+        "music",
+        "technology",
+        "entertainment",
+        "t"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_60ffymt2mkre27e4mpvu",
+      "title": "Midi Avatars",
+      "url": "https://midipunkz.com/midiezz",
+      "description": "Browse and collect MidiPunkZ avatars.",
+      "favicon": "https://midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "midiezz",
+        "zao",
+        "social",
+        "music",
+        "technology",
+        "entertainment"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_llgwgizx04mgjqzham9x",
+      "title": "ZAO Community Page",
+      "url": "https://ima.midipunkz.com/communities/the-zao",
+      "description": "Check out the ZAO's dedicated community space on midipunkz.com.",
+      "favicon": "https://ima.midipunkz.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "midipunkz",
+        "social",
+        "zao",
+        "ima",
+        "communities",
+        "community",
+        "music",
+        "technology",
+        "entertainment",
+        "t"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_ztn8fhdkoutqkv06uwol",
+      "title": "BetterCallZaal Linktree",
+      "url": "https://linktr.ee/bettercallzaal",
+      "description": "Access all BetterCallZaal links and resources on Linktree.",
+      "favicon": "https://linktr.ee/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "linktr",
+        "bettercallzaal"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_rvbfgxhqulyd9jbrdc",
+      "title": "Personal Meeting Room (Huddle01)",
+      "url": "https://huddle01.app/room/zfp-tzyh-anm",
+      "description": "Enter your personal meeting room.",
+      "favicon": "https://huddle01.app/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "huddle01",
+        "room"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_rhembzu7mccybwcy44nn",
+      "title": "Meet with Zaal (Calendly)",
+      "url": "https://calendly.com/zaalp99/30minmeeting",
+      "description": "Schedule a meeting with Zaal.",
+      "favicon": "https://calendly.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "calendly",
+        "zaalp99"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_xcn2gu0l4vt8pkshrmmb",
+      "title": "Interview #0 (3/28/24): Blitzscaling w/Bayo",
+      "url": "https://youtu.be/FKyIS-h3fNY",
+      "description": "Interview #0: Blitzscaling a Startup w/Bayo.",
+      "favicon": "https://youtu.be/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "youtu",
+        "business",
+        "design",
+        "fkyis-h3fny",
+        "startup",
+        "zao",
+        "music",
+        "thezao",
+        "paragraph",
+        "technology"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_3hroizyxvqewsxm2e6ru",
+      "title": "Interview #1 (11/14/24): ZAO Fractal w/NovaCrypto",
+      "url": "https://www.youtube.com/watch?v=0_WvwzBvs90&ab_channel=NovaCryptoLTD",
+      "description": "Interview #1: ZAO Fractal w/NovaCrypto.",
+      "favicon": "https://www.youtube.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "youtube",
+        "finance",
+        "web3",
+        "zao",
+        "watch",
+        "crypto",
+        "entertainment",
+        "festival",
+        "thezao",
+        "music"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_d4qdyyk7dxreacodbhk",
+      "title": "Interview #2 (4/1/25): ZAO w/Lindsey",
+      "url": "https://www.youtube.com/watch?v=SXmdO6l4Rfg&ab_channel=TokenForYourThoughtsPodcast",
+      "description": "Interview #2: ZAO w/Lindsey.",
+      "favicon": "https://www.youtube.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "youtube",
+        "zao",
+        "watch",
+        "entertainment",
+        "festival",
+        "finance",
+        "web3",
+        "thezao",
+        "music",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_4o2e136q85xofyyhifyb",
+      "title": "Interview #3 (4/10/25): THE ZAO w/Will T",
+      "url": "https://www.youtube.com/watch?v=oVp0d1BBmko&ab_channel=ReFiDAO",
+      "description": "Interview #3: THE ZAO w/Will T.",
+      "favicon": "https://www.youtube.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "youtube",
+        "zao",
+        "watch",
+        "entertainment",
+        "festival",
+        "finance",
+        "web3",
+        "thezao",
+        "music",
+        "design"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_proacsgqu0a8gydi3gk3",
+      "title": "CandyToyBox Test Link",
+      "url": "https://thezao.com",
+      "description": "Test link for ZAO Co-Founder CandyToyBox.",
+      "favicon": "https://thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "zao",
+        "music",
+        "design",
+        "technology",
+        "news",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_wvzhd06kkv2k4vfbp0",
+      "title": "Attabotty Test Link",
+      "url": "https://thezao.com",
+      "description": "Test link for ZAO Co-Founder Attabotty.",
+      "favicon": "https://thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "zao",
+        "music",
+        "design",
+        "technology",
+        "news",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_ed9ukfcrgms547wa8aij",
+      "title": "HURRIC4N3IKE Test Link",
+      "url": "https://thezao.com",
+      "description": "Test link for ZAO Co-Founder HURRIC4N3IKE.",
+      "favicon": "https://thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "zao",
+        "music",
+        "design",
+        "technology",
+        "news",
+        "festival",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_f5ls5t9ejeexd5nf5au",
+      "title": "Instagram",
+      "url": "https://www.instagram.com/jangouuforever?igsh=MTl4bTRodXl2bDU4Mw%3D%3D&utm_source=qr",
+      "description": "Follow Jango UU on Instagram.",
+      "favicon": "https://www.instagram.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "instagram",
+        "jangouuforever",
+        "festival",
+        "zao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_kh2rr5o2i4abdilfgw3z",
+      "title": "X (Twitter)",
+      "url": "https://x.com/jangouuforever?s=11&t=lwnZlcNedjeVZeQDTcNEwQ",
+      "description": "Follow Jango UU on X (Twitter).",
+      "favicon": "https://x.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "x",
+        "jangouuforever",
+        "news",
+        "festival",
+        "zao",
+        "technology"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_zcgju1bj4yqhg5wfc",
+      "title": "Spotify",
+      "url": "https://open.spotify.com/artist/5nc2dgefoPLfvsrJVx3PNz?si=Xhzfg5n1Q3uHVJHHawp8KA",
+      "description": "Listen to Jango UU on Spotify.",
+      "favicon": "https://open.spotify.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "spotify",
+        "open",
+        "artist",
+        "music",
+        "zao"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_j7ubop5avylkabeah4pt",
+      "title": "EZinCrypto Test Link",
+      "url": "https://thezao.com",
+      "description": "Test link for ZAO Staff EZinCrypto.",
+      "favicon": "https://thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "finance",
+        "web3",
+        "zao",
+        "crypto",
+        "music",
+        "design",
+        "technology",
+        "news",
+        "youtube"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_jmqrw8xi3fuefsgdcrln",
+      "title": "Ohnahji Linktree",
+      "url": "https://linktr.ee/ohnahji",
+      "description": "Linktree for Ohnahji B.",
+      "favicon": "https://linktr.ee/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "linktr",
+        "ohnahji"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_xl6ppsauq3ksnlpdppi",
+      "title": "Jed XO Test Link",
+      "url": "https://thezao.com",
+      "description": "Test link for ZAO Community Member Jed XO.",
+      "favicon": "https://thezao.com/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "thezao",
+        "social",
+        "zao",
+        "community",
+        "music",
+        "design",
+        "technology",
+        "news",
+        "midipunkz",
+        "t"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_b5uwpdu5ciwdo6pk25cs",
+      "title": "GodCloud Website",
+      "url": "https://godcloud.org",
+      "description": "Website for GodCloud.",
+      "favicon": "https://godcloud.org/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "godcloud"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    },
+    {
+      "id": "link_1kopjjoduhljciz0i1fl",
+      "title": "GodCloud Drip.haus",
+      "url": "https://drip.haus/godcloud",
+      "description": "Collect GodCloud tracks.",
+      "favicon": "https://drip.haus/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "drip",
+        "music",
+        "godcloud",
+        "zao",
+        "design",
+        "thezao",
+        "midipunkz",
+        "spotify"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-11T10:37:15.139Z",
+        "updatedAt": "2025-07-11T10:37:15.139Z",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-11T10:37:15.139Z"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_web3_resources",
+      "name": "Web3 Resources",
+      "description": "Web3 Resources resources and links",
+      "icon": "folder",
+      "color": "#0F02A4",
+      "subcategories": [
+        {
+          "id": "subcat_documentation",
+          "name": "Documentation",
+          "description": "Documentation in Web3 Resources",
+          "links": [
+            "link_ob4noeufoiodenzqshi5c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_zao_onchain",
+      "name": "ZAO Onchain",
+      "description": "ZAO Onchain resources and links",
+      "icon": "folder",
+      "color": "#B5A20A",
+      "subcategories": [
+        {
+          "id": "subcat_zao_tokens",
+          "name": "ZAO Tokens",
+          "description": "ZAO Tokens in ZAO Onchain",
+          "links": [
+            "link_ytthj4gvpwcjgjysnvvb",
+            "link_srnarjn4mjjsdendud",
+            "link_3w3sjmegdgcepodi"
+          ]
+        },
+        {
+          "id": "subcat_zao_tracks",
+          "name": "ZAO Tracks",
+          "description": "ZAO Tracks in ZAO Onchain",
+          "links": [
+            "link_kfrgmu4bxf7dyipfss",
+            "link_zyzb7wmguhz7okjnkt9f",
+            "link_3cqkuurrvprcglvqq40l",
+            "link_4lch2jowxfolimhydk7w"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_zao_links",
+      "name": "ZAO Links",
+      "description": "ZAO Links resources and links",
+      "icon": "folder",
+      "color": "#432781",
+      "subcategories": [
+        {
+          "id": "subcat_zao_platforms",
+          "name": "ZAO Platforms",
+          "description": "ZAO Platforms in ZAO Links",
+          "links": [
+            "link_cdl3rk367o5lztd2woje",
+            "link_qnn3wybfbrlsmwe0sqcv",
+            "link_z0ne0rfwxpnpzveqa0y4"
+          ]
+        },
+        {
+          "id": "subcat_calendars",
+          "name": "Calendars",
+          "description": "Calendars in ZAO Links",
+          "links": [
+            "link_2qse2beifxaseimgjkl0",
+            "link_xkhvuowlywwawoafcps",
+            "link_nbyk5fuu6c2ju2saio"
+          ]
+        },
+        {
+          "id": "subcat_zao_social_media_chats",
+          "name": "ZAO Social Media Chats",
+          "description": "ZAO Social Media Chats in ZAO Links",
+          "links": [
+            "link_tx4bdmztlswwi402dinb",
+            "link_0vtv8ctani2lxscc0hcu"
+          ]
+        },
+        {
+          "id": "subcat_zao_whitepaper",
+          "name": "ZAO WHITEPAPER",
+          "description": "ZAO WHITEPAPER in ZAO Links",
+          "links": [
+            "link_b3uhsqkzaqwvmudec7m"
+          ]
+        },
+        {
+          "id": "subcat_daily_newsletter_articles",
+          "name": "Daily Newsletter Articles",
+          "description": "Daily Newsletter Articles in ZAO Links",
+          "links": [
+            "link_zwgxygj5ndbo26x3qq2",
+            "link_exo1v84c9gsvjj5jrz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_zao_projects_links",
+      "name": "ZAO Projects Links",
+      "description": "ZAO Projects Links resources and links",
+      "icon": "folder",
+      "color": "#1D31AB",
+      "subcategories": [
+        {
+          "id": "subcat_wavewarz",
+          "name": "WaveWarZ",
+          "description": "WaveWarZ in ZAO Projects Links",
+          "links": [
+            "link_ekrk2j157x1f195hrpsc",
+            "link_sjatuek6lts9ye4tubdp"
+          ]
+        },
+        {
+          "id": "subcat_zao_festivals",
+          "name": "ZAO Festivals",
+          "description": "ZAO Festivals in ZAO Projects Links",
+          "links": [
+            "link_16g8u0nq2bbipzuqfgpj",
+            "link_wi17n8bmm7mdab9rtak",
+            "link_m5ovyrvel3ksvd2lcxmr",
+            "link_wzyqb6swylgqsi0f5ed9"
+          ]
+        },
+        {
+          "id": "subcat_zao_festivals_socials",
+          "name": "ZAO Festivals Socials",
+          "description": "ZAO Festivals Socials in ZAO Projects Links",
+          "links": [
+            "link_s4nl5im6fx8bowetbj",
+            "link_9k59zjkvoltffwv502w",
+            "link_ipfkiqytgxfb3yw1r3oh",
+            "link_jnnxdr4yhpxwsquugk3g",
+            "link_jca4a7nbolhccij2yl8"
+          ]
+        },
+        {
+          "id": "subcat__loanz",
+          "name": "$Loanz",
+          "description": "$Loanz in ZAO Projects Links",
+          "links": [
+            "link_uvg59lhffnhsus9kkbx",
+            "link_zkm87h0pn4uyqxletsep",
+            "link_hguqdws3gk97h0k6xq3l",
+            "link_ippfdp3khboey9zj4lwp"
+          ]
+        },
+        {
+          "id": "subcat_zao_playlists",
+          "name": "ZAO Playlists",
+          "description": "ZAO Playlists in ZAO Projects Links",
+          "links": [
+            "link_cfkiasw6svbxakwunugu",
+            "link_9b2wskn5hbdpmuw2j0ej",
+            "link_80oanve7cq7wjf54hzq"
+          ]
+        },
+        {
+          "id": "subcat_zao_cmotm_interviews",
+          "name": "ZAO CMOTM Interviews",
+          "description": "ZAO CMOTM Interviews in ZAO Projects Links",
+          "links": [
+            "link_oveet1bghzsbh0crlulp",
+            "link_xdnam7foffcr9kv6yqeh",
+            "link_tunpgv4ifcsv7xdeenyw",
+            "link_zmnglqz7htnkvkabfbb",
+            "link_p4jrpng4nyryjuchp7w",
+            "link_pn4ukoba48hu74lchde",
+            "link_zjhxeljronnbrozyomrv",
+            "link_tnoihlpypismjjzukbw"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_zao_community_links",
+      "name": "ZAO Community Links",
+      "description": "ZAO Community Links resources and links",
+      "icon": "folder",
+      "color": "#980E6A",
+      "subcategories": [
+        {
+          "id": "subcat_defi_space_donkeys",
+          "name": "Defi Space Donkeys",
+          "description": "Defi Space Donkeys in ZAO Community Links",
+          "links": [
+            "link_dtlvi0b8diarmoaoeyld"
+          ]
+        },
+        {
+          "id": "subcat_impact_concerts",
+          "name": "Impact Concerts",
+          "description": "Impact Concerts in ZAO Community Links",
+          "links": [
+            "link_dtlvi0b8diarmoaoeyld"
+          ]
+        },
+        {
+          "id": "subcat_midipunkz",
+          "name": "MidiPunkZ",
+          "description": "MidiPunkZ in ZAO Community Links",
+          "links": [
+            "link_blqbkh2zqbwatyuqali",
+            "link_ddbwsjbwxldltttpk",
+            "link_5gav4njioc7fuftavirc",
+            "link_tbla7u77hdmpty93m1ud",
+            "link_60ffymt2mkre27e4mpvu",
+            "link_llgwgizx04mgjqzham9x"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_zao_community_members",
+      "name": "ZAO Community Members",
+      "description": "ZAO Community Members resources and links",
+      "icon": "folder",
+      "color": "#CE9F8A",
+      "subcategories": [
+        {
+          "id": "subcat_zao_founder_bettercallzaal_links",
+          "name": "ZAO Founder BetterCallZaal Links",
+          "description": "ZAO Founder BetterCallZaal Links in ZAO Community Members",
+          "links": [
+            "link_ztn8fhdkoutqkv06uwol",
+            "link_rvbfgxhqulyd9jbrdc",
+            "link_rhembzu7mccybwcy44nn"
+          ]
+        },
+        {
+          "id": "subcat_zao_founder_bettercallzaal_interviews",
+          "name": "ZAO Founder BetterCallZaal Interviews",
+          "description": "ZAO Founder BetterCallZaal Interviews in ZAO Community Members",
+          "links": [
+            "link_xcn2gu0l4vt8pkshrmmb",
+            "link_3hroizyxvqewsxm2e6ru",
+            "link_d4qdyyk7dxreacodbhk",
+            "link_4o2e136q85xofyyhifyb"
+          ]
+        },
+        {
+          "id": "subcat_zao_co_founder_candytoybox_links",
+          "name": "ZAO Co-Founder CandyToyBox Links",
+          "description": "ZAO Co-Founder CandyToyBox Links in ZAO Community Members",
+          "links": [
+            "link_proacsgqu0a8gydi3gk3"
+          ]
+        },
+        {
+          "id": "subcat_zao_co_founder_attabotty_links",
+          "name": "ZAO Co-Founder Attabotty Links",
+          "description": "ZAO Co-Founder Attabotty Links in ZAO Community Members",
+          "links": [
+            "link_wvzhd06kkv2k4vfbp0"
+          ]
+        },
+        {
+          "id": "subcat_zao_co_founder_hurric4n3ike_links",
+          "name": "ZAO Co-Founder HURRIC4N3IKE Links",
+          "description": "ZAO Co-Founder HURRIC4N3IKE Links in ZAO Community Members",
+          "links": [
+            "link_ed9ukfcrgms547wa8aij"
+          ]
+        },
+        {
+          "id": "subcat_zao_co_founder_jango_uu_links",
+          "name": "ZAO Co-Founder Jango UU Links",
+          "description": "ZAO Co-Founder Jango UU Links in ZAO Community Members",
+          "links": [
+            "link_f5ls5t9ejeexd5nf5au",
+            "link_kh2rr5o2i4abdilfgw3z",
+            "link_zcgju1bj4yqhg5wfc"
+          ]
+        },
+        {
+          "id": "subcat_zao_staff_ezincrypto_links",
+          "name": "ZAO Staff EZinCrypto Links",
+          "description": "ZAO Staff EZinCrypto Links in ZAO Community Members",
+          "links": [
+            "link_j7ubop5avylkabeah4pt"
+          ]
+        },
+        {
+          "id": "subcat_zao_staff_ohnahji_b_links",
+          "name": "ZAO Staff Ohnahji B Links",
+          "description": "ZAO Staff Ohnahji B Links in ZAO Community Members",
+          "links": [
+            "link_jmqrw8xi3fuefsgdcrln"
+          ]
+        },
+        {
+          "id": "subcat_zao_community_member_jed_xo_links",
+          "name": "ZAO Community Member Jed XO Links",
+          "description": "ZAO Community Member Jed XO Links in ZAO Community Members",
+          "links": [
+            "link_xl6ppsauq3ksnlpdppi"
+          ]
+        },
+        {
+          "id": "subcat_zao_musician_godcloud",
+          "name": "ZAO Musician GodCloud",
+          "description": "ZAO Musician GodCloud in ZAO Community Members",
+          "links": [
+            "link_b5uwpdu5ciwdo6pk25cs",
+            "link_1kopjjoduhljciz0i1fl"
+          ]
+        }
+      ]
+    }
+  ],
+  "tags": {
+    "optimism": {
+      "count": 7,
+      "color": "#49520C",
+      "related": [
+        "ethereum",
+        "technology",
+        "paragraph",
+        "news",
+        "layer2"
+      ]
+    },
+    "ethereum": {
+      "count": 7,
+      "color": "#662FF7",
+      "related": [
+        "optimism",
+        "technology",
+        "paragraph",
+        "news",
+        "layer2"
+      ]
+    },
+    "layer2": {
+      "count": 5,
+      "color": "#DAD501",
+      "related": [
+        "optimism",
+        "ethereum",
+        "technology",
+        "paragraph",
+        "news"
+      ]
+    },
+    "superchain": {
+      "count": 2,
+      "color": "#C9DC26",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "op-stack",
+        "blockchain"
+      ]
+    },
+    "op-stack": {
+      "count": 2,
+      "color": "#B1379C",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "blockchain"
+      ]
+    },
+    "blockchain": {
+      "count": 2,
+      "color": "#E1E254",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "op-stack"
+      ]
+    },
+    "technology": {
+      "count": 45,
+      "color": "#E7850C",
+      "related": [
+        "news",
+        "design",
+        "zao",
+        "paragraph",
+        "music"
+      ]
+    },
+    "thezao": {
+      "count": 53,
+      "color": "#DB7417",
+      "related": [
+        "zao",
+        "music",
+        "design",
+        "festival",
+        "technology"
+      ]
+    },
+    "music": {
+      "count": 55,
+      "color": "#36EE25",
+      "related": [
+        "zao",
+        "thezao",
+        "design",
+        "festival",
+        "technology"
+      ]
+    },
+    "zao": {
+      "count": 87,
+      "color": "#01D628",
+      "related": [
+        "music",
+        "thezao",
+        "design",
+        "festival",
+        "technology"
+      ]
+    },
+    "design": {
+      "count": 50,
+      "color": "#69C1BE",
+      "related": [
+        "thezao",
+        "music",
+        "zao",
+        "technology",
+        "festival"
+      ]
+    },
+    "zora": {
+      "count": 2,
+      "color": "#392424",
+      "related": [
+        "music",
+        "zao",
+        "nft",
+        "web3",
+        "collect"
+      ]
+    },
+    "midipunkz": {
+      "count": 25,
+      "color": "#FBCBB7",
+      "related": [
+        "music",
+        "zao",
+        "thezao",
+        "design",
+        "technology"
+      ]
+    },
+    "news": {
+      "count": 34,
+      "color": "#338AD3",
+      "related": [
+        "technology",
+        "design",
+        "paragraph",
+        "thezao",
+        "zao"
+      ]
+    },
+    "google": {
+      "count": 10,
+      "color": "#135E39",
+      "related": [
+        "festival",
+        "zao",
+        "lu",
+        "entertainment",
+        "zaofestivals"
+      ]
+    },
+    "festival": {
+      "count": 44,
+      "color": "#5EB978",
+      "related": [
+        "zao",
+        "thezao",
+        "music",
+        "design",
+        "youtube"
+      ]
+    },
+    "lu": {
+      "count": 14,
+      "color": "#000D89",
+      "related": [
+        "festival",
+        "zao",
+        "entertainment",
+        "zaofestivals",
+        "thezao"
+      ]
+    },
+    "entertainment": {
+      "count": 25,
+      "color": "#CD7F88",
+      "related": [
+        "zao",
+        "music",
+        "thezao",
+        "festival",
+        "lu"
+      ]
+    },
+    "discord": {
+      "count": 2,
+      "color": "#9F3D2C",
+      "related": [
+        "zao",
+        "acjyyqh3be",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "t": {
+      "count": 8,
+      "color": "#000074",
+      "related": [
+        "technology",
+        "zao",
+        "music",
+        "social",
+        "thezao"
+      ]
+    },
+    "social": {
+      "count": 15,
+      "color": "#88176D",
+      "related": [
+        "technology",
+        "midipunkz",
+        "music",
+        "zao",
+        "entertainment"
+      ]
+    },
+    "charmverse": {
+      "count": 2,
+      "color": "#BAEFBE",
+      "related": [
+        "zao",
+        "the-zao",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "paragraph": {
+      "count": 34,
+      "color": "#2FC96E",
+      "related": [
+        "technology",
+        "news",
+        "design",
+        "thezao",
+        "@thezao"
+      ]
+    },
+    "x": {
+      "count": 8,
+      "color": "#000078",
+      "related": [
+        "news",
+        "festival",
+        "zao",
+        "technology",
+        "paragraph"
+      ]
+    },
+    "wavewarz": {
+      "count": 2,
+      "color": "#0B010B",
+      "related": [
+        "x",
+        "news",
+        "update",
+        "festival",
+        "zao"
+      ]
+    },
+    "zaofestivals": {
+      "count": 12,
+      "color": "#A10CD3",
+      "related": [
+        "festival",
+        "zao",
+        "lu",
+        "entertainment",
+        "google"
+      ]
+    },
+    "giveth": {
+      "count": 2,
+      "color": "#C1F945",
+      "related": [
+        "festival",
+        "zao",
+        "project",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "instagram": {
+      "count": 4,
+      "color": "#B907B2",
+      "related": [
+        "festival",
+        "zao",
+        "zaofestivals",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "facebook": {
+      "count": 2,
+      "color": "#A19AC6",
+      "related": [
+        "festival",
+        "zao",
+        "zaofestivals",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "linkedin": {
+      "count": 2,
+      "color": "#3590FE",
+      "related": [
+        "festival",
+        "zao",
+        "company",
+        "connect",
+        "lu"
+      ]
+    },
+    "youtube": {
+      "count": 27,
+      "color": "#E32B23",
+      "related": [
+        "zao",
+        "music",
+        "thezao",
+        "festival",
+        "design"
+      ]
+    },
+    "studentloanz": {
+      "count": 1,
+      "color": "#96842F",
+      "related": []
+    },
+    "spotify": {
+      "count": 9,
+      "color": "#DDE6BA",
+      "related": [
+        "music",
+        "zao",
+        "thezao",
+        "design",
+        "midipunkz"
+      ]
+    },
+    "sound": {
+      "count": 2,
+      "color": "#88C90F",
+      "related": [
+        "music",
+        "zao",
+        "playlist",
+        "design",
+        "thezao"
+      ]
+    },
+    "web3": {
+      "count": 10,
+      "color": "#379F5F",
+      "related": [
+        "zao",
+        "music",
+        "thezao",
+        "youtube",
+        "finance"
+      ]
+    },
+    "linktr": {
+      "count": 4,
+      "color": "#46A7F8",
+      "related": [
+        "bettercallzaal",
+        "ohnahji"
+      ]
+    },
+    "huddle01": {
+      "count": 2,
+      "color": "#0BB507",
+      "related": [
+        "room"
+      ]
+    },
+    "calendly": {
+      "count": 2,
+      "color": "#5EFC9A",
+      "related": [
+        "zaalp99"
+      ]
+    },
+    "youtu": {
+      "count": 2,
+      "color": "#DD56E0",
+      "related": [
+        "business",
+        "design",
+        "fkyis-h3fny",
+        "startup",
+        "zao"
+      ]
+    },
+    "business": {
+      "count": 2,
+      "color": "#A4BFC0",
+      "related": [
+        "youtu",
+        "design",
+        "fkyis-h3fny",
+        "startup",
+        "zao"
+      ]
+    },
+    "finance": {
+      "count": 8,
+      "color": "#244FDA",
+      "related": [
+        "youtube",
+        "zao",
+        "web3",
+        "music",
+        "thezao"
+      ]
+    },
+    "godcloud": {
+      "count": 2,
+      "color": "#B73B39",
+      "related": [
+        "drip",
+        "music",
+        "zao",
+        "design",
+        "thezao"
+      ]
+    },
+    "drip": {
+      "count": 2,
+      "color": "#2F2E35",
+      "related": [
+        "music",
+        "godcloud",
+        "zao",
+        "design",
+        "thezao"
+      ]
+    },
+    "stack": {
+      "count": 1,
+      "color": "#8AC288",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "op-stack"
+      ]
+    },
+    "song": {
+      "count": 1,
+      "color": "#35F515",
+      "related": [
+        "thezao",
+        "music",
+        "zao",
+        "zao-chella",
+        "design"
+      ]
+    },
+    "zao-chella": {
+      "count": 3,
+      "color": "#E1B586",
+      "related": [
+        "thezao",
+        "music",
+        "zao",
+        "design",
+        "technology"
+      ]
+    },
+    "attabotty": {
+      "count": 1,
+      "color": "#6888AC",
+      "related": [
+        "zao",
+        "design",
+        "music",
+        "artist",
+        "thezao"
+      ]
+    },
+    "artist": {
+      "count": 4,
+      "color": "#02DF47",
+      "related": [
+        "zao",
+        "music",
+        "design",
+        "thezao",
+        "paragraph"
+      ]
+    },
+    "zalora": {
+      "count": 1,
+      "color": "#B8EA99",
+      "related": [
+        "thezao",
+        "technology",
+        "zao",
+        "music",
+        "design"
+      ]
+    },
+    "nft": {
+      "count": 1,
+      "color": "#01A9BC",
+      "related": [
+        "zora",
+        "music",
+        "zao",
+        "web3",
+        "collect"
+      ]
+    },
+    "collect": {
+      "count": 1,
+      "color": "#97612A",
+      "related": [
+        "zora",
+        "music",
+        "zao",
+        "nft",
+        "web3"
+      ]
+    },
+    "zao-cypher": {
+      "count": 1,
+      "color": "#D63560",
+      "related": [
+        "thezao",
+        "design",
+        "music",
+        "zao",
+        "artist"
+      ]
+    },
+    "ima": {
+      "count": 5,
+      "color": "#0197BD",
+      "related": [
+        "midipunkz",
+        "music",
+        "zao",
+        "social",
+        "technology"
+      ]
+    },
+    "midivaderz": {
+      "count": 2,
+      "color": "#9C4615",
+      "related": [
+        "midipunkz",
+        "music",
+        "zao",
+        "ima",
+        "social"
+      ]
+    },
+    "innovation": {
+      "count": 1,
+      "color": "#052565",
+      "related": [
+        "thezao",
+        "zao",
+        "connect",
+        "zverse",
+        "music"
+      ]
+    },
+    "connect": {
+      "count": 3,
+      "color": "#B478EA",
+      "related": [
+        "thezao",
+        "zao",
+        "technology",
+        "news",
+        "festival"
+      ]
+    },
+    "zverse": {
+      "count": 1,
+      "color": "#DDB4FB",
+      "related": [
+        "thezao",
+        "zao",
+        "innovation",
+        "connect",
+        "music"
+      ]
+    },
+    "hats": {
+      "count": 1,
+      "color": "#30C138",
+      "related": [
+        "thezao",
+        "design",
+        "zao",
+        "music",
+        "technology"
+      ]
+    },
+    "calendar": {
+      "count": 1,
+      "color": "#5EFB3E",
+      "related": [
+        "google",
+        "festival",
+        "zao",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "zao-m": {
+      "count": 1,
+      "color": "#E4F208",
+      "related": [
+        "lu",
+        "entertainment",
+        "music",
+        "festival",
+        "zao"
+      ]
+    },
+    "acjyyqh3be": {
+      "count": 1,
+      "color": "#3C3597",
+      "related": [
+        "discord",
+        "zao",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "+imh5y_t2mks1nmvh": {
+      "count": 1,
+      "color": "#BB904D",
+      "related": [
+        "t",
+        "news",
+        "social",
+        "update",
+        "discussion"
+      ]
+    },
+    "update": {
+      "count": 3,
+      "color": "#0038C9",
+      "related": [
+        "news",
+        "paragraph",
+        "technology",
+        "thezao",
+        "t"
+      ]
+    },
+    "discussion": {
+      "count": 1,
+      "color": "#233828",
+      "related": [
+        "t",
+        "news",
+        "social",
+        "+imh5y_t2mks1nmvh",
+        "update"
+      ]
+    },
+    "the-zao": {
+      "count": 1,
+      "color": "#706ACC",
+      "related": [
+        "charmverse",
+        "zao",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "@thezao": {
+      "count": 11,
+      "color": "#6A4457",
+      "related": [
+        "paragraph",
+        "technology",
+        "news",
+        "design",
+        "optimism"
+      ]
+    },
+    "article": {
+      "count": 1,
+      "color": "#58CCF6",
+      "related": [
+        "paragraph",
+        "technology",
+        "news",
+        "design",
+        "@thezao"
+      ]
+    },
+    "merch": {
+      "count": 1,
+      "color": "#2FA3BF",
+      "related": [
+        "zaofestivals",
+        "festival",
+        "zao",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "project": {
+      "count": 1,
+      "color": "#904B19",
+      "related": [
+        "giveth",
+        "festival",
+        "zao",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "company": {
+      "count": 1,
+      "color": "#A73C7D",
+      "related": [
+        "linkedin",
+        "festival",
+        "zao",
+        "connect",
+        "lu"
+      ]
+    },
+    "@zaofestivals": {
+      "count": 1,
+      "color": "#62AD13",
+      "related": [
+        "youtube",
+        "entertainment",
+        "festival",
+        "zao",
+        "finance"
+      ]
+    },
+    "loanzonbase": {
+      "count": 1,
+      "color": "#61173A",
+      "related": [
+        "x",
+        "technology",
+        "news",
+        "festival",
+        "zao"
+      ]
+    },
+    "open": {
+      "count": 3,
+      "color": "#34264A",
+      "related": [
+        "spotify",
+        "music",
+        "zao",
+        "playlist",
+        "design"
+      ]
+    },
+    "playlist": {
+      "count": 3,
+      "color": "#0681D2",
+      "related": [
+        "spotify",
+        "music",
+        "zao",
+        "design",
+        "thezao"
+      ]
+    },
+    "games": {
+      "count": 1,
+      "color": "#D932C1",
+      "related": [
+        "midipunkz",
+        "entertainment",
+        "zao",
+        "social",
+        "music"
+      ]
+    },
+    "communities": {
+      "count": 3,
+      "color": "#38AA47",
+      "related": [
+        "midipunkz",
+        "social",
+        "ima",
+        "community",
+        "zao"
+      ]
+    },
+    "community": {
+      "count": 4,
+      "color": "#C52FE9",
+      "related": [
+        "midipunkz",
+        "social",
+        "zao",
+        "music",
+        "technology"
+      ]
+    },
+    "midiezz": {
+      "count": 1,
+      "color": "#E687A4",
+      "related": [
+        "midipunkz",
+        "zao",
+        "social",
+        "music",
+        "technology"
+      ]
+    },
+    "bettercallzaal": {
+      "count": 1,
+      "color": "#F2C6E0",
+      "related": [
+        "linktr"
+      ]
+    },
+    "room": {
+      "count": 1,
+      "color": "#3580DB",
+      "related": [
+        "huddle01"
+      ]
+    },
+    "zaalp99": {
+      "count": 1,
+      "color": "#C7FCBE",
+      "related": [
+        "calendly"
+      ]
+    },
+    "fkyis-h3fny": {
+      "count": 1,
+      "color": "#8E59F7",
+      "related": [
+        "youtu",
+        "business",
+        "design",
+        "startup",
+        "zao"
+      ]
+    },
+    "startup": {
+      "count": 1,
+      "color": "#EB427D",
+      "related": [
+        "youtu",
+        "business",
+        "design",
+        "fkyis-h3fny",
+        "zao"
+      ]
+    },
+    "watch": {
+      "count": 3,
+      "color": "#BAC4CF",
+      "related": [
+        "youtube",
+        "finance",
+        "web3",
+        "zao",
+        "entertainment"
+      ]
+    },
+    "crypto": {
+      "count": 2,
+      "color": "#6EF0C1",
+      "related": [
+        "youtube",
+        "finance",
+        "web3",
+        "zao",
+        "thezao"
+      ]
+    },
+    "jangouuforever": {
+      "count": 2,
+      "color": "#77E868",
+      "related": [
+        "festival",
+        "zao",
+        "instagram",
+        "x",
+        "news"
+      ]
+    },
+    "ohnahji": {
+      "count": 1,
+      "color": "#8776DB",
+      "related": [
+        "linktr"
+      ]
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-07-11T05:44:01-04:00",
+  "metadata": {
+    "totalLinks": 71,
+    "totalCategories": 8,
+    "totalTags": 120
+  },
+  "links": [
+    {
+      "id": "link_ob4noeufoiodenzqshi5c",
+      "title": "Optimism Superchain Documentation",
+      "url": "https://docs.optimism.io/stack/explainer",
+      "description": "Comprehensive documentation about the Optimism Superchain architecture and ecosystem",
+      "favicon": "https://docs.optimism.io/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "op-stack",
+        "blockchain",
+        "technology"
+      ],
+      "metadata": {
+        "createdAt": "2025-07-10T22:18:56-04:00",
+        "updatedAt": "2025-07-10T22:18:56-04:00",
+        "addedBy": "admin",
+        "clicks": 0,
+        "popularity": 0,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-10T22:18:56-04:00"
+      }
+    },
+    {
+      "id": "link_zao_website_main",
+      "title": "ZAO Website",
+      "url": "https://zao.network",
+      "description": "Official website for the ZAO ecosystem",
+      "favicon": "https://zao.network/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zao",
+        "official",
+        "website",
+        "ecosystem"
+      ],
+      "metadata": {
+        "createdAt": "2025-01-01T00:00:00-04:00",
+        "updatedAt": "2025-01-01T00:00:00-04:00",
+        "addedBy": "admin",
+        "clicks": 245,
+        "popularity": 8.7,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-01T00:00:00-04:00"
+      }
+    },
+    {
+      "id": "link_zao_chella_vibez",
+      "title": "Mint ZAO-CHELLA Vibez Track on Zora",
+      "url": "https://zora.co/collect/zao-chella-vibez",
+      "description": "Mint the official ZAO-CHELLA Vibez track on Zora NFT marketplace",
+      "favicon": "https://zora.co/favicon.ico",
+      "screenshot": null,
+      "tags": [
+        "zao",
+        "music",
+        "nft",
+        "zora",
+        "mint",
+        "track",
+        "vibez"
+      ],
+      "metadata": {
+        "createdAt": "2025-03-15T00:00:00-04:00",
+        "updatedAt": "2025-03-15T00:00:00-04:00",
+        "addedBy": "admin",
+        "clicks": 187,
+        "popularity": 7.2,
+        "isArchived": false,
+        "isDead": false,
+        "lastChecked": "2025-07-01T00:00:00-04:00"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_web3_resources",
+      "name": "Web3 Resources",
+      "description": "Documentation, tools, and resources for Web3 development",
+      "icon": "book-open",
+      "color": "#3498db",
+      "subcategories": [
+        {
+          "id": "subcat_documentation",
+          "name": "Documentation",
+          "description": "Technical documentation for Web3 protocols and tools",
+          "links": [
+            "link_ob4noeufoiodenzqshi5c"
+          ]
+        },
+        {
+          "id": "subcat_tools",
+          "name": "Tools",
+          "description": "Development tools for Web3",
+          "links": []
+        }
+      ]
+    },
+    {
+      "id": "cat_zao_ecosystem",
+      "name": "ZAO Ecosystem",
+      "description": "Official ZAO ecosystem resources",
+      "icon": "globe",
+      "color": "#e74c3c",
+      "subcategories": [
+        {
+          "id": "subcat_official",
+          "name": "Official Sites",
+          "description": "Official ZAO websites and platforms",
+          "links": [
+            "link_zao_website_main"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cat_zao_music",
+      "name": "ZAO Music",
+      "description": "Music tracks, NFTs, and audio content",
+      "icon": "music",
+      "color": "#9b59b6",
+      "subcategories": [
+        {
+          "id": "subcat_tracks",
+          "name": "Tracks",
+          "description": "ZAO music tracks and audio content",
+          "links": [
+            "link_zao_chella_vibez"
+          ]
+        }
+      ]
+    }
+  ],
+  "tags": {
+    "optimism": {
+      "count": 1,
+      "color": "#FF0420",
+      "related": ["ethereum", "layer2", "blockchain"]
+    },
+    "ethereum": {
+      "count": 1,
+      "color": "#627EEA",
+      "related": ["blockchain", "web3"]
+    },
+    "zao": {
+      "count": 2,
+      "color": "#e74c3c",
+      "related": ["music", "ecosystem"]
+    },
+    "music": {
+      "count": 1,
+      "color": "#9b59b6",
+      "related": ["track", "audio"]
+    }
+  }
+}

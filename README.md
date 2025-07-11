@@ -2,104 +2,174 @@
 
 A mobile-optimized version of the ZAO Nexus portal that efficiently handles 5000+ links with wallet connection, token gating, advanced search functionality, AI-powered tagging, and an AI assistant.
 
-## Latest Updates
+[![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen)](https://github.com/bettercallzaal/NEXUSV5.6)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.3-38B2AC)](https://tailwindcss.com/)
 
-**[July 8, 2025]** Fixed filter UI positioning and layout:
+## 📋 Overview
 
-- Adjusted filter bar positioning to prevent overlap with other UI elements
-- Optimized sticky positioning with proper top offset for better user experience
-- Improved visual separation with subtle shadow effect
-- Fixed spacing and padding in filter components for more consistent layout
+ZAO Nexus V5 is a comprehensive web application designed to organize and provide access to 5000+ curated links for the ZAO ecosystem. The platform features token-gated access, requiring users to hold either $ZAO tokens on Optimism or $LOANZ tokens on Base. The application offers advanced filtering, AI-powered tagging, and a responsive design optimized for all devices.
 
-**[July 6, 2025]** Implemented advanced filtering and AI-powered tagging system:
+## 🔄 Latest Updates
 
-- Added comprehensive `AdvancedFilters` component with date range, popularity, read status, and domain filtering
-- Created responsive `TagManager` component with colored tag badges and searchable dialog
-- Implemented AI-powered tag generation using OpenAI GPT with three-tiered fallback system:
-  - Primary: OpenAI GPT-3.5 Turbo for intelligent tag generation
-  - Secondary: REST API fallback for tag suggestions
-  - Tertiary: Local keyword extraction for offline capability
-- Built keyword extraction utility with stopword filtering and n-gram analysis
-- Created new link processor with URL validation, metadata extraction, and favicon generation
-- Implemented intelligent category assignment based on tag content and URL patterns
-- Developed responsive filter sidebar with mobile slide-in animation and desktop persistent mode
-- Enhanced link browser with integrated filtering, tagging, and mobile-optimized display
-- Added interactive demo page to showcase all new features with sample data
-- Fixed TypeScript lint errors and improved code organization
-- Removed references to version 5.3 from Git to prevent accidental pushes
+### **[July 11, 2025]** Web3 Resources & Auto-Tagging
+- **New Web3 Resources Category**
+  - Added dedicated category for Web3 documentation and resources
+  - Created Documentation subcategory for technical documentation links
+  - Added Optimism Superchain Documentation as the first entry (71st link in the database)
+  - Implemented comprehensive tagging with technology, blockchain, and layer2 tags
 
-**[July 5, 2025]** Enhanced the mobile-optimized link list component with improved view modes and scrolling:
+- **Auto-Tagging System**
+  - Developed `auto-tag-all-links.js` utility for batch tagging of existing links
+  - Enhanced tag generation with domain extraction and keyword matching
+  - Added Web3-specific keyword detection for blockchain-related content
+  - Implemented tag deduplication and intelligent category suggestion
 
-- Added consistent scrollbar styling across the entire application for a unified user experience
-- Improved compact view with descriptions and better spacing for all view modes
-- Set compact view as default for better mobile usability
-- Fixed mobile scrolling with improved touch support and momentum scrolling
-- Implemented best practices for nested scrolling with overscroll-behavior
-- Created custom `useScrollLock` hook to prevent body scrolling when modals are open
-- Enhanced nested scrolling UX with proper touch event handling
-- Improved grid item height (280px mobile, 240px desktop) and added padding
-- Enhanced list view with borders, rounded corners, padding, and hover effects
-- Made wallet connection and token balances section more compact
-- Fixed filter sheet auto-open issue and improved UI responsiveness
-- Fixed spacing and layout consistency in all view modes (grid, list, compact)
-- Optimized compact view with efficient spacing and clear visual hierarchy
-- Fixed TypeScript issues and improved component structure
+### **[July 8, 2025]** UI Improvements
+- **Filter UI Positioning Fix**
+  - Adjusted filter bar positioning to prevent overlap with other UI elements
+  - Optimized sticky positioning with proper top offset for better user experience
+  - Improved visual separation with subtle shadow effect
+  - Fixed spacing and padding in filter components for more consistent layout
 
-**[June 29, 2025]** Implemented multi-chain token balance checking for $ZAO (Optimism) and $LOANZ (Base) tokens with a clean, modular UI. The implementation includes:
+### **[July 6, 2025]** Advanced Filtering & AI Tagging
 
-- Modular `WalletConnector` and `TokenChecker` components
-- Robust error handling and debug logging
-- Manual test functionality for specific wallet addresses
-- Automatic and manual balance refresh options
-- Clear visual indicators for token gating status
+- **Advanced Filtering System**
+  - Added comprehensive `AdvancedFilters` component with date range, popularity, read status, and domain filtering
+  - Developed responsive filter sidebar with mobile slide-in animation and desktop persistent mode
 
-## Features
+- **AI-Powered Tagging System**
+  - Created responsive `TagManager` component with colored tag badges and searchable dialog
+  - Implemented AI-powered tag generation using OpenAI GPT with three-tiered fallback system:
+    - Primary: OpenAI GPT-3.5 Turbo for intelligent tag generation
+    - Secondary: REST API fallback for tag suggestions
+    - Tertiary: Local keyword extraction for offline capability
+  - Built keyword extraction utility with stopword filtering and n-gram analysis
 
+- **Link Processing Improvements**
+  - Created new link processor with URL validation, metadata extraction, and favicon generation
+  - Implemented intelligent category assignment based on tag content and URL patterns
+  - Enhanced link browser with integrated filtering, tagging, and mobile-optimized display
+
+- **Developer Experience**
+  - Added interactive demo page to showcase all new features with sample data
+  - Fixed TypeScript lint errors and improved code organization
+  - Removed references to version 5.3 from Git to prevent accidental pushes
+
+### **[July 5, 2025]** Mobile Optimization & UI Enhancements
+
+- **UI Improvements**
+  - Added consistent scrollbar styling across the entire application for a unified user experience
+  - Enhanced list view with borders, rounded corners, padding, and hover effects
+  - Made wallet connection and token balances section more compact
+  - Fixed spacing and layout consistency in all view modes (grid, list, compact)
+
+- **Mobile Optimization**
+  - Improved compact view with descriptions and better spacing for all view modes
+  - Set compact view as default for better mobile usability
+  - Fixed mobile scrolling with improved touch support and momentum scrolling
+  - Implemented best practices for nested scrolling with overscroll-behavior
+  - Improved grid item height (280px mobile, 240px desktop) and added padding
+
+- **UX Enhancements**
+  - Created custom `useScrollLock` hook to prevent body scrolling when modals are open
+  - Enhanced nested scrolling UX with proper touch event handling
+  - Fixed filter sheet auto-open issue and improved UI responsiveness
+  - Optimized compact view with efficient spacing and clear visual hierarchy
+
+- **Code Quality**
+  - Fixed TypeScript issues and improved component structure
+
+### **[June 29, 2025]** Multi-Chain Token Balance Checking
+
+- **Wallet Integration**
+  - Implemented multi-chain token balance checking for $ZAO (Optimism) and $LOANZ (Base) tokens
+  - Created modular `WalletConnector` and `TokenChecker` components
+  - Added robust error handling and debug logging
+
+- **User Experience**
+  - Developed clean, modular UI for wallet connection and token status
+  - Added manual test functionality for specific wallet addresses
+  - Implemented automatic and manual balance refresh options
+  - Created clear visual indicators for token gating status
+
+## 🌟 Key Features
+
+### Wallet & Token Gating
 - **Multi-Chain Wallet Connection**: Connect with MetaMask or other Ethereum wallets across different networks
 - **Cross-Chain Token Gating**: Access requires holding at least 0.1 $ZAO (on Optimism) or $LOANZ (on Base) token
-- **Link Discovery**: Browse through 5000+ links organized by categories and subcategories
+- **Automatic Balance Checking**: Seamless verification of token balances across multiple chains
+
+### Link Management & Discovery
+- **Organized Link Collection**: Browse through 5000+ links organized by categories and subcategories
 - **Advanced Filtering**: Filter links by date range, popularity, read status, tags, and domains
+- **Fast Search**: Fuzzy search across all links, categories, and descriptions
+
+### AI & Smart Features
 - **AI-Powered Tagging**: Automatically generate relevant tags for new links using AI analysis
-- **Search Functionality**: Fast, fuzzy search across all links, categories, and descriptions
 - **Tag Management**: Add, remove, and filter by colored tags with searchable interface
-- **Dark Mode**: Toggle between light and dark themes
 - **AI Assistant**: Chat widget for user assistance (placeholder implementation)
-- **Responsive Design**: Works on mobile, tablet, and desktop with optimized UI for each form factor
 
-## Tech Stack
+### User Experience
+- **Responsive Design**: Optimized for mobile, tablet, and desktop with adaptive layouts
+- **Multiple View Modes**: Grid, list, and compact views for different browsing preferences
+- **Dark Mode**: Toggle between light and dark themes
+- **Performance Optimized**: Virtualized lists for smooth scrolling with thousands of items
 
+## 🛠️ Tech Stack
+
+### Frontend
 - **Framework**: Next.js 14
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Components**: Radix UI primitives
 - **State Management**: Zustand with persist middleware
-- **Web3**: ethers.js for blockchain interactions
-- **Search**: Fuse.js for fuzzy searching
-- **Notifications**: Sonner for toast notifications
 - **Virtualization**: react-window and react-virtualized-auto-sizer for efficient list rendering
+
+### Web3 Integration
+- **Blockchain Library**: ethers.js for wallet connection and token balance checking
+- **Networks**: Optimism and Base chain support
+- **Token Standards**: ERC-20 token verification
+
+### AI & Data Processing
 - **AI Integration**: OpenAI GPT for tag generation with fallback mechanisms
+- **Search**: Fuse.js for fuzzy searching
 - **HTTP Client**: Axios for fetching webpage content
 - **HTML Parsing**: Cheerio for extracting metadata from webpages
 
-## Getting Started
+### Developer Experience
+- **Notifications**: Sonner for toast notifications
+- **Build Tools**: Next.js built-in tooling
+- **Type Safety**: Strict TypeScript configuration
 
-1. Install dependencies:
+## 🚀 Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/bettercallzaal/NEXUSV5.6.git
+   cd NEXUSV5.6
+   ```
+
+2. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. Set up environment variables (see Environment Variables section)
+3. **Set up environment variables**:
+   - Create a `.env.local` file in the root directory
+   - Add the required environment variables (see Environment Variables section)
 
-3. Run the development server:
+4. **Run the development server**:
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. **Open [http://localhost:3000](http://localhost:3000) in your browser**
 
-## Project Structure
+## 📂 Project Structure
 
-Below is a brief description of key files and directories in the project:
+The project follows a modular architecture with clear separation of concerns. Below is a description of key files and directories:
 
 ### Core Application
 
@@ -366,25 +436,40 @@ export const useWalletStore = create<WalletState>(
 - **Connection Issues**: Verify MetaMask is installed and unlocked. Check for network connectivity.
 - **Performance Problems**: If balance checks are slow, consider increasing the throttle time.
 
-## Project Structure
+## 🗂️ Directory Structure
 
-- `/src/app`: Next.js app router pages
-- `/src/components`: React components
-  - `/ui`: Reusable UI components
-  - `/wallet`: Wallet connection components
-  - `/links`: Link discovery components
-  - `/ai`: AI assistant components
-- `/src/hooks`: Custom React hooks
-  - `use-wallet.ts`: Multi-chain wallet connection and token balance checking
-- `/src/data`: Static data files
-- `/src/styles`: Global styles
-- `/src/types`: TypeScript type definitions
+```
+NEXUS V5/
+├── public/            # Static assets and images
+├── src/
+│   ├── admin/         # Admin utilities and scripts
+│   │   └── utils/     # Admin helper functions
+│   ├── app/           # Next.js app router pages
+│   ├── components/    # React components
+│   │   ├── ai/        # AI assistant components
+│   │   ├── filters/   # Filter components
+│   │   ├── links/     # Link discovery components
+│   │   ├── tags/      # Tag management components
+│   │   ├── ui/        # Reusable UI components
+│   │   └── wallet/    # Wallet connection components
+│   ├── data/          # Static data files
+│   ├── hooks/         # Custom React hooks
+│   ├── lib/           # Utility functions and services
+│   ├── scripts/       # Helper scripts
+│   ├── styles/        # Global styles
+│   └── types/         # TypeScript type definitions
+├── .env.example       # Example environment variables
+├── next.config.js     # Next.js configuration
+├── package.json       # Dependencies and scripts
+├── tailwind.config.js # Tailwind CSS configuration
+└── tsconfig.json      # TypeScript configuration
+```
 
-## Environment Variables
+## ⚙️ Environment Variables
 
 Create a `.env.local` file in the root directory with the following variables:
 
-```
+```bash
 # Contract addresses
 NEXT_PUBLIC_ZAO_TOKEN_ADDRESS=0x34cE89baA7E4a4B00E17F7E4C0cb97105C216957
 NEXT_PUBLIC_LOANZ_TOKEN_ADDRESS=0x03315307b202bf9c55ebebb8e9341d30411a0bc4
@@ -395,7 +480,21 @@ NEXT_PUBLIC_BASE_RPC=https://base-mainnet.g.alchemy.com/v2/YOUR_API_KEY
 
 # AI Tag Generation
 OPENAI_API_KEY=your_openai_api_key  # Required for AI-powered tag generation
+
+# Feature Flags
+NEXT_PUBLIC_ENABLE_AI_ASSISTANT=true
+NEXT_PUBLIC_ENABLE_ANALYTICS=false
 ```
+
+### Required Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `NEXT_PUBLIC_ZAO_TOKEN_ADDRESS` | Contract address for ZAO token on Optimism | Yes |
+| `NEXT_PUBLIC_LOANZ_TOKEN_ADDRESS` | Contract address for LOANZ token on Base | Yes |
+| `NEXT_PUBLIC_OPTIMISM_RPC` | RPC endpoint for Optimism network | Yes |
+| `NEXT_PUBLIC_BASE_RPC` | RPC endpoint for Base network | Yes |
+| `OPENAI_API_KEY` | API key for OpenAI services | For AI tagging |
 
 ## Admin Utilities
 
@@ -414,6 +513,34 @@ node -r ts-node/register src/admin/batch-import-links.ts --file=path/to/links.cs
 # Or use the admin CLI
 node -r ts-node/register src/admin/admin-cli.ts import --file=path/to/links.csv --type=csv --generate-tags
 ```
+
+#### CSV Format
+
+The CSV file should have the following columns:
+
+```csv
+title,url,description,category,subcategory,tags
+"Link Title","https://example.com","Link description","Category","Subcategory","tag1,tag2,tag3"
+```
+
+### Auto-Tagging Utility
+
+The auto-tagging utility analyzes all links in the database and adds relevant tags based on content analysis, domain extraction, and keyword matching.
+
+#### Usage
+
+```bash
+# Run the auto-tagging utility
+node auto-tag-all-links.js
+```
+
+#### Features
+
+- **Domain Extraction**: Extracts meaningful tags from URL domains
+- **Keyword Matching**: Identifies relevant keywords in titles and descriptions
+- **Category Suggestion**: Suggests appropriate categories based on tags
+- **Tag Deduplication**: Ensures no duplicate tags are added
+- **Web3-Specific Detection**: Special handling for blockchain and Web3 content
 
 #### Options
 
@@ -508,12 +635,27 @@ const AI_TAG_CONFIG = {
 };
 ```
 
-## Building for Production
+## 🏗️ Building for Production
 
 ```bash
+# Build the application
 npm run build
+
+# Start the production server
 npm run start
 ```
+
+### Deployment Options
+
+- **Vercel**: Recommended deployment platform with automatic CI/CD
+- **Netlify**: Alternative deployment option with similar features
+- **Self-hosted**: Can be deployed on any Node.js server
+
+### Performance Considerations
+
+- Enable caching for static assets
+- Configure CDN for global distribution
+- Set up proper cache headers for API responses
 
 ## Links Page Improvements
 
@@ -607,97 +749,120 @@ npm run start
 
 4. **Categorization Review**: Some categories could be reorganized for better logical grouping.
 
-## Future Improvements and Integrations
+## 🔮 Next Steps
 
-### Wallet and Token Improvements
+Based on our current progress, here are the prioritized next steps for the project:
 
-- Implement a backend API for token balance aggregation
-- Add support for more networks and tokens
-- Implement multicall contracts for more efficient balance checking
-- Add unit and integration tests for wallet functionality
-- Optimize RPC usage with better caching strategies
+### Immediate Priorities (Next 2 Weeks)
 
-### Advanced Integrations
+1. **Performance Optimization**
+   - Implement code splitting for faster initial load times
+   - Optimize image loading with next/image and proper sizing
+   - Add Suspense boundaries for smoother loading states
 
-1. **AI-Powered Link Recommendations**: Implement machine learning to suggest links based on user behavior and preferences.
+2. **Mobile Experience Refinement**
+   - Further improve touch interactions on filter components
+   - Enhance mobile navigation with better bottom sheet interactions
+   - Optimize layout for small screens (<320px width)
 
-2. **Social Integration**: Allow users to connect social accounts to personalize their experience.
+3. **Testing & Quality Assurance**
+   - Implement unit tests for core components
+   - Add end-to-end tests for critical user flows
+   - Set up automated accessibility testing
 
-3. **Browser Extension**: Create a browser extension for quick access to the Nexus from any webpage.
+### Medium-Term Goals (1-2 Months)
 
-4. **Mobile App**: Develop a native mobile application for iOS and Android.
+1. **Enhanced Search Experience**
+   - Implement search history and suggestions
+   - Add advanced search operators (e.g., tag:blockchain)
+   - Improve search result ranking algorithm
 
-5. **Decentralized Storage**: Store link data on IPFS or Arweave for censorship resistance.
+2. **User Personalization**
+   - Add user preferences for default view mode and filters
+   - Implement "favorite links" functionality
+   - Create personalized link recommendations
 
-6. **DAO Governance**: Implement community voting for link additions and removals.
+3. **Wallet and Token Improvements**
+   - Implement a backend API for token balance aggregation
+   - Add support for more networks and tokens
+   - Implement multicall contracts for more efficient balance checking
+   - Add unit and integration tests for wallet functionality
+   - Optimize RPC usage with better caching strategies
 
-7. **NFT Integration**: Create collectible NFTs that unlock premium features or exclusive link collections.
+### Long-Term Vision (3+ Months)
 
-8. **Cross-Platform Bookmarking**: Sync bookmarked links across devices and browsers.
+1. **AI-Powered Features**
+   - Enhance AI tag generation with custom-trained models
+   - Implement AI-powered link recommendations
+   - Add natural language search capabilities
 
-9. **API Access**: Provide an API for developers to build applications on top of the ZAO Nexus data.
+2. **Community Features**
+   - Implement user-submitted links with moderation
+   - Add commenting and discussion features
+   - Create user profiles and reputation system
 
-10. **Notification System**: Alert users when new links are added in categories they follow.
+3. **Integration Ecosystem**
+   - Develop browser extensions for quick access
+   - Create mobile apps for iOS and Android
+   - Implement API for third-party integrations
 
-11. **Content Aggregation**: Pull in content previews from linked sites to create a unified reading experience.
+### Future Integrations
 
-12. **Custom Link Collections**: Allow users to create and share their own curated collections of links.
+4. **Extended Ecosystem**
+   - **Browser Extension**: Create a browser extension for quick access to the Nexus from any webpage
+   - **Mobile App**: Develop a native mobile application for iOS and Android
+   - **API Access**: Provide an API for developers to build applications on top of the ZAO Nexus data
 
-13. **Advanced Analytics Dashboard**: Provide insights on link usage and popularity for administrators.
+5. **Web3 & Decentralization**
+   - **Decentralized Storage**: Store link data on IPFS or Arweave for censorship resistance
+   - **DAO Governance**: Implement community voting for link additions and removals
+   - **NFT Integration**: Create collectible NFTs that unlock premium features or exclusive link collections
 
-14. **Multi-language Support**: Translate link descriptions and categories into multiple languages.
+6. **Advanced User Features**
+   - **Cross-Platform Bookmarking**: Sync bookmarked links across devices and browsers
+   - **Notification System**: Alert users when new links are added in categories they follow
+   - **Content Aggregation**: Pull in content previews from linked sites to create a unified reading experience
+   - **Custom Link Collections**: Allow users to create and share their own curated collections of links
+   - **Multi-language Support**: Translate link descriptions and categories into multiple languages
+   - **Voice Search**: Implement voice commands for hands-free navigation of the Nexus
 
-15. **Voice Search**: Implement voice commands for hands-free navigation of the Nexus.
+## 🤝 Integration Opportunities
 
-## ZAO Nexus × Hats Protocol Integration
+### ZAO Nexus × Hats Protocol Integration
 
-A next-generation "Trusted Link Aggregator" playbook that integrates Hats Protocol at every layer of Nexus. Hats Protocol serves as a programmable reputation OS where every role, permission, or kudos gets minted as an on-chain "Hat," visible at hats.thezao.com and automatically reflected inside Nexus.
+A potential integration with Hats Protocol would create a next-generation "Trusted Link Aggregator" that leverages on-chain reputation for content curation and access control.
 
-### 1. Hats Foundation Layer
+#### Key Integration Points
 
-- **Hat Registry UI (hats.thezao.com)**
-  - Fork the Hats Protocol dashboard; pre-load "Curator," "Moderator," "Builder," "Partner DAO," "Service Provider," etc.
-  - Anyone can apply for a Hat or be nominated by an existing Hat-holder
-  - Gives every contributor a cryptographically provable badge wired to smart-contract permissions
+1. **Role-Based Access Control**
+   - Implement Hat-gated feature flags for different user roles:
+     - Curator Hat → can submit links
+     - Moderator Hat → can approve/remove content
+     - Builder Hat → can access admin tools
+     - Partner Hat → gets a "Trusted Source" label
+   - All permissions stored on-chain for transparency and interoperability
 
-- **Hat-gated Feature Flags**
-  - Nexus checks the user's Hats on page-load:
-    - Curator Hat ⇒ can submit links
-    - Moderator Hat ⇒ can approve/remove
-    - Builder Hat ⇒ can run CLI/import tools
-    - Partner Hat ⇒ gets a "Trusted Source" label
-  - Permissions live on-chain—not in a hidden database—so any dApp can reuse them
+2. **Verifiable Content Curation**
+   - Links attested on-chain with curator's Hat ID
+   - Creates verifiable audit trail of content provenance
+   - Enables automated quality control mechanisms
 
-### 2. Verifiable Trust Layer
+3. **Social Integration**
+   - Farcaster Mini-App integration for social sharing
+   - Hat-filtered content views based on curator reputation
+   - Social proof through Hat emoji and ID in shared content
 
-- **EAS-attested Links + Hat Signature**
-  - When a Curator submits a link, the attestation includes their Hat ID
-  - Nexus badge = ✅ Verified by Curator #123
-  - Creates an auditable trail of who vouched for what
+4. **Developer Ecosystem**
+   - Indexed subgraph of link attestations and Hat assignments
+   - API access for third-party developers
+   - Composable building blocks for other applications
 
-- **Hat Slashing / Suspension Hooks**
-  - If a Moderator removes a Curator's malicious link, the Curator Hat can be auto-suspended until DAO review
-  - Keeps quality high without centralized gatekeepers
+### Other Potential Integrations
 
-### 3. Farcaster Mini-App Surface
-
-- **"Hat-Filtered" Nexus Frame**
-  - Mini-App shows only links attested by wallets holding Curator or higher Hats
-  - Drop-downs let users toggle by Hat type
-  - Makes it obvious which resources are DAO-vetted vs community-submitted
-
-- **Hat-earned Cast Flair**
-  - When the Mini-App posts an auto-receipt cast, it adds the Curator's Hat emoji (🎩) + ID
-  - Social proof travels with the share
-
-### 4. Storage & Portability
-
-- **Hat-indexed Subgraph**
-  - The Graph indexes LinkAttested events and WearHat events
-  - External devs can fetch links by Hat tier
-  - Any hackathon team can instantly build "Top Partner DAO Tools," etc.
-
-### 5. Community-Driven Curation
+1. **Lens Protocol**: Social graph integration for personalized content discovery
+2. **Push Protocol**: Decentralized notifications for new content
+3. **Ceramic Network**: Decentralized user profiles and preferences
+4. **The Graph**: Indexed data for advanced querying capabilities
 
 - **Quadratic Votes Weighted by Hat Seniority**
   - Votes = √(tokens) × HatLevel (e.g., Moderator = 1.5×)

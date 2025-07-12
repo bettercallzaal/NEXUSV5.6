@@ -13,6 +13,20 @@ ZAO Nexus V5 is a comprehensive web application designed to organize and provide
 
 ## 🔄 Latest Updates
 
+### **[July 15, 2025]** Optimized Link Management System
+- **New JSON Schema for Link Management**
+  - Implemented centralized link definitions with unique IDs to eliminate duplication
+  - Added enhanced metadata including creation dates, popularity metrics, and health status
+  - Created comprehensive tagging system with tag relationships and visual styling
+  - Developed hierarchical category structure with references to link IDs
+  - Added version tracking and collection statistics
+
+- **Link Management Utilities**
+  - Created `migrate-links-structure.js` to convert existing data to the new optimized format
+  - Developed `enhanced-auto-tagger.js` for batch processing links with domain extraction and keyword matching
+  - Built `adapter-for-app.js` to ensure backward compatibility with the current application
+  - Enhanced tag display in all view modes (grid, list, compact)
+
 ### **[July 11, 2025]** Web3 Resources & Auto-Tagging
 - **New Web3 Resources Category**
   - Added dedicated category for Web3 documentation and resources
@@ -198,38 +212,161 @@ The project follows a modular architecture with clear separation of concerns. Be
 
 #### Filtering and Tagging Components
 - `src/components/filters/advanced-filters.tsx` - Advanced filtering options for links
-- `src/components/tags/tag-manager.tsx` - Tag management with colored badges and search
-
-#### UI Components
-- `src/components/ui/button.tsx` - Reusable button component
-- `src/components/ui/toast.tsx` - Toast notification component
-- `src/components/ui/sheet.tsx` - Slide-out panel component
-- `src/components/ui/dialog.tsx` - Modal dialog component
 
 ### Hooks and Utilities
 
-- `src/hooks/use-wallet.ts` - Hook for wallet connection and token balance checking
-- `src/hooks/use-media-query.ts` - Hook for responsive design and media queries
-- `src/hooks/useScrollLock.ts` - Hook for managing scroll behavior on mobile devices
-- `src/lib/token-balance-checker.ts` - Utility for checking token balances across chains
-- `src/lib/utils.ts` - General utility functions
-- `src/lib/auto-tagger.ts` - Service for AI-powered tag generation
+- `src/hooks` - Custom React hooks for state management
+  - `useLinks.ts` - Hook for accessing and filtering links data
+  - `useWallet.ts` - Wallet connection and state management
+  - `useSearch.ts` - Search functionality with fuzzy matching
+  - `useTags.ts` - Tag management and filtering
 
-### Scripts and Admin Utilities
+- `src/lib` - Utility functions and helpers
+  - `api.ts` - API client for external services
+  - `utils.ts` - General utility functions
+  - `constants.ts` - Application constants
+  - `ai-helpers.ts` - Utilities for AI tag generation
 
-- `src/scripts/ai-tag-generator.ts` - AI-powered tag generation using OpenAI and fallbacks
-- `src/admin/batch-import-links.ts` - Batch import utility for links from CSV or JSON files
-- `src/admin/recategorize-by-tags.ts` - Utility to recategorize links based on their tags
-- `src/admin/admin-cli.ts` - Command-line interface for admin utilities
-- `src/admin/utils/links-data-utils.ts` - Helper functions for loading and saving links data
-- `src/admin/utils/tagging-utils.ts` - Utilities for generating tags for links
-- `src/admin/utils/link-utils.ts` - Utilities for working with links (ID generation, URL normalization)
-- `src/scripts/keyword-extractor.ts` - Utility for extracting keywords from text content
-- `src/scripts/new-link-processor.ts` - Process new links with metadata extraction and tag generation
+- `src/styles` - Global styles and Tailwind configuration
+  - `globals.css` - Global CSS styles
+  - `tailwind.config.js` - Tailwind CSS configuration
 
 ### Data and Types
 
-- `src/data/links.json` - Link data source
+- `src/data` - JSON data files for links and categories
+  - `links.json` - Main links database in application-compatible format
+  - `links-new.json` - Optimized links structure with enhanced metadata
+  - `links-structure-example.json` - Example of the optimized structure format
+  - `csv/` - Directory containing CSV files for batch imports
+    - `new-links.csv` - New links for import
+    - `production-link.csv` - Production links for testing
+
+- `src/types` - TypeScript type definitions
+  - `links.ts` - Types for link data structures
+  - `wallet.ts` - Types for wallet integration
+  - `api.ts` - Types for API responses
+
+### Scripts and Admin Utilities
+
+- `src/scripts/adapter-for-app.js` - Converts the optimized link structure (links-new.json) to the application-compatible format (links.json). This script maintains the mapping between the centralized link definitions with unique IDs and the category-based structure needed by the application.
+
+- `src/scripts/auto-tag-all-links.js` - Automatically generates tags for all links in the database by analyzing link titles, descriptions, and URLs. Uses keyword mapping to detect relevant tags and updates both top-level and nested link entries.
+
+- `src/scripts/test-import.js` - Tests the batch import functionality with CSV files. Generates link IDs, tags based on content, and suggests categories from tags. Processes each link from CSV with validation.
+
+- `src/scripts/ai-tag-generator.ts` - AI-powered tag generation using OpenAI with fallback mechanisms. Analyzes link content to generate relevant tags when automatic keyword matching is insufficient.
+
+- `src/admin/batch-import-links.ts` - Batch import utility for links from CSV or JSON files. Validates and normalizes input data before adding to the database.
+
+- `src/admin/recategorize-by-tags.ts` - Utility to recategorize links based on their tags. Analyzes tag patterns to suggest optimal categories.
+
+- `src/admin/admin-cli.ts` - Command-line interface for admin utilities, providing a unified interface for various maintenance tasks.
+
+- `src/admin/utils/links-data-utils.ts` - Helper functions for loading and saving links data with validation and error handling.
+
+- `src/admin/utils/tagging-utils.ts` - Utilities for generating tags for links using various methods (keyword matching, AI, domain extraction).
+
+## Optimized Link Structure
+
+The ZAO Nexus V5 uses an optimized link structure stored in `links-new.json` that provides several advantages over the traditional approach:
+
+### Key Features
+
+1. **Centralized Link Definitions**: Each link has a unique ID to eliminate duplication across categories
+2. **Enhanced Metadata**: Includes creation dates, popularity metrics, and health status
+3. **Comprehensive Tagging**: Supports tag relationships, visual styling, and frequency metrics
+4. **Hierarchical Categories**: Categories reference link IDs instead of duplicating link data
+5. **Version Tracking**: Includes schema version and last updated timestamp
+6. **Collection Statistics**: Provides overall metrics about the link collection
+
+### Schema Structure
+
+```json
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-07-15T12:00:00Z",
+  "stats": {
+    "totalLinks": 70,
+    "totalCategories": 6,
+    "totalSubcategories": 12,
+    "totalTags": 87
+  },
+  "links": {
+    "link-001": {
+      "url": "https://example.com",
+      "title": "Example Website",
+      "description": "This is an example website",
+      "dateAdded": "2025-07-01T10:00:00Z",
+      "clicks": 0,
+      "health": {
+        "lastChecked": "2025-07-15T12:00:00Z",
+        "status": "alive",
+        "statusCode": 200
+      },
+      "tags": ["example", "website", "documentation"],
+      "displayTags": ["example", "documentation"]
+    }
+  },
+  "categories": {
+    "cat-001": {
+      "name": "ZAO Ecosystem",
+      "description": "Official ZAO ecosystem resources",
+      "icon": "globe",
+      "color": "#e74c3c",
+      "subcategories": {
+        "sub-001": {
+          "name": "Official Sites",
+          "description": "Official ZAO websites and platforms",
+          "icon": "link",
+          "color": "#e74c3c",
+          "linkIds": ["link-001", "link-002", "link-003"]
+        },
+        "sub-002": {
+          "name": "Community",
+          "description": "ZAO community platforms and resources",
+          "icon": "users",
+          "color": "#3498db",
+          "linkIds": ["link-004", "link-005"]
+        }
+      }
+    }
+  },
+  "tags": {
+    "example": {
+      "count": 5,
+      "color": "#3498db",
+      "related": ["documentation", "tutorial"]
+    },
+    "documentation": {
+      "count": 12,
+      "color": "#2ecc71",
+      "related": ["example", "guide", "reference"]
+    }
+  }
+}
+```
+
+### Adapter System
+
+To maintain compatibility with the existing application components, we use an adapter system:
+
+1. **Data Storage**: The optimized structure is stored in `links-new.json`
+2. **Conversion**: The `adapter-for-app.js` script converts this to the application-compatible format
+3. **Application Use**: The application continues to use `links.json` (generated from the optimized structure)
+
+### Benefits
+
+- **Reduced Data Duplication**: Links are defined once and referenced by ID
+- **Improved Data Integrity**: Changes to a link are automatically reflected everywhere
+- **Enhanced Metadata**: More comprehensive tracking of link health and popularity
+- **Better Tag Management**: Centralized tag definitions with relationship mapping
+- **Easier Maintenance**: Simplified structure for adding, updating, and removing links
+
+## Key Files
+
+- `src/data/links-new.json` - Optimized link data structure with centralized definitions
+- `src/data/links.json` - Application-compatible link data (generated from the optimized structure)
+- `src/data/links-structure-example.json` - Example of the optimized structure format
 - `src/types/links.ts` - TypeScript types for link data
 - `src/types/ethereum.d.ts` - TypeScript types for Ethereum interactions
 
@@ -643,6 +780,19 @@ npm run build
 
 # Start the production server
 npm run start
+```
+
+### Utility Scripts
+
+```bash
+# Convert optimized link structure to app format
+npm run adapt-links
+
+# Auto-generate tags for all links
+npm run auto-tag
+
+# Test batch importing links from CSV
+npm run test-import
 ```
 
 ### Deployment Options

@@ -7,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "adapt-links": "node src/scripts/adapter-for-app.js",
+    "auto-tag": "node src/scripts/auto-tag-all-links.js",
+    "test-import": "node src/scripts/test-import.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -65,6 +68,7 @@
     "@types/react-window": "^1.8.8",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.0",
-    "typescript": "^5.3.0"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }

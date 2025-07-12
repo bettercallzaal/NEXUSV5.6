@@ -1,12 +1,19 @@
 {
+  "version": "1.0",
+  "lastUpdated": "2025-07-12T00:17:56.390Z",
   "categories": [
     {
       "name": "Web3 Resources",
+      "description": "Web3 Resources resources and links",
+      "icon": "folder",
+      "color": "#0F02A4",
       "subcategories": [
         {
           "name": "Documentation",
+          "description": "Documentation in Web3 Resources",
           "links": [
             {
+              "id": "link_ob4noeufoiodenzqshi5c",
               "title": "Optimism Superchain Documentation",
               "url": "https://docs.optimism.io/stack/explainer",
               "description": "Comprehensive documentation about the Optimism Superchain architecture and ecosystem",
@@ -22,10 +29,21 @@
                 "paragraph",
                 "news"
               ],
+              "displayTags": [
+                "news",
+                "stack",
+                "layer2",
+                "optimism",
+                "ethereum"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-10T22:18:56-04:00",
-              "updatedAt": "2025-07-11T10:37:15.131Z"
+              "updatedAt": "2025-07-11T10:37:15.131Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://docs.optimism.io/favicon.ico"
             }
           ]
         }
@@ -33,11 +51,16 @@
     },
     {
       "name": "ZAO Onchain",
+      "description": "ZAO Onchain resources and links",
+      "icon": "folder",
+      "color": "#B5A20A",
       "subcategories": [
         {
           "name": "ZAO Tokens",
+          "description": "ZAO Tokens in ZAO Onchain",
           "links": [
             {
+              "id": "link_ytthj4gvpwcjgjysnvvb",
               "title": "Mint ZAO-CHELLA Vibez Track on Zora",
               "url": "https://song.thezao.com",
               "description": "Own a piece of the ZAO-CHELLA experience by minting the Vibez track.",
@@ -53,12 +76,24 @@
                 "midipunkz",
                 "spotify"
               ],
+              "displayTags": [
+                "zao",
+                "song",
+                "news",
+                "music",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://song.thezao.com/favicon.ico"
             },
             {
+              "id": "link_srnarjn4mjjsdendud",
               "title": "Mint Attabotty ZAO-PALOOZA Card",
               "url": "https://attabotty.zao.cards",
               "description": "Collect the limited-edition Attabotty artist card from ZAO-PALOOZA.",
@@ -74,12 +109,24 @@
                 "paragraph",
                 "technology"
               ],
+              "displayTags": [
+                "zao",
+                "music",
+                "design",
+                "artist",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://attabotty.zao.cards/favicon.ico"
             },
             {
+              "id": "link_3w3sjmegdgcepodi",
               "title": "Mint Zalora – the ZAO Mascot (MidiVerse)",
               "url": "https://zalora.thezao.com",
               "description": "Bring Zalora into your wallet – the on-chain mascot of the ZAO.",
@@ -95,17 +142,30 @@
                 "optimism",
                 "ethereum"
               ],
+              "displayTags": [
+                "zao",
+                "news",
+                "music",
+                "thezao",
+                "zalora"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://zalora.thezao.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Tracks",
+          "description": "ZAO Tracks in ZAO Onchain",
           "links": [
             {
+              "id": "link_kfrgmu4bxf7dyipfss",
               "title": "ZAO song #1: ZAO-CHELLA VIBEZ",
               "url": "https://zora.co/collect/base:0x1458f7d12c1fe1747e13793d99dcb6da6f9d6123/1?referrer=0xa46b072e6607d37413000220653d3bca5be32513",
               "description": "Vibe to the first official ZAO track from ZAO-CHELLA.",
@@ -121,12 +181,24 @@
                 "thezao",
                 "midipunkz"
               ],
+              "displayTags": [
+                "zao",
+                "nft",
+                "zora",
+                "web3",
+                "music"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://zora.co/favicon.ico"
             },
             {
+              "id": "link_zyzb7wmguhz7okjnkt9f",
               "title": "ZAO song #2: ZAO-CHELLA CYPHER",
               "url": "https://www.thezao.com/zao-cypher",
               "description": "Listen to the multi-artist Cypher track from ZAO-CHELLA.",
@@ -142,12 +214,24 @@
                 "news",
                 "paragraph"
               ],
+              "displayTags": [
+                "zao",
+                "news",
+                "music",
+                "thezao",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.thezao.com/favicon.ico"
             },
             {
+              "id": "link_3cqkuurrvprcglvqq40l",
               "title": "ZAO song #3: Side by Side (ZAO Side)",
               "url": "https://ima.midipunkz.com/midivaderz/side-by-side-thezao",
               "description": "Watch the Side-by-Side collab in MidiVaderZ – ZAO's side.",
@@ -163,12 +247,24 @@
                 "design",
                 "thezao"
               ],
+              "displayTags": [
+                "zao",
+                "ima",
+                "music",
+                "social",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://ima.midipunkz.com/favicon.ico"
             },
             {
+              "id": "link_4lch2jowxfolimhydk7w",
               "title": "ZAO song #3.1: Side by Side (MidiPunkz Side)",
               "url": "https://ima.midipunkz.com/midivaderz/side-by-side-midipunkz",
               "description": "Watch the Side-by-Side collab in MidiVaderZ – MidiPunkz's side.",
@@ -184,10 +280,21 @@
                 "design",
                 "thezao"
               ],
+              "displayTags": [
+                "zao",
+                "ima",
+                "music",
+                "social",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://ima.midipunkz.com/favicon.ico"
             }
           ]
         }
@@ -195,11 +302,16 @@
     },
     {
       "name": "ZAO Links",
+      "description": "ZAO Links resources and links",
+      "icon": "folder",
+      "color": "#432781",
       "subcategories": [
         {
           "name": "ZAO Platforms",
+          "description": "ZAO Platforms in ZAO Links",
           "links": [
             {
+              "id": "link_cdl3rk367o5lztd2woje",
               "title": "ZAO Website",
               "url": "https://thezao.com",
               "description": "Visit the official ZAO website for all the latest news and resources.",
@@ -215,12 +327,24 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "t",
+                "zao",
+                "news",
+                "music",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.137Z",
-              "updatedAt": "2025-07-11T10:37:15.137Z"
+              "updatedAt": "2025-07-11T10:37:15.137Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://thezao.com/favicon.ico"
             },
             {
+              "id": "link_qnn3wybfbrlsmwe0sqcv",
               "title": "ZVerse (ZAO Hivemind)",
               "url": "https://thezao.xyz",
               "description": "Explore the ZVerse, where the ZAO Hivemind connects ideas and innovations.",
@@ -236,12 +360,24 @@
                 "news",
                 "festival"
               ],
+              "displayTags": [
+                "zao",
+                "news",
+                "music",
+                "thezao",
+                "zverse"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://thezao.xyz/favicon.ico"
             },
             {
+              "id": "link_z0ne0rfwxpnpzveqa0y4",
               "title": "ZAO ORG CHART (Hats Tree)",
               "url": "https://hats.thezao.com",
               "description": "Dive into the ZAO ORG CHART to see our team and projects.",
@@ -257,17 +393,30 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "hats",
+                "news",
+                "music",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://hats.thezao.com/favicon.ico"
             }
           ]
         },
         {
           "name": "Calendars",
+          "description": "Calendars in ZAO Links",
           "links": [
             {
+              "id": "link_2qse2beifxaseimgjkl0",
               "title": "ZAO Google Calendar",
               "url": "https://calendar.google.com/calendar/u/0?cid=MmY3YTQ4YTY2MWIyNzVlMmFkZTgxYzlhYjJkMGFhM2E1YTBmNThiNTA3MDVhOTYxZGE2NWNmNTE0MTZjZGU3NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
               "description": "Stay up to date with ZAO events on Google Calendar.",
@@ -283,12 +432,24 @@
                 "music",
                 "design"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "music",
+                "google",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://calendar.google.com/favicon.ico"
             },
             {
+              "id": "link_xkhvuowlywwawoafcps",
               "title": "ZAO Calendar",
               "url": "https://lu.ma/zao",
               "description": "Browse upcoming ZAO events and activities on Luma.",
@@ -304,12 +465,24 @@
                 "design",
                 "youtube"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "music",
+                "google",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://lu.ma/favicon.ico"
             },
             {
+              "id": "link_nbyk5fuu6c2ju2saio",
               "title": "ZAO Music Events Calendar",
               "url": "https://lu.ma/zao-m",
               "description": "Explore ZAO music-related events and gigs on Luma.",
@@ -325,17 +498,30 @@
                 "thezao",
                 "midipunkz"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "music",
+                "zao-m",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://lu.ma/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Social Media Chats",
+          "description": "ZAO Social Media Chats in ZAO Links",
           "links": [
             {
+              "id": "link_tx4bdmztlswwi402dinb",
               "title": "Discord",
               "url": "https://discord.gg/ACJyYQH3BE",
               "description": "Join our ZAO Discord for real-time group chats.",
@@ -349,12 +535,24 @@
                 "design",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "music",
+                "thezao",
+                "design",
+                "discord"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://discord.gg/favicon.ico"
             },
             {
+              "id": "link_0vtv8ctani2lxscc0hcu",
               "title": "Telegram",
               "url": "https://t.me/+iMH5Y_t2Mks1NmVh",
               "description": "Connect with us on Telegram for updates and discussions.",
@@ -370,17 +568,30 @@
                 "technology",
                 "thezao"
               ],
+              "displayTags": [
+                "t",
+                "news",
+                "social",
+                "update",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://t.me/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO WHITEPAPER",
+          "description": "ZAO WHITEPAPER in ZAO Links",
           "links": [
             {
+              "id": "link_b3uhsqkzaqwvmudec7m",
               "title": "ZAO Whitepaper Draft",
               "url": "https://app.charmverse.io/the-zao/the-zao-whitepaper-draft-2-6565388910657037",
               "description": "Dive into the ZAO Whitepaper for a deeper understanding of the ecosystem.",
@@ -394,17 +605,30 @@
                 "design",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "music",
+                "thezao",
+                "design",
+                "the-zao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://app.charmverse.io/favicon.ico"
             }
           ]
         },
         {
           "name": "Daily Newsletter Articles",
+          "description": "Daily Newsletter Articles in ZAO Links",
           "links": [
             {
+              "id": "link_zwgxygj5ndbo26x3qq2",
               "title": "Daily Newsletter Articles",
               "url": "https://paragraph.xyz/@thezao",
               "description": "Read daily newsletter articles.",
@@ -420,12 +644,24 @@
                 "layer2",
                 "thezao"
               ],
+              "displayTags": [
+                "news",
+                "design",
+                "layer2",
+                "thezao",
+                "@thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_exo1v84c9gsvjj5jrz",
               "title": "Subscribe to the newsletter",
               "url": "https://paragraph.xyz/@thezao/subscribe",
               "description": "Subscribe for daily updates.",
@@ -441,10 +677,21 @@
                 "layer2",
                 "thezao"
               ],
+              "displayTags": [
+                "news",
+                "update",
+                "design",
+                "layer2",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             }
           ]
         }
@@ -452,11 +699,16 @@
     },
     {
       "name": "ZAO Projects Links",
+      "description": "ZAO Projects Links resources and links",
+      "icon": "folder",
+      "color": "#1D31AB",
       "subcategories": [
         {
           "name": "WaveWarZ",
+          "description": "WaveWarZ in ZAO Projects Links",
           "links": [
             {
+              "id": "link_ekrk2j157x1f195hrpsc",
               "title": "WaveWarZ Twitter",
               "url": "https://x.com/WaveWarZ",
               "description": "Check out the latest updates on WaveWarZ Twitter.",
@@ -472,29 +724,50 @@
                 "thezao",
                 "t"
               ],
+              "displayTags": [
+                "x",
+                "t",
+                "zao",
+                "news",
+                "update"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://x.com/favicon.ico"
             },
             {
+              "id": "link_sjatuek6lts9ye4tubdp",
               "title": "WaveWarZ V1 SOL Testnet",
               "url": "https://www.wavewarz.com",
               "description": "Access the WaveWarZ DAPP on the SOL Testnet (V1).",
               "tags": [
                 "wavewarz"
               ],
+              "displayTags": [
+                "wavewarz"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.wavewarz.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Festivals",
+          "description": "ZAO Festivals in ZAO Projects Links",
           "links": [
             {
+              "id": "link_16g8u0nq2bbipzuqfgpj",
               "title": "ZAO Festivals Website",
               "url": "https://zaofestivals.com/",
               "description": "Visit the official ZAO Festivals website.",
@@ -510,12 +783,24 @@
                 "design",
                 "youtube"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "music",
+                "google",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://zaofestivals.com/favicon.ico"
             },
             {
+              "id": "link_wi17n8bmm7mdab9rtak",
               "title": "Merch",
               "url": "https://merch.zaofestivals.com",
               "description": "Shop for ZAO Festivals merchandise.",
@@ -531,12 +816,24 @@
                 "music",
                 "design"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "merch",
+                "music",
+                "google"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://merch.zaofestivals.com/favicon.ico"
             },
             {
+              "id": "link_m5ovyrvel3ksvd2lcxmr",
               "title": "Donate",
               "url": "https://giveth.io/project/sustaining-zao-festivals-creativity-technology?tab=donations",
               "description": "Donate to support ZAO Festivals.",
@@ -552,12 +849,24 @@
                 "thezao",
                 "music"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "music",
+                "giveth",
+                "google"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://giveth.io/favicon.ico"
             },
             {
+              "id": "link_wzyqb6swylgqsi0f5ed9",
               "title": "ZAO PALOOZA Artist Cards",
               "url": "https://zao.cards",
               "description": "View ZAO PALOOZA Artist Cards.",
@@ -573,17 +882,30 @@
                 "technology",
                 "midipunkz"
               ],
+              "displayTags": [
+                "zao",
+                "music",
+                "design",
+                "artist",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://zao.cards/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Festivals Socials",
+          "description": "ZAO Festivals Socials in ZAO Projects Links",
           "links": [
             {
+              "id": "link_s4nl5im6fx8bowetbj",
               "title": "Twitter",
               "url": "https://x.com/zaofestivals?lang=en",
               "description": "Follow ZAO Festivals on Twitter.",
@@ -599,12 +921,24 @@
                 "google",
                 "thezao"
               ],
+              "displayTags": [
+                "x",
+                "lu",
+                "zao",
+                "news",
+                "google"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://x.com/favicon.ico"
             },
             {
+              "id": "link_9k59zjkvoltffwv502w",
               "title": "Instagram",
               "url": "https://www.instagram.com/zaofestivals/",
               "description": "Follow ZAO Festivals on Instagram.",
@@ -620,12 +954,24 @@
                 "music",
                 "design"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "music",
+                "google",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.instagram.com/favicon.ico"
             },
             {
+              "id": "link_ipfkiqytgxfb3yw1r3oh",
               "title": "Facebook",
               "url": "https://www.facebook.com/ZAOFestivals",
               "description": "Like ZAO Festivals on Facebook.",
@@ -641,12 +987,24 @@
                 "music",
                 "design"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "music",
+                "google",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.facebook.com/favicon.ico"
             },
             {
+              "id": "link_jnnxdr4yhpxwsquugk3g",
               "title": "LinkedIn",
               "url": "https://www.linkedin.com/company/zaofestivals",
               "description": "Connect with ZAO Festivals on LinkedIn.",
@@ -662,12 +1020,24 @@
                 "google",
                 "thezao"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "google",
+                "thezao",
+                "company"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.linkedin.com/favicon.ico"
             },
             {
+              "id": "link_jca4a7nbolhccij2yl8",
               "title": "YouTube",
               "url": "https://www.youtube.com/@zaofestivals",
               "description": "Watch ZAO Festivals videos on YouTube.",
@@ -683,17 +1053,30 @@
                 "music",
                 "zaofestivals"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "web3",
+                "music",
+                "youtube"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.youtube.com/favicon.ico"
             }
           ]
         },
         {
           "name": "$Loanz",
+          "description": "$Loanz in ZAO Projects Links",
           "links": [
             {
+              "id": "link_uvg59lhffnhsus9kkbx",
               "title": "$Loanz OG Whitepaper",
               "url": "https://paragraph.xyz/@thezao/student-loanz-whitepaper",
               "description": "Dive into the original $Loanz Whitepaper for in-depth info on Student Loanz.",
@@ -704,24 +1087,44 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_zkm87h0pn4uyqxletsep",
               "title": "$Loanz website",
               "url": "https://studentloanz.xyz/",
               "description": "Visit the official $Loanz website to explore student loan solutions.",
               "tags": [
                 "studentloanz"
               ],
+              "displayTags": [
+                "studentloanz"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://studentloanz.xyz/favicon.ico"
             },
             {
+              "id": "link_hguqdws3gk97h0k6xq3l",
               "title": "$Loanz memebook",
               "url": "https://zao.lol",
               "description": "Make your own $loanz memes.",
@@ -733,12 +1136,24 @@
                 "design",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "music",
+                "thezao",
+                "design",
+                "youtube"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://zao.lol/favicon.ico"
             },
             {
+              "id": "link_ippfdp3khboey9zj4lwp",
               "title": "Loanz Daily Spaces",
               "url": "https://x.com/loanzonbase",
               "description": "Loanz Daily Spaces.",
@@ -754,17 +1169,30 @@
                 "ethereum",
                 "layer2"
               ],
+              "displayTags": [
+                "x",
+                "zao",
+                "news",
+                "layer2",
+                "festival"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://x.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Playlists",
+          "description": "ZAO Playlists in ZAO Projects Links",
           "links": [
             {
+              "id": "link_cfkiasw6svbxakwunugu",
               "title": "ZAO Spotify 2024",
               "url": "https://open.spotify.com/playlist/2IIl13a4YNxQTLNJhDKr32?si=1bb3ef92068143cf",
               "description": "Listen to ZAO Spotify 2024 playlist.",
@@ -780,12 +1208,24 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "open",
+                "music",
+                "design",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://open.spotify.com/favicon.ico"
             },
             {
+              "id": "link_9b2wskn5hbdpmuw2j0ej",
               "title": "ZAO Spotify 2025",
               "url": "https://open.spotify.com/playlist/7MCDgGzyqbnsyKSNuMUUpM?si=2652032d60de4b93",
               "description": "Listen to ZAO Spotify 2025 playlist.",
@@ -801,12 +1241,24 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "open",
+                "music",
+                "design",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://open.spotify.com/favicon.ico"
             },
             {
+              "id": "link_80oanve7cq7wjf54hzq",
               "title": "ZAO SOUND.XYZ Playlist",
               "url": "https://www.sound.xyz/playlist/1e1ab680-2f45-4232-9c34-b6ba9dc1a1d3",
               "description": "Listen to the ZAO SOUND.XYZ Playlist.",
@@ -822,17 +1274,30 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "sound",
+                "music",
+                "design",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.sound.xyz/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO CMOTM Interviews",
+          "description": "ZAO CMOTM Interviews in ZAO Projects Links",
           "links": [
             {
+              "id": "link_oveet1bghzsbh0crlulp",
               "title": "Daniel Obute Interview",
               "url": "https://paragraph.xyz/@thezao/ztalentnewsletter12",
               "description": "Daniel Obute Interview.",
@@ -843,12 +1308,24 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_xdnam7foffcr9kv6yqeh",
               "title": "Davyd Interview",
               "url": "https://paragraph.xyz/@thezao/ztalent-interview-1-davyd",
               "description": "Davyd Interview.",
@@ -859,12 +1336,24 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_tunpgv4ifcsv7xdeenyw",
               "title": "Tej Interview",
               "url": "https://paragraph.xyz/@thezao/ztalent-interview-2",
               "description": "Tej Interview.",
@@ -875,12 +1364,24 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_zmnglqz7htnkvkabfbb",
               "title": "Ohnahji B Interview",
               "url": "https://paragraph.xyz/@thezao/ztalent-interview-3",
               "description": "Ohnahji B Interview.",
@@ -891,12 +1392,24 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_p4jrpng4nyryjuchp7w",
               "title": "CandyToyBox Interview",
               "url": "https://paragraph.xyz/@thezao/ztalent-interview-4",
               "description": "CandyToyBox Interview.",
@@ -907,12 +1420,24 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_pn4ukoba48hu74lchde",
               "title": "Hurric4n3Ike Interview",
               "url": "https://paragraph.xyz/@thezao/ztalent-interview-5-hurric4n3ike",
               "description": "Hurric4n3Ike Interview.",
@@ -923,12 +1448,24 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_zjhxeljronnbrozyomrv",
               "title": "Heather Interview",
               "url": "https://paragraph.xyz/@thezao/ztalent-interview-6",
               "description": "Heather Interview.",
@@ -939,12 +1476,24 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             },
             {
+              "id": "link_tnoihlpypismjjzukbw",
               "title": "Attabotty Interview",
               "url": "https://paragraph.xyz/@thezao/ztalent-interview-7-attabotty",
               "description": "Attabotty Interview.",
@@ -955,10 +1504,21 @@
                 "news",
                 "design"
               ],
+              "displayTags": [
+                "paragraph",
+                "@thezao",
+                "technology",
+                "news",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.138Z",
-              "updatedAt": "2025-07-11T10:37:15.138Z"
+              "updatedAt": "2025-07-11T10:37:15.138Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://paragraph.xyz/favicon.ico"
             }
           ]
         }
@@ -966,11 +1526,16 @@
     },
     {
       "name": "ZAO Community Links",
+      "description": "ZAO Community Links resources and links",
+      "icon": "folder",
+      "color": "#980E6A",
       "subcategories": [
         {
           "name": "Defi Space Donkeys",
+          "description": "Defi Space Donkeys in ZAO Community Links",
           "links": [
             {
+              "id": "link_dtlvi0b8diarmoaoeyld",
               "title": "Coming Soon",
               "url": "#",
               "description": "Links for Defi Space Donkeys will appear here.",
@@ -981,17 +1546,30 @@
                 "youtube",
                 "thezao"
               ],
+              "displayTags": [
+                "web3",
+                "finance",
+                "zao",
+                "youtube",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": null
             }
           ]
         },
         {
           "name": "Impact Concerts",
+          "description": "Impact Concerts in ZAO Community Links",
           "links": [
             {
+              "id": "link_dtlvi0b8diarmoaoeyld",
               "title": "Coming Soon",
               "url": "#",
               "description": "Links for Defi Space Donkeys will appear here.",
@@ -1002,17 +1580,30 @@
                 "youtube",
                 "thezao"
               ],
+              "displayTags": [
+                "web3",
+                "finance",
+                "zao",
+                "youtube",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": null
             }
           ]
         },
         {
           "name": "MidiPunkZ",
+          "description": "MidiPunkZ in ZAO Community Links",
           "links": [
             {
+              "id": "link_blqbkh2zqbwatyuqali",
               "title": "Main website",
               "url": "https://midipunkz.com/",
               "description": "The official MidiPunkZ website.",
@@ -1028,12 +1619,24 @@
                 "optimism",
                 "ethereum"
               ],
+              "displayTags": [
+                "zao",
+                "news",
+                "music",
+                "social",
+                "optimism"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://midipunkz.com/favicon.ico"
             },
             {
+              "id": "link_ddbwsjbwxldltttpk",
               "title": "MidiVaderz game",
               "url": "https://midipunkz.com/games",
               "description": "Play MidiVaderz on the MidiPunkZ website.",
@@ -1049,12 +1652,24 @@
                 "lu",
                 "youtube"
               ],
+              "displayTags": [
+                "lu",
+                "zao",
+                "games",
+                "music",
+                "social"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://midipunkz.com/favicon.ico"
             },
             {
+              "id": "link_5gav4njioc7fuftavirc",
               "title": "MidiPunkz Community",
               "url": "https://ima.midipunkz.com/communities/midipunkz",
               "description": "Join the MidiPunkZ community on IMA.",
@@ -1070,12 +1685,24 @@
                 "entertainment",
                 "t"
               ],
+              "displayTags": [
+                "t",
+                "ima",
+                "zao",
+                "music",
+                "social"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://ima.midipunkz.com/favicon.ico"
             },
             {
+              "id": "link_tbla7u77hdmpty93m1ud",
               "title": "MiDi FeatherFrogs Community",
               "url": "https://ima.midipunkz.com/communities/featherfrogs",
               "description": "Explore the FeatherFrogs community on IMA.",
@@ -1091,12 +1718,24 @@
                 "entertainment",
                 "t"
               ],
+              "displayTags": [
+                "t",
+                "ima",
+                "zao",
+                "music",
+                "social"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://ima.midipunkz.com/favicon.ico"
             },
             {
+              "id": "link_60ffymt2mkre27e4mpvu",
               "title": "Midi Avatars",
               "url": "https://midipunkz.com/midiezz",
               "description": "Browse and collect MidiPunkZ avatars.",
@@ -1109,12 +1748,24 @@
                 "technology",
                 "entertainment"
               ],
+              "displayTags": [
+                "zao",
+                "music",
+                "social",
+                "midiezz",
+                "midipunkz"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://midipunkz.com/favicon.ico"
             },
             {
+              "id": "link_llgwgizx04mgjqzham9x",
               "title": "ZAO Community Page",
               "url": "https://ima.midipunkz.com/communities/the-zao",
               "description": "Check out the ZAO's dedicated community space on midipunkz.com.",
@@ -1130,10 +1781,21 @@
                 "entertainment",
                 "t"
               ],
+              "displayTags": [
+                "t",
+                "zao",
+                "ima",
+                "music",
+                "social"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://ima.midipunkz.com/favicon.ico"
             }
           ]
         }
@@ -1141,11 +1803,16 @@
     },
     {
       "name": "ZAO Community Members",
+      "description": "ZAO Community Members resources and links",
+      "icon": "folder",
+      "color": "#CE9F8A",
       "subcategories": [
         {
           "name": "ZAO Founder BetterCallZaal Links",
+          "description": "ZAO Founder BetterCallZaal Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_ztn8fhdkoutqkv06uwol",
               "title": "BetterCallZaal Linktree",
               "url": "https://linktr.ee/bettercallzaal",
               "description": "Access all BetterCallZaal links and resources on Linktree.",
@@ -1153,12 +1820,21 @@
                 "linktr",
                 "bettercallzaal"
               ],
+              "displayTags": [
+                "linktr",
+                "bettercallzaal"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://linktr.ee/favicon.ico"
             },
             {
+              "id": "link_rvbfgxhqulyd9jbrdc",
               "title": "Personal Meeting Room (Huddle01)",
               "url": "https://huddle01.app/room/zfp-tzyh-anm",
               "description": "Enter your personal meeting room.",
@@ -1166,12 +1842,21 @@
                 "huddle01",
                 "room"
               ],
+              "displayTags": [
+                "huddle01",
+                "room"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://huddle01.app/favicon.ico"
             },
             {
+              "id": "link_rhembzu7mccybwcy44nn",
               "title": "Meet with Zaal (Calendly)",
               "url": "https://calendly.com/zaalp99/30minmeeting",
               "description": "Schedule a meeting with Zaal.",
@@ -1179,17 +1864,27 @@
                 "calendly",
                 "zaalp99"
               ],
+              "displayTags": [
+                "calendly",
+                "zaalp99"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://calendly.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Founder BetterCallZaal Interviews",
+          "description": "ZAO Founder BetterCallZaal Interviews in ZAO Community Members",
           "links": [
             {
+              "id": "link_xcn2gu0l4vt8pkshrmmb",
               "title": "Interview #0 (3/28/24): Blitzscaling w/Bayo",
               "url": "https://youtu.be/FKyIS-h3fNY",
               "description": "Interview #0: Blitzscaling a Startup w/Bayo.",
@@ -1205,12 +1900,24 @@
                 "paragraph",
                 "technology"
               ],
+              "displayTags": [
+                "zao",
+                "youtu",
+                "music",
+                "design",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://youtu.be/favicon.ico"
             },
             {
+              "id": "link_3hroizyxvqewsxm2e6ru",
               "title": "Interview #1 (11/14/24): ZAO Fractal w/NovaCrypto",
               "url": "https://www.youtube.com/watch?v=0_WvwzBvs90&ab_channel=NovaCryptoLTD",
               "description": "Interview #1: ZAO Fractal w/NovaCrypto.",
@@ -1226,12 +1933,24 @@
                 "thezao",
                 "music"
               ],
+              "displayTags": [
+                "zao",
+                "web3",
+                "watch",
+                "music",
+                "crypto"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.youtube.com/favicon.ico"
             },
             {
+              "id": "link_d4qdyyk7dxreacodbhk",
               "title": "Interview #2 (4/1/25): ZAO w/Lindsey",
               "url": "https://www.youtube.com/watch?v=SXmdO6l4Rfg&ab_channel=TokenForYourThoughtsPodcast",
               "description": "Interview #2: ZAO w/Lindsey.",
@@ -1247,12 +1966,24 @@
                 "music",
                 "design"
               ],
+              "displayTags": [
+                "zao",
+                "web3",
+                "watch",
+                "music",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.youtube.com/favicon.ico"
             },
             {
+              "id": "link_4o2e136q85xofyyhifyb",
               "title": "Interview #3 (4/10/25): THE ZAO w/Will T",
               "url": "https://www.youtube.com/watch?v=oVp0d1BBmko&ab_channel=ReFiDAO",
               "description": "Interview #3: THE ZAO w/Will T.",
@@ -1268,17 +1999,30 @@
                 "music",
                 "design"
               ],
+              "displayTags": [
+                "zao",
+                "web3",
+                "watch",
+                "music",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.youtube.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Co-Founder CandyToyBox Links",
+          "description": "ZAO Co-Founder CandyToyBox Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_proacsgqu0a8gydi3gk3",
               "title": "CandyToyBox Test Link",
               "url": "https://thezao.com",
               "description": "Test link for ZAO Co-Founder CandyToyBox.",
@@ -1292,17 +2036,30 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "news",
+                "music",
+                "thezao",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://thezao.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Co-Founder Attabotty Links",
+          "description": "ZAO Co-Founder Attabotty Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_wvzhd06kkv2k4vfbp0",
               "title": "Attabotty Test Link",
               "url": "https://thezao.com",
               "description": "Test link for ZAO Co-Founder Attabotty.",
@@ -1316,17 +2073,30 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "news",
+                "music",
+                "thezao",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://thezao.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Co-Founder HURRIC4N3IKE Links",
+          "description": "ZAO Co-Founder HURRIC4N3IKE Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_ed9ukfcrgms547wa8aij",
               "title": "HURRIC4N3IKE Test Link",
               "url": "https://thezao.com",
               "description": "Test link for ZAO Co-Founder HURRIC4N3IKE.",
@@ -1340,17 +2110,30 @@
                 "festival",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "news",
+                "music",
+                "thezao",
+                "design"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://thezao.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Co-Founder Jango UU Links",
+          "description": "ZAO Co-Founder Jango UU Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_f5ls5t9ejeexd5nf5au",
               "title": "Instagram",
               "url": "https://www.instagram.com/jangouuforever?igsh=MTl4bTRodXl2bDU4Mw%3D%3D&utm_source=qr",
               "description": "Follow Jango UU on Instagram.",
@@ -1360,12 +2143,23 @@
                 "festival",
                 "zao"
               ],
+              "displayTags": [
+                "instagram",
+                "jangouuforever",
+                "festival",
+                "zao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://www.instagram.com/favicon.ico"
             },
             {
+              "id": "link_kh2rr5o2i4abdilfgw3z",
               "title": "X (Twitter)",
               "url": "https://x.com/jangouuforever?s=11&t=lwnZlcNedjeVZeQDTcNEwQ",
               "description": "Follow Jango UU on X (Twitter).",
@@ -1377,12 +2171,24 @@
                 "zao",
                 "technology"
               ],
+              "displayTags": [
+                "x",
+                "zao",
+                "news",
+                "festival",
+                "technology"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://x.com/favicon.ico"
             },
             {
+              "id": "link_zcgju1bj4yqhg5wfc",
               "title": "Spotify",
               "url": "https://open.spotify.com/artist/5nc2dgefoPLfvsrJVx3PNz?si=Xhzfg5n1Q3uHVJHHawp8KA",
               "description": "Listen to Jango UU on Spotify.",
@@ -1393,17 +2199,30 @@
                 "music",
                 "zao"
               ],
+              "displayTags": [
+                "spotify",
+                "open",
+                "artist",
+                "music",
+                "zao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://open.spotify.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Staff EZinCrypto Links",
+          "description": "ZAO Staff EZinCrypto Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_j7ubop5avylkabeah4pt",
               "title": "EZinCrypto Test Link",
               "url": "https://thezao.com",
               "description": "Test link for ZAO Staff EZinCrypto.",
@@ -1419,17 +2238,30 @@
                 "news",
                 "youtube"
               ],
+              "displayTags": [
+                "zao",
+                "web3",
+                "news",
+                "music",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://thezao.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Staff Ohnahji B Links",
+          "description": "ZAO Staff Ohnahji B Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_jmqrw8xi3fuefsgdcrln",
               "title": "Ohnahji Linktree",
               "url": "https://linktr.ee/ohnahji",
               "description": "Linktree for Ohnahji B.",
@@ -1437,17 +2269,27 @@
                 "linktr",
                 "ohnahji"
               ],
+              "displayTags": [
+                "linktr",
+                "ohnahji"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://linktr.ee/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Community Member Jed XO Links",
+          "description": "ZAO Community Member Jed XO Links in ZAO Community Members",
           "links": [
             {
+              "id": "link_xl6ppsauq3ksnlpdppi",
               "title": "Jed XO Test Link",
               "url": "https://thezao.com",
               "description": "Test link for ZAO Community Member Jed XO.",
@@ -1463,29 +2305,50 @@
                 "midipunkz",
                 "t"
               ],
+              "displayTags": [
+                "t",
+                "zao",
+                "news",
+                "music",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://thezao.com/favicon.ico"
             }
           ]
         },
         {
           "name": "ZAO Musician GodCloud",
+          "description": "ZAO Musician GodCloud in ZAO Community Members",
           "links": [
             {
+              "id": "link_b5uwpdu5ciwdo6pk25cs",
               "title": "GodCloud Website",
               "url": "https://godcloud.org",
               "description": "Website for GodCloud.",
               "tags": [
                 "godcloud"
               ],
+              "displayTags": [
+                "godcloud"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://godcloud.org/favicon.ico"
             },
             {
+              "id": "link_1kopjjoduhljciz0i1fl",
               "title": "GodCloud Drip.haus",
               "url": "https://drip.haus/godcloud",
               "description": "Collect GodCloud tracks.",
@@ -1499,10 +2362,21 @@
                 "midipunkz",
                 "spotify"
               ],
+              "displayTags": [
+                "zao",
+                "drip",
+                "music",
+                "design",
+                "thezao"
+              ],
               "isNew": true,
               "isOfficial": true,
+              "isPopular": false,
               "createdAt": "2025-07-11T10:37:15.139Z",
-              "updatedAt": "2025-07-11T10:37:15.139Z"
+              "updatedAt": "2025-07-11T10:37:15.139Z",
+              "clicks": 0,
+              "popularity": 0,
+              "favicon": "https://drip.haus/favicon.ico"
             }
           ]
         }
@@ -1511,6 +2385,7 @@
   ],
   "links": [
     {
+      "id": "link_ob4noeufoiodenzqshi5c",
       "title": "Optimism Superchain Documentation",
       "url": "https://docs.optimism.io/stack/explainer",
       "description": "Comprehensive documentation about the Optimism Superchain architecture and ecosystem",
@@ -1526,12 +2401,24 @@
         "paragraph",
         "news"
       ],
+      "displayTags": [
+        "news",
+        "stack",
+        "layer2",
+        "optimism",
+        "ethereum"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-10T22:18:56-04:00",
-      "updatedAt": "2025-07-11T10:37:15.131Z"
+      "updatedAt": "2025-07-11T10:37:15.131Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://docs.optimism.io/favicon.ico"
     },
     {
+      "id": "link_ytthj4gvpwcjgjysnvvb",
       "title": "Mint ZAO-CHELLA Vibez Track on Zora",
       "url": "https://song.thezao.com",
       "description": "Own a piece of the ZAO-CHELLA experience by minting the Vibez track.",
@@ -1547,12 +2434,24 @@
         "midipunkz",
         "spotify"
       ],
+      "displayTags": [
+        "zao",
+        "song",
+        "news",
+        "music",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://song.thezao.com/favicon.ico"
     },
     {
+      "id": "link_srnarjn4mjjsdendud",
       "title": "Mint Attabotty ZAO-PALOOZA Card",
       "url": "https://attabotty.zao.cards",
       "description": "Collect the limited-edition Attabotty artist card from ZAO-PALOOZA.",
@@ -1568,12 +2467,24 @@
         "paragraph",
         "technology"
       ],
+      "displayTags": [
+        "zao",
+        "music",
+        "design",
+        "artist",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://attabotty.zao.cards/favicon.ico"
     },
     {
+      "id": "link_3w3sjmegdgcepodi",
       "title": "Mint Zalora – the ZAO Mascot (MidiVerse)",
       "url": "https://zalora.thezao.com",
       "description": "Bring Zalora into your wallet – the on-chain mascot of the ZAO.",
@@ -1589,12 +2500,24 @@
         "optimism",
         "ethereum"
       ],
+      "displayTags": [
+        "zao",
+        "news",
+        "music",
+        "thezao",
+        "zalora"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://zalora.thezao.com/favicon.ico"
     },
     {
+      "id": "link_kfrgmu4bxf7dyipfss",
       "title": "ZAO song #1: ZAO-CHELLA VIBEZ",
       "url": "https://zora.co/collect/base:0x1458f7d12c1fe1747e13793d99dcb6da6f9d6123/1?referrer=0xa46b072e6607d37413000220653d3bca5be32513",
       "description": "Vibe to the first official ZAO track from ZAO-CHELLA.",
@@ -1610,12 +2533,24 @@
         "thezao",
         "midipunkz"
       ],
+      "displayTags": [
+        "zao",
+        "nft",
+        "zora",
+        "web3",
+        "music"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://zora.co/favicon.ico"
     },
     {
+      "id": "link_zyzb7wmguhz7okjnkt9f",
       "title": "ZAO song #2: ZAO-CHELLA CYPHER",
       "url": "https://www.thezao.com/zao-cypher",
       "description": "Listen to the multi-artist Cypher track from ZAO-CHELLA.",
@@ -1631,12 +2566,24 @@
         "news",
         "paragraph"
       ],
+      "displayTags": [
+        "zao",
+        "news",
+        "music",
+        "thezao",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.thezao.com/favicon.ico"
     },
     {
+      "id": "link_3cqkuurrvprcglvqq40l",
       "title": "ZAO song #3: Side by Side (ZAO Side)",
       "url": "https://ima.midipunkz.com/midivaderz/side-by-side-thezao",
       "description": "Watch the Side-by-Side collab in MidiVaderZ – ZAO's side.",
@@ -1652,12 +2599,24 @@
         "design",
         "thezao"
       ],
+      "displayTags": [
+        "zao",
+        "ima",
+        "music",
+        "social",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://ima.midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_4lch2jowxfolimhydk7w",
       "title": "ZAO song #3.1: Side by Side (MidiPunkz Side)",
       "url": "https://ima.midipunkz.com/midivaderz/side-by-side-midipunkz",
       "description": "Watch the Side-by-Side collab in MidiVaderZ – MidiPunkz's side.",
@@ -1673,12 +2632,24 @@
         "design",
         "thezao"
       ],
+      "displayTags": [
+        "zao",
+        "ima",
+        "music",
+        "social",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://ima.midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_cdl3rk367o5lztd2woje",
       "title": "ZAO Website",
       "url": "https://thezao.com",
       "description": "Visit the official ZAO website for all the latest news and resources.",
@@ -1694,12 +2665,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "t",
+        "zao",
+        "news",
+        "music",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.137Z",
-      "updatedAt": "2025-07-11T10:37:15.137Z"
+      "updatedAt": "2025-07-11T10:37:15.137Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://thezao.com/favicon.ico"
     },
     {
+      "id": "link_qnn3wybfbrlsmwe0sqcv",
       "title": "ZVerse (ZAO Hivemind)",
       "url": "https://thezao.xyz",
       "description": "Explore the ZVerse, where the ZAO Hivemind connects ideas and innovations.",
@@ -1715,12 +2698,24 @@
         "news",
         "festival"
       ],
+      "displayTags": [
+        "zao",
+        "news",
+        "music",
+        "thezao",
+        "zverse"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://thezao.xyz/favicon.ico"
     },
     {
+      "id": "link_z0ne0rfwxpnpzveqa0y4",
       "title": "ZAO ORG CHART (Hats Tree)",
       "url": "https://hats.thezao.com",
       "description": "Dive into the ZAO ORG CHART to see our team and projects.",
@@ -1736,12 +2731,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "hats",
+        "news",
+        "music",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://hats.thezao.com/favicon.ico"
     },
     {
+      "id": "link_2qse2beifxaseimgjkl0",
       "title": "ZAO Google Calendar",
       "url": "https://calendar.google.com/calendar/u/0?cid=MmY3YTQ4YTY2MWIyNzVlMmFkZTgxYzlhYjJkMGFhM2E1YTBmNThiNTA3MDVhOTYxZGE2NWNmNTE0MTZjZGU3NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t",
       "description": "Stay up to date with ZAO events on Google Calendar.",
@@ -1757,12 +2764,24 @@
         "music",
         "design"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "music",
+        "google",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://calendar.google.com/favicon.ico"
     },
     {
+      "id": "link_xkhvuowlywwawoafcps",
       "title": "ZAO Calendar",
       "url": "https://lu.ma/zao",
       "description": "Browse upcoming ZAO events and activities on Luma.",
@@ -1778,12 +2797,24 @@
         "design",
         "youtube"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "music",
+        "google",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://lu.ma/favicon.ico"
     },
     {
+      "id": "link_nbyk5fuu6c2ju2saio",
       "title": "ZAO Music Events Calendar",
       "url": "https://lu.ma/zao-m",
       "description": "Explore ZAO music-related events and gigs on Luma.",
@@ -1799,12 +2830,24 @@
         "thezao",
         "midipunkz"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "music",
+        "zao-m",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://lu.ma/favicon.ico"
     },
     {
+      "id": "link_tx4bdmztlswwi402dinb",
       "title": "Discord",
       "url": "https://discord.gg/ACJyYQH3BE",
       "description": "Join our ZAO Discord for real-time group chats.",
@@ -1818,12 +2861,24 @@
         "design",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "music",
+        "thezao",
+        "design",
+        "discord"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://discord.gg/favicon.ico"
     },
     {
+      "id": "link_0vtv8ctani2lxscc0hcu",
       "title": "Telegram",
       "url": "https://t.me/+iMH5Y_t2Mks1NmVh",
       "description": "Connect with us on Telegram for updates and discussions.",
@@ -1839,12 +2894,24 @@
         "technology",
         "thezao"
       ],
+      "displayTags": [
+        "t",
+        "news",
+        "social",
+        "update",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://t.me/favicon.ico"
     },
     {
+      "id": "link_b3uhsqkzaqwvmudec7m",
       "title": "ZAO Whitepaper Draft",
       "url": "https://app.charmverse.io/the-zao/the-zao-whitepaper-draft-2-6565388910657037",
       "description": "Dive into the ZAO Whitepaper for a deeper understanding of the ecosystem.",
@@ -1858,12 +2925,24 @@
         "design",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "music",
+        "thezao",
+        "design",
+        "the-zao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://app.charmverse.io/favicon.ico"
     },
     {
+      "id": "link_zwgxygj5ndbo26x3qq2",
       "title": "Daily Newsletter Articles",
       "url": "https://paragraph.xyz/@thezao",
       "description": "Read daily newsletter articles.",
@@ -1879,12 +2958,24 @@
         "layer2",
         "thezao"
       ],
+      "displayTags": [
+        "news",
+        "design",
+        "layer2",
+        "thezao",
+        "@thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_exo1v84c9gsvjj5jrz",
       "title": "Subscribe to the newsletter",
       "url": "https://paragraph.xyz/@thezao/subscribe",
       "description": "Subscribe for daily updates.",
@@ -1900,12 +2991,24 @@
         "layer2",
         "thezao"
       ],
+      "displayTags": [
+        "news",
+        "update",
+        "design",
+        "layer2",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_ekrk2j157x1f195hrpsc",
       "title": "WaveWarZ Twitter",
       "url": "https://x.com/WaveWarZ",
       "description": "Check out the latest updates on WaveWarZ Twitter.",
@@ -1921,24 +3024,44 @@
         "thezao",
         "t"
       ],
+      "displayTags": [
+        "x",
+        "t",
+        "zao",
+        "news",
+        "update"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://x.com/favicon.ico"
     },
     {
+      "id": "link_sjatuek6lts9ye4tubdp",
       "title": "WaveWarZ V1 SOL Testnet",
       "url": "https://www.wavewarz.com",
       "description": "Access the WaveWarZ DAPP on the SOL Testnet (V1).",
       "tags": [
         "wavewarz"
       ],
+      "displayTags": [
+        "wavewarz"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.wavewarz.com/favicon.ico"
     },
     {
+      "id": "link_16g8u0nq2bbipzuqfgpj",
       "title": "ZAO Festivals Website",
       "url": "https://zaofestivals.com/",
       "description": "Visit the official ZAO Festivals website.",
@@ -1954,12 +3077,24 @@
         "design",
         "youtube"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "music",
+        "google",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://zaofestivals.com/favicon.ico"
     },
     {
+      "id": "link_wi17n8bmm7mdab9rtak",
       "title": "Merch",
       "url": "https://merch.zaofestivals.com",
       "description": "Shop for ZAO Festivals merchandise.",
@@ -1975,12 +3110,24 @@
         "music",
         "design"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "merch",
+        "music",
+        "google"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://merch.zaofestivals.com/favicon.ico"
     },
     {
+      "id": "link_m5ovyrvel3ksvd2lcxmr",
       "title": "Donate",
       "url": "https://giveth.io/project/sustaining-zao-festivals-creativity-technology?tab=donations",
       "description": "Donate to support ZAO Festivals.",
@@ -1996,12 +3143,24 @@
         "thezao",
         "music"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "music",
+        "giveth",
+        "google"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://giveth.io/favicon.ico"
     },
     {
+      "id": "link_wzyqb6swylgqsi0f5ed9",
       "title": "ZAO PALOOZA Artist Cards",
       "url": "https://zao.cards",
       "description": "View ZAO PALOOZA Artist Cards.",
@@ -2017,12 +3176,24 @@
         "technology",
         "midipunkz"
       ],
+      "displayTags": [
+        "zao",
+        "music",
+        "design",
+        "artist",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://zao.cards/favicon.ico"
     },
     {
+      "id": "link_s4nl5im6fx8bowetbj",
       "title": "Twitter",
       "url": "https://x.com/zaofestivals?lang=en",
       "description": "Follow ZAO Festivals on Twitter.",
@@ -2038,12 +3209,24 @@
         "google",
         "thezao"
       ],
+      "displayTags": [
+        "x",
+        "lu",
+        "zao",
+        "news",
+        "google"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://x.com/favicon.ico"
     },
     {
+      "id": "link_9k59zjkvoltffwv502w",
       "title": "Instagram",
       "url": "https://www.instagram.com/zaofestivals/",
       "description": "Follow ZAO Festivals on Instagram.",
@@ -2059,12 +3242,24 @@
         "music",
         "design"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "music",
+        "google",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.instagram.com/favicon.ico"
     },
     {
+      "id": "link_ipfkiqytgxfb3yw1r3oh",
       "title": "Facebook",
       "url": "https://www.facebook.com/ZAOFestivals",
       "description": "Like ZAO Festivals on Facebook.",
@@ -2080,12 +3275,24 @@
         "music",
         "design"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "music",
+        "google",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.facebook.com/favicon.ico"
     },
     {
+      "id": "link_jnnxdr4yhpxwsquugk3g",
       "title": "LinkedIn",
       "url": "https://www.linkedin.com/company/zaofestivals",
       "description": "Connect with ZAO Festivals on LinkedIn.",
@@ -2101,12 +3308,24 @@
         "google",
         "thezao"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "google",
+        "thezao",
+        "company"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.linkedin.com/favicon.ico"
     },
     {
+      "id": "link_jca4a7nbolhccij2yl8",
       "title": "YouTube",
       "url": "https://www.youtube.com/@zaofestivals",
       "description": "Watch ZAO Festivals videos on YouTube.",
@@ -2122,12 +3341,24 @@
         "music",
         "zaofestivals"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "web3",
+        "music",
+        "youtube"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.youtube.com/favicon.ico"
     },
     {
+      "id": "link_uvg59lhffnhsus9kkbx",
       "title": "$Loanz OG Whitepaper",
       "url": "https://paragraph.xyz/@thezao/student-loanz-whitepaper",
       "description": "Dive into the original $Loanz Whitepaper for in-depth info on Student Loanz.",
@@ -2138,24 +3369,44 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_zkm87h0pn4uyqxletsep",
       "title": "$Loanz website",
       "url": "https://studentloanz.xyz/",
       "description": "Visit the official $Loanz website to explore student loan solutions.",
       "tags": [
         "studentloanz"
       ],
+      "displayTags": [
+        "studentloanz"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://studentloanz.xyz/favicon.ico"
     },
     {
+      "id": "link_hguqdws3gk97h0k6xq3l",
       "title": "$Loanz memebook",
       "url": "https://zao.lol",
       "description": "Make your own $loanz memes.",
@@ -2167,12 +3418,24 @@
         "design",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "music",
+        "thezao",
+        "design",
+        "youtube"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://zao.lol/favicon.ico"
     },
     {
+      "id": "link_ippfdp3khboey9zj4lwp",
       "title": "Loanz Daily Spaces",
       "url": "https://x.com/loanzonbase",
       "description": "Loanz Daily Spaces.",
@@ -2188,12 +3451,24 @@
         "ethereum",
         "layer2"
       ],
+      "displayTags": [
+        "x",
+        "zao",
+        "news",
+        "layer2",
+        "festival"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://x.com/favicon.ico"
     },
     {
+      "id": "link_cfkiasw6svbxakwunugu",
       "title": "ZAO Spotify 2024",
       "url": "https://open.spotify.com/playlist/2IIl13a4YNxQTLNJhDKr32?si=1bb3ef92068143cf",
       "description": "Listen to ZAO Spotify 2024 playlist.",
@@ -2209,12 +3484,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "open",
+        "music",
+        "design",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://open.spotify.com/favicon.ico"
     },
     {
+      "id": "link_9b2wskn5hbdpmuw2j0ej",
       "title": "ZAO Spotify 2025",
       "url": "https://open.spotify.com/playlist/7MCDgGzyqbnsyKSNuMUUpM?si=2652032d60de4b93",
       "description": "Listen to ZAO Spotify 2025 playlist.",
@@ -2230,12 +3517,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "open",
+        "music",
+        "design",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://open.spotify.com/favicon.ico"
     },
     {
+      "id": "link_80oanve7cq7wjf54hzq",
       "title": "ZAO SOUND.XYZ Playlist",
       "url": "https://www.sound.xyz/playlist/1e1ab680-2f45-4232-9c34-b6ba9dc1a1d3",
       "description": "Listen to the ZAO SOUND.XYZ Playlist.",
@@ -2251,12 +3550,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "sound",
+        "music",
+        "design",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.sound.xyz/favicon.ico"
     },
     {
+      "id": "link_oveet1bghzsbh0crlulp",
       "title": "Daniel Obute Interview",
       "url": "https://paragraph.xyz/@thezao/ztalentnewsletter12",
       "description": "Daniel Obute Interview.",
@@ -2267,12 +3578,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_xdnam7foffcr9kv6yqeh",
       "title": "Davyd Interview",
       "url": "https://paragraph.xyz/@thezao/ztalent-interview-1-davyd",
       "description": "Davyd Interview.",
@@ -2283,12 +3606,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_tunpgv4ifcsv7xdeenyw",
       "title": "Tej Interview",
       "url": "https://paragraph.xyz/@thezao/ztalent-interview-2",
       "description": "Tej Interview.",
@@ -2299,12 +3634,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_zmnglqz7htnkvkabfbb",
       "title": "Ohnahji B Interview",
       "url": "https://paragraph.xyz/@thezao/ztalent-interview-3",
       "description": "Ohnahji B Interview.",
@@ -2315,12 +3662,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_p4jrpng4nyryjuchp7w",
       "title": "CandyToyBox Interview",
       "url": "https://paragraph.xyz/@thezao/ztalent-interview-4",
       "description": "CandyToyBox Interview.",
@@ -2331,12 +3690,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_pn4ukoba48hu74lchde",
       "title": "Hurric4n3Ike Interview",
       "url": "https://paragraph.xyz/@thezao/ztalent-interview-5-hurric4n3ike",
       "description": "Hurric4n3Ike Interview.",
@@ -2347,12 +3718,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_zjhxeljronnbrozyomrv",
       "title": "Heather Interview",
       "url": "https://paragraph.xyz/@thezao/ztalent-interview-6",
       "description": "Heather Interview.",
@@ -2363,12 +3746,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_tnoihlpypismjjzukbw",
       "title": "Attabotty Interview",
       "url": "https://paragraph.xyz/@thezao/ztalent-interview-7-attabotty",
       "description": "Attabotty Interview.",
@@ -2379,12 +3774,24 @@
         "news",
         "design"
       ],
+      "displayTags": [
+        "paragraph",
+        "@thezao",
+        "technology",
+        "news",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.138Z",
-      "updatedAt": "2025-07-11T10:37:15.138Z"
+      "updatedAt": "2025-07-11T10:37:15.138Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://paragraph.xyz/favicon.ico"
     },
     {
+      "id": "link_dtlvi0b8diarmoaoeyld",
       "title": "Coming Soon",
       "url": "#",
       "description": "Links for Defi Space Donkeys will appear here.",
@@ -2395,12 +3802,24 @@
         "youtube",
         "thezao"
       ],
+      "displayTags": [
+        "web3",
+        "finance",
+        "zao",
+        "youtube",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": null
     },
     {
+      "id": "link_blqbkh2zqbwatyuqali",
       "title": "Main website",
       "url": "https://midipunkz.com/",
       "description": "The official MidiPunkZ website.",
@@ -2416,12 +3835,24 @@
         "optimism",
         "ethereum"
       ],
+      "displayTags": [
+        "zao",
+        "news",
+        "music",
+        "social",
+        "optimism"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_ddbwsjbwxldltttpk",
       "title": "MidiVaderz game",
       "url": "https://midipunkz.com/games",
       "description": "Play MidiVaderz on the MidiPunkZ website.",
@@ -2437,12 +3868,24 @@
         "lu",
         "youtube"
       ],
+      "displayTags": [
+        "lu",
+        "zao",
+        "games",
+        "music",
+        "social"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_5gav4njioc7fuftavirc",
       "title": "MidiPunkz Community",
       "url": "https://ima.midipunkz.com/communities/midipunkz",
       "description": "Join the MidiPunkZ community on IMA.",
@@ -2458,12 +3901,24 @@
         "entertainment",
         "t"
       ],
+      "displayTags": [
+        "t",
+        "ima",
+        "zao",
+        "music",
+        "social"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://ima.midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_tbla7u77hdmpty93m1ud",
       "title": "MiDi FeatherFrogs Community",
       "url": "https://ima.midipunkz.com/communities/featherfrogs",
       "description": "Explore the FeatherFrogs community on IMA.",
@@ -2479,12 +3934,24 @@
         "entertainment",
         "t"
       ],
+      "displayTags": [
+        "t",
+        "ima",
+        "zao",
+        "music",
+        "social"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://ima.midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_60ffymt2mkre27e4mpvu",
       "title": "Midi Avatars",
       "url": "https://midipunkz.com/midiezz",
       "description": "Browse and collect MidiPunkZ avatars.",
@@ -2497,12 +3964,24 @@
         "technology",
         "entertainment"
       ],
+      "displayTags": [
+        "zao",
+        "music",
+        "social",
+        "midiezz",
+        "midipunkz"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_llgwgizx04mgjqzham9x",
       "title": "ZAO Community Page",
       "url": "https://ima.midipunkz.com/communities/the-zao",
       "description": "Check out the ZAO's dedicated community space on midipunkz.com.",
@@ -2518,12 +3997,24 @@
         "entertainment",
         "t"
       ],
+      "displayTags": [
+        "t",
+        "zao",
+        "ima",
+        "music",
+        "social"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://ima.midipunkz.com/favicon.ico"
     },
     {
+      "id": "link_ztn8fhdkoutqkv06uwol",
       "title": "BetterCallZaal Linktree",
       "url": "https://linktr.ee/bettercallzaal",
       "description": "Access all BetterCallZaal links and resources on Linktree.",
@@ -2531,12 +4022,21 @@
         "linktr",
         "bettercallzaal"
       ],
+      "displayTags": [
+        "linktr",
+        "bettercallzaal"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://linktr.ee/favicon.ico"
     },
     {
+      "id": "link_rvbfgxhqulyd9jbrdc",
       "title": "Personal Meeting Room (Huddle01)",
       "url": "https://huddle01.app/room/zfp-tzyh-anm",
       "description": "Enter your personal meeting room.",
@@ -2544,12 +4044,21 @@
         "huddle01",
         "room"
       ],
+      "displayTags": [
+        "huddle01",
+        "room"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://huddle01.app/favicon.ico"
     },
     {
+      "id": "link_rhembzu7mccybwcy44nn",
       "title": "Meet with Zaal (Calendly)",
       "url": "https://calendly.com/zaalp99/30minmeeting",
       "description": "Schedule a meeting with Zaal.",
@@ -2557,12 +4066,21 @@
         "calendly",
         "zaalp99"
       ],
+      "displayTags": [
+        "calendly",
+        "zaalp99"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://calendly.com/favicon.ico"
     },
     {
+      "id": "link_xcn2gu0l4vt8pkshrmmb",
       "title": "Interview #0 (3/28/24): Blitzscaling w/Bayo",
       "url": "https://youtu.be/FKyIS-h3fNY",
       "description": "Interview #0: Blitzscaling a Startup w/Bayo.",
@@ -2578,12 +4096,24 @@
         "paragraph",
         "technology"
       ],
+      "displayTags": [
+        "zao",
+        "youtu",
+        "music",
+        "design",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://youtu.be/favicon.ico"
     },
     {
+      "id": "link_3hroizyxvqewsxm2e6ru",
       "title": "Interview #1 (11/14/24): ZAO Fractal w/NovaCrypto",
       "url": "https://www.youtube.com/watch?v=0_WvwzBvs90&ab_channel=NovaCryptoLTD",
       "description": "Interview #1: ZAO Fractal w/NovaCrypto.",
@@ -2599,12 +4129,24 @@
         "thezao",
         "music"
       ],
+      "displayTags": [
+        "zao",
+        "web3",
+        "watch",
+        "music",
+        "crypto"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.youtube.com/favicon.ico"
     },
     {
+      "id": "link_d4qdyyk7dxreacodbhk",
       "title": "Interview #2 (4/1/25): ZAO w/Lindsey",
       "url": "https://www.youtube.com/watch?v=SXmdO6l4Rfg&ab_channel=TokenForYourThoughtsPodcast",
       "description": "Interview #2: ZAO w/Lindsey.",
@@ -2620,12 +4162,24 @@
         "music",
         "design"
       ],
+      "displayTags": [
+        "zao",
+        "web3",
+        "watch",
+        "music",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.youtube.com/favicon.ico"
     },
     {
+      "id": "link_4o2e136q85xofyyhifyb",
       "title": "Interview #3 (4/10/25): THE ZAO w/Will T",
       "url": "https://www.youtube.com/watch?v=oVp0d1BBmko&ab_channel=ReFiDAO",
       "description": "Interview #3: THE ZAO w/Will T.",
@@ -2641,12 +4195,24 @@
         "music",
         "design"
       ],
+      "displayTags": [
+        "zao",
+        "web3",
+        "watch",
+        "music",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.youtube.com/favicon.ico"
     },
     {
+      "id": "link_proacsgqu0a8gydi3gk3",
       "title": "CandyToyBox Test Link",
       "url": "https://thezao.com",
       "description": "Test link for ZAO Co-Founder CandyToyBox.",
@@ -2660,12 +4226,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "news",
+        "music",
+        "thezao",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://thezao.com/favicon.ico"
     },
     {
+      "id": "link_wvzhd06kkv2k4vfbp0",
       "title": "Attabotty Test Link",
       "url": "https://thezao.com",
       "description": "Test link for ZAO Co-Founder Attabotty.",
@@ -2679,12 +4257,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "news",
+        "music",
+        "thezao",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://thezao.com/favicon.ico"
     },
     {
+      "id": "link_ed9ukfcrgms547wa8aij",
       "title": "HURRIC4N3IKE Test Link",
       "url": "https://thezao.com",
       "description": "Test link for ZAO Co-Founder HURRIC4N3IKE.",
@@ -2698,12 +4288,24 @@
         "festival",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "news",
+        "music",
+        "thezao",
+        "design"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://thezao.com/favicon.ico"
     },
     {
+      "id": "link_f5ls5t9ejeexd5nf5au",
       "title": "Instagram",
       "url": "https://www.instagram.com/jangouuforever?igsh=MTl4bTRodXl2bDU4Mw%3D%3D&utm_source=qr",
       "description": "Follow Jango UU on Instagram.",
@@ -2713,12 +4315,23 @@
         "festival",
         "zao"
       ],
+      "displayTags": [
+        "instagram",
+        "jangouuforever",
+        "festival",
+        "zao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://www.instagram.com/favicon.ico"
     },
     {
+      "id": "link_kh2rr5o2i4abdilfgw3z",
       "title": "X (Twitter)",
       "url": "https://x.com/jangouuforever?s=11&t=lwnZlcNedjeVZeQDTcNEwQ",
       "description": "Follow Jango UU on X (Twitter).",
@@ -2730,12 +4343,24 @@
         "zao",
         "technology"
       ],
+      "displayTags": [
+        "x",
+        "zao",
+        "news",
+        "festival",
+        "technology"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://x.com/favicon.ico"
     },
     {
+      "id": "link_zcgju1bj4yqhg5wfc",
       "title": "Spotify",
       "url": "https://open.spotify.com/artist/5nc2dgefoPLfvsrJVx3PNz?si=Xhzfg5n1Q3uHVJHHawp8KA",
       "description": "Listen to Jango UU on Spotify.",
@@ -2746,12 +4371,24 @@
         "music",
         "zao"
       ],
+      "displayTags": [
+        "spotify",
+        "open",
+        "artist",
+        "music",
+        "zao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://open.spotify.com/favicon.ico"
     },
     {
+      "id": "link_j7ubop5avylkabeah4pt",
       "title": "EZinCrypto Test Link",
       "url": "https://thezao.com",
       "description": "Test link for ZAO Staff EZinCrypto.",
@@ -2767,12 +4404,24 @@
         "news",
         "youtube"
       ],
+      "displayTags": [
+        "zao",
+        "web3",
+        "news",
+        "music",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://thezao.com/favicon.ico"
     },
     {
+      "id": "link_jmqrw8xi3fuefsgdcrln",
       "title": "Ohnahji Linktree",
       "url": "https://linktr.ee/ohnahji",
       "description": "Linktree for Ohnahji B.",
@@ -2780,12 +4429,21 @@
         "linktr",
         "ohnahji"
       ],
+      "displayTags": [
+        "linktr",
+        "ohnahji"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://linktr.ee/favicon.ico"
     },
     {
+      "id": "link_xl6ppsauq3ksnlpdppi",
       "title": "Jed XO Test Link",
       "url": "https://thezao.com",
       "description": "Test link for ZAO Community Member Jed XO.",
@@ -2801,24 +4459,44 @@
         "midipunkz",
         "t"
       ],
+      "displayTags": [
+        "t",
+        "zao",
+        "news",
+        "music",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://thezao.com/favicon.ico"
     },
     {
+      "id": "link_b5uwpdu5ciwdo6pk25cs",
       "title": "GodCloud Website",
       "url": "https://godcloud.org",
       "description": "Website for GodCloud.",
       "tags": [
         "godcloud"
       ],
+      "displayTags": [
+        "godcloud"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://godcloud.org/favicon.ico"
     },
     {
+      "id": "link_1kopjjoduhljciz0i1fl",
       "title": "GodCloud Drip.haus",
       "url": "https://drip.haus/godcloud",
       "description": "Collect GodCloud tracks.",
@@ -2832,10 +4510,947 @@
         "midipunkz",
         "spotify"
       ],
+      "displayTags": [
+        "zao",
+        "drip",
+        "music",
+        "design",
+        "thezao"
+      ],
       "isNew": true,
       "isOfficial": true,
+      "isPopular": false,
       "createdAt": "2025-07-11T10:37:15.139Z",
-      "updatedAt": "2025-07-11T10:37:15.139Z"
+      "updatedAt": "2025-07-11T10:37:15.139Z",
+      "clicks": 0,
+      "popularity": 0,
+      "favicon": "https://drip.haus/favicon.ico"
     }
-  ]
+  ],
+  "tagMetadata": {
+    "optimism": {
+      "count": 7,
+      "color": "#49520C",
+      "related": [
+        "ethereum",
+        "technology",
+        "paragraph",
+        "news",
+        "layer2"
+      ]
+    },
+    "ethereum": {
+      "count": 7,
+      "color": "#662FF7",
+      "related": [
+        "optimism",
+        "technology",
+        "paragraph",
+        "news",
+        "layer2"
+      ]
+    },
+    "layer2": {
+      "count": 5,
+      "color": "#DAD501",
+      "related": [
+        "optimism",
+        "ethereum",
+        "technology",
+        "paragraph",
+        "news"
+      ]
+    },
+    "superchain": {
+      "count": 2,
+      "color": "#C9DC26",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "op-stack",
+        "blockchain"
+      ]
+    },
+    "op-stack": {
+      "count": 2,
+      "color": "#B1379C",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "blockchain"
+      ]
+    },
+    "blockchain": {
+      "count": 2,
+      "color": "#E1E254",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "op-stack"
+      ]
+    },
+    "technology": {
+      "count": 45,
+      "color": "#E7850C",
+      "related": [
+        "news",
+        "design",
+        "zao",
+        "paragraph",
+        "music"
+      ]
+    },
+    "thezao": {
+      "count": 53,
+      "color": "#DB7417",
+      "related": [
+        "zao",
+        "music",
+        "design",
+        "festival",
+        "technology"
+      ]
+    },
+    "music": {
+      "count": 55,
+      "color": "#36EE25",
+      "related": [
+        "zao",
+        "thezao",
+        "design",
+        "festival",
+        "technology"
+      ]
+    },
+    "zao": {
+      "count": 87,
+      "color": "#01D628",
+      "related": [
+        "music",
+        "thezao",
+        "design",
+        "festival",
+        "technology"
+      ]
+    },
+    "design": {
+      "count": 50,
+      "color": "#69C1BE",
+      "related": [
+        "thezao",
+        "music",
+        "zao",
+        "technology",
+        "festival"
+      ]
+    },
+    "zora": {
+      "count": 2,
+      "color": "#392424",
+      "related": [
+        "music",
+        "zao",
+        "nft",
+        "web3",
+        "collect"
+      ]
+    },
+    "midipunkz": {
+      "count": 25,
+      "color": "#FBCBB7",
+      "related": [
+        "music",
+        "zao",
+        "thezao",
+        "design",
+        "technology"
+      ]
+    },
+    "news": {
+      "count": 34,
+      "color": "#338AD3",
+      "related": [
+        "technology",
+        "design",
+        "paragraph",
+        "thezao",
+        "zao"
+      ]
+    },
+    "google": {
+      "count": 10,
+      "color": "#135E39",
+      "related": [
+        "festival",
+        "zao",
+        "lu",
+        "entertainment",
+        "zaofestivals"
+      ]
+    },
+    "festival": {
+      "count": 44,
+      "color": "#5EB978",
+      "related": [
+        "zao",
+        "thezao",
+        "music",
+        "design",
+        "youtube"
+      ]
+    },
+    "lu": {
+      "count": 14,
+      "color": "#000D89",
+      "related": [
+        "festival",
+        "zao",
+        "entertainment",
+        "zaofestivals",
+        "thezao"
+      ]
+    },
+    "entertainment": {
+      "count": 25,
+      "color": "#CD7F88",
+      "related": [
+        "zao",
+        "music",
+        "thezao",
+        "festival",
+        "lu"
+      ]
+    },
+    "discord": {
+      "count": 2,
+      "color": "#9F3D2C",
+      "related": [
+        "zao",
+        "acjyyqh3be",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "t": {
+      "count": 8,
+      "color": "#000074",
+      "related": [
+        "technology",
+        "zao",
+        "music",
+        "social",
+        "thezao"
+      ]
+    },
+    "social": {
+      "count": 15,
+      "color": "#88176D",
+      "related": [
+        "technology",
+        "midipunkz",
+        "music",
+        "zao",
+        "entertainment"
+      ]
+    },
+    "charmverse": {
+      "count": 2,
+      "color": "#BAEFBE",
+      "related": [
+        "zao",
+        "the-zao",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "paragraph": {
+      "count": 34,
+      "color": "#2FC96E",
+      "related": [
+        "technology",
+        "news",
+        "design",
+        "thezao",
+        "@thezao"
+      ]
+    },
+    "x": {
+      "count": 8,
+      "color": "#000078",
+      "related": [
+        "news",
+        "festival",
+        "zao",
+        "technology",
+        "paragraph"
+      ]
+    },
+    "wavewarz": {
+      "count": 2,
+      "color": "#0B010B",
+      "related": [
+        "x",
+        "news",
+        "update",
+        "festival",
+        "zao"
+      ]
+    },
+    "zaofestivals": {
+      "count": 12,
+      "color": "#A10CD3",
+      "related": [
+        "festival",
+        "zao",
+        "lu",
+        "entertainment",
+        "google"
+      ]
+    },
+    "giveth": {
+      "count": 2,
+      "color": "#C1F945",
+      "related": [
+        "festival",
+        "zao",
+        "project",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "instagram": {
+      "count": 4,
+      "color": "#B907B2",
+      "related": [
+        "festival",
+        "zao",
+        "zaofestivals",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "facebook": {
+      "count": 2,
+      "color": "#A19AC6",
+      "related": [
+        "festival",
+        "zao",
+        "zaofestivals",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "linkedin": {
+      "count": 2,
+      "color": "#3590FE",
+      "related": [
+        "festival",
+        "zao",
+        "company",
+        "connect",
+        "lu"
+      ]
+    },
+    "youtube": {
+      "count": 27,
+      "color": "#E32B23",
+      "related": [
+        "zao",
+        "music",
+        "thezao",
+        "festival",
+        "design"
+      ]
+    },
+    "studentloanz": {
+      "count": 1,
+      "color": "#96842F",
+      "related": []
+    },
+    "spotify": {
+      "count": 9,
+      "color": "#DDE6BA",
+      "related": [
+        "music",
+        "zao",
+        "thezao",
+        "design",
+        "midipunkz"
+      ]
+    },
+    "sound": {
+      "count": 2,
+      "color": "#88C90F",
+      "related": [
+        "music",
+        "zao",
+        "playlist",
+        "design",
+        "thezao"
+      ]
+    },
+    "web3": {
+      "count": 10,
+      "color": "#379F5F",
+      "related": [
+        "zao",
+        "music",
+        "thezao",
+        "youtube",
+        "finance"
+      ]
+    },
+    "linktr": {
+      "count": 4,
+      "color": "#46A7F8",
+      "related": [
+        "bettercallzaal",
+        "ohnahji"
+      ]
+    },
+    "huddle01": {
+      "count": 2,
+      "color": "#0BB507",
+      "related": [
+        "room"
+      ]
+    },
+    "calendly": {
+      "count": 2,
+      "color": "#5EFC9A",
+      "related": [
+        "zaalp99"
+      ]
+    },
+    "youtu": {
+      "count": 2,
+      "color": "#DD56E0",
+      "related": [
+        "business",
+        "design",
+        "fkyis-h3fny",
+        "startup",
+        "zao"
+      ]
+    },
+    "business": {
+      "count": 2,
+      "color": "#A4BFC0",
+      "related": [
+        "youtu",
+        "design",
+        "fkyis-h3fny",
+        "startup",
+        "zao"
+      ]
+    },
+    "finance": {
+      "count": 8,
+      "color": "#244FDA",
+      "related": [
+        "youtube",
+        "zao",
+        "web3",
+        "music",
+        "thezao"
+      ]
+    },
+    "godcloud": {
+      "count": 2,
+      "color": "#B73B39",
+      "related": [
+        "drip",
+        "music",
+        "zao",
+        "design",
+        "thezao"
+      ]
+    },
+    "drip": {
+      "count": 2,
+      "color": "#2F2E35",
+      "related": [
+        "music",
+        "godcloud",
+        "zao",
+        "design",
+        "thezao"
+      ]
+    },
+    "stack": {
+      "count": 1,
+      "color": "#8AC288",
+      "related": [
+        "optimism",
+        "ethereum",
+        "layer2",
+        "superchain",
+        "op-stack"
+      ]
+    },
+    "song": {
+      "count": 1,
+      "color": "#35F515",
+      "related": [
+        "thezao",
+        "music",
+        "zao",
+        "zao-chella",
+        "design"
+      ]
+    },
+    "zao-chella": {
+      "count": 3,
+      "color": "#E1B586",
+      "related": [
+        "thezao",
+        "music",
+        "zao",
+        "design",
+        "technology"
+      ]
+    },
+    "attabotty": {
+      "count": 1,
+      "color": "#6888AC",
+      "related": [
+        "zao",
+        "design",
+        "music",
+        "artist",
+        "thezao"
+      ]
+    },
+    "artist": {
+      "count": 4,
+      "color": "#02DF47",
+      "related": [
+        "zao",
+        "music",
+        "design",
+        "thezao",
+        "paragraph"
+      ]
+    },
+    "zalora": {
+      "count": 1,
+      "color": "#B8EA99",
+      "related": [
+        "thezao",
+        "technology",
+        "zao",
+        "music",
+        "design"
+      ]
+    },
+    "nft": {
+      "count": 1,
+      "color": "#01A9BC",
+      "related": [
+        "zora",
+        "music",
+        "zao",
+        "web3",
+        "collect"
+      ]
+    },
+    "collect": {
+      "count": 1,
+      "color": "#97612A",
+      "related": [
+        "zora",
+        "music",
+        "zao",
+        "nft",
+        "web3"
+      ]
+    },
+    "zao-cypher": {
+      "count": 1,
+      "color": "#D63560",
+      "related": [
+        "thezao",
+        "design",
+        "music",
+        "zao",
+        "artist"
+      ]
+    },
+    "ima": {
+      "count": 5,
+      "color": "#0197BD",
+      "related": [
+        "midipunkz",
+        "music",
+        "zao",
+        "social",
+        "technology"
+      ]
+    },
+    "midivaderz": {
+      "count": 2,
+      "color": "#9C4615",
+      "related": [
+        "midipunkz",
+        "music",
+        "zao",
+        "ima",
+        "social"
+      ]
+    },
+    "innovation": {
+      "count": 1,
+      "color": "#052565",
+      "related": [
+        "thezao",
+        "zao",
+        "connect",
+        "zverse",
+        "music"
+      ]
+    },
+    "connect": {
+      "count": 3,
+      "color": "#B478EA",
+      "related": [
+        "thezao",
+        "zao",
+        "technology",
+        "news",
+        "festival"
+      ]
+    },
+    "zverse": {
+      "count": 1,
+      "color": "#DDB4FB",
+      "related": [
+        "thezao",
+        "zao",
+        "innovation",
+        "connect",
+        "music"
+      ]
+    },
+    "hats": {
+      "count": 1,
+      "color": "#30C138",
+      "related": [
+        "thezao",
+        "design",
+        "zao",
+        "music",
+        "technology"
+      ]
+    },
+    "calendar": {
+      "count": 1,
+      "color": "#5EFB3E",
+      "related": [
+        "google",
+        "festival",
+        "zao",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "zao-m": {
+      "count": 1,
+      "color": "#E4F208",
+      "related": [
+        "lu",
+        "entertainment",
+        "music",
+        "festival",
+        "zao"
+      ]
+    },
+    "acjyyqh3be": {
+      "count": 1,
+      "color": "#3C3597",
+      "related": [
+        "discord",
+        "zao",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "+imh5y_t2mks1nmvh": {
+      "count": 1,
+      "color": "#BB904D",
+      "related": [
+        "t",
+        "news",
+        "social",
+        "update",
+        "discussion"
+      ]
+    },
+    "update": {
+      "count": 3,
+      "color": "#0038C9",
+      "related": [
+        "news",
+        "paragraph",
+        "technology",
+        "thezao",
+        "t"
+      ]
+    },
+    "discussion": {
+      "count": 1,
+      "color": "#233828",
+      "related": [
+        "t",
+        "news",
+        "social",
+        "+imh5y_t2mks1nmvh",
+        "update"
+      ]
+    },
+    "the-zao": {
+      "count": 1,
+      "color": "#706ACC",
+      "related": [
+        "charmverse",
+        "zao",
+        "thezao",
+        "music",
+        "festival"
+      ]
+    },
+    "@thezao": {
+      "count": 11,
+      "color": "#6A4457",
+      "related": [
+        "paragraph",
+        "technology",
+        "news",
+        "design",
+        "optimism"
+      ]
+    },
+    "article": {
+      "count": 1,
+      "color": "#58CCF6",
+      "related": [
+        "paragraph",
+        "technology",
+        "news",
+        "design",
+        "@thezao"
+      ]
+    },
+    "merch": {
+      "count": 1,
+      "color": "#2FA3BF",
+      "related": [
+        "zaofestivals",
+        "festival",
+        "zao",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "project": {
+      "count": 1,
+      "color": "#904B19",
+      "related": [
+        "giveth",
+        "festival",
+        "zao",
+        "lu",
+        "entertainment"
+      ]
+    },
+    "company": {
+      "count": 1,
+      "color": "#A73C7D",
+      "related": [
+        "linkedin",
+        "festival",
+        "zao",
+        "connect",
+        "lu"
+      ]
+    },
+    "@zaofestivals": {
+      "count": 1,
+      "color": "#62AD13",
+      "related": [
+        "youtube",
+        "entertainment",
+        "festival",
+        "zao",
+        "finance"
+      ]
+    },
+    "loanzonbase": {
+      "count": 1,
+      "color": "#61173A",
+      "related": [
+        "x",
+        "technology",
+        "news",
+        "festival",
+        "zao"
+      ]
+    },
+    "open": {
+      "count": 3,
+      "color": "#34264A",
+      "related": [
+        "spotify",
+        "music",
+        "zao",
+        "playlist",
+        "design"
+      ]
+    },
+    "playlist": {
+      "count": 3,
+      "color": "#0681D2",
+      "related": [
+        "spotify",
+        "music",
+        "zao",
+        "design",
+        "thezao"
+      ]
+    },
+    "games": {
+      "count": 1,
+      "color": "#D932C1",
+      "related": [
+        "midipunkz",
+        "entertainment",
+        "zao",
+        "social",
+        "music"
+      ]
+    },
+    "communities": {
+      "count": 3,
+      "color": "#38AA47",
+      "related": [
+        "midipunkz",
+        "social",
+        "ima",
+        "community",
+        "zao"
+      ]
+    },
+    "community": {
+      "count": 4,
+      "color": "#C52FE9",
+      "related": [
+        "midipunkz",
+        "social",
+        "zao",
+        "music",
+        "technology"
+      ]
+    },
+    "midiezz": {
+      "count": 1,
+      "color": "#E687A4",
+      "related": [
+        "midipunkz",
+        "zao",
+        "social",
+        "music",
+        "technology"
+      ]
+    },
+    "bettercallzaal": {
+      "count": 1,
+      "color": "#F2C6E0",
+      "related": [
+        "linktr"
+      ]
+    },
+    "room": {
+      "count": 1,
+      "color": "#3580DB",
+      "related": [
+        "huddle01"
+      ]
+    },
+    "zaalp99": {
+      "count": 1,
+      "color": "#C7FCBE",
+      "related": [
+        "calendly"
+      ]
+    },
+    "fkyis-h3fny": {
+      "count": 1,
+      "color": "#8E59F7",
+      "related": [
+        "youtu",
+        "business",
+        "design",
+        "startup",
+        "zao"
+      ]
+    },
+    "startup": {
+      "count": 1,
+      "color": "#EB427D",
+      "related": [
+        "youtu",
+        "business",
+        "design",
+        "fkyis-h3fny",
+        "zao"
+      ]
+    },
+    "watch": {
+      "count": 3,
+      "color": "#BAC4CF",
+      "related": [
+        "youtube",
+        "finance",
+        "web3",
+        "zao",
+        "entertainment"
+      ]
+    },
+    "crypto": {
+      "count": 2,
+      "color": "#6EF0C1",
+      "related": [
+        "youtube",
+        "finance",
+        "web3",
+        "zao",
+        "thezao"
+      ]
+    },
+    "jangouuforever": {
+      "count": 2,
+      "color": "#77E868",
+      "related": [
+        "festival",
+        "zao",
+        "instagram",
+        "x",
+        "news"
+      ]
+    },
+    "ohnahji": {
+      "count": 1,
+      "color": "#8776DB",
+      "related": [
+        "linktr"
+      ]
+    }
+  }
 }
